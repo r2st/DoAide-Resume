@@ -53,6 +53,20 @@ PAGE_METADATA = [
         "og_image": "https://resume.doaide.com/og-guide-cover-letter.png",
     },
     {
+        "path": "/cover-letter-generator",
+        "title": "Free Cover Letter Generator India | DoAide Resume",
+        "description": "Generate professional cover letters in seconds. Templates for freshers, experienced professionals, and career changers. 100% free, no login required.",
+        "keywords": ["cover letter generator", "free cover letter", "cover letter format India", "cover letter template"],
+        "og_image": "https://resume.doaide.com/og-cover-letter-gen.png",
+    },
+    {
+        "path": "/linkedin-summary-generator",
+        "title": "Free LinkedIn Summary Generator | DoAide Resume",
+        "description": "Create compelling LinkedIn About sections that get you noticed by recruiters. Professional, storytelling, and results-driven styles. Optimised for Indian professionals.",
+        "keywords": ["LinkedIn summary generator", "LinkedIn about section", "LinkedIn profile summary", "LinkedIn bio generator"],
+        "og_image": "https://resume.doaide.com/og-linkedin-gen.png",
+    },
+    {
         "path": "/compare/novoresume",
         "title": "DoAide Resume vs Novoresume - Free Resume Builder Comparison",
         "description": "Compare DoAide Resume with Novoresume. See why DoAide offers more free features, better ATS optimization, and no hidden paywalls.",

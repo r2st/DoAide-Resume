@@ -8,6 +8,8 @@ import ResumeWritingGuide from './pages/guides/ResumeWritingGuide';
 import AtsResumeGuide from './pages/guides/AtsResumeGuide';
 import FresherResumeGuide from './pages/guides/FresherResumeGuide';
 import CoverLetterGuide from './pages/guides/CoverLetterGuide';
+import CoverLetterGenerator from './pages/CoverLetterGenerator';
+import LinkedinSummaryGenerator from './pages/LinkedinSummaryGenerator';
 import VsNovoresume from './pages/compare/VsNovoresume';
 import BestFreeResumeBuilder from './pages/compare/BestFreeResumeBuilder';
 
@@ -20,6 +22,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/templates" element={<TemplatesPage />} />
           <Route path="/ats-checker" element={<AtsCheckerPage />} />
+          <Route path="/cover-letter-generator" element={<CoverLetterGenerator />} />
+          <Route path="/linkedin-summary-generator" element={<LinkedinSummaryGenerator />} />
           <Route path="/guides/resume-writing" element={<ResumeWritingGuide />} />
           <Route path="/guides/ats-resume" element={<AtsResumeGuide />} />
           <Route path="/guides/fresher-resume" element={<FresherResumeGuide />} />

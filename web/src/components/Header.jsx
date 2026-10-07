@@ -13,6 +13,8 @@ export default function Header() {
             <Link to="/" className="text-gray-600 hover:text-blue-600 text-sm font-medium">Builder</Link>
             <Link to="/templates" className="text-gray-600 hover:text-blue-600 text-sm font-medium">Templates</Link>
             <Link to="/ats-checker" className="text-gray-600 hover:text-blue-600 text-sm font-medium">ATS Checker</Link>
+            <Link to="/cover-letter-generator" className="text-gray-600 hover:text-blue-600 text-sm font-medium">Cover Letter</Link>
+            <Link to="/linkedin-summary-generator" className="text-gray-600 hover:text-blue-600 text-sm font-medium">LinkedIn</Link>
             <Link to="/guides/resume-writing" className="text-gray-600 hover:text-blue-600 text-sm font-medium">Guides</Link>
           </nav>
           <a href="/" className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">

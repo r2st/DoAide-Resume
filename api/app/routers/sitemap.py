@@ -14,6 +14,8 @@ PAGES = [
     {"loc": "/guides/ats-resume", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/guides/fresher-resume", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/guides/cover-letter", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/cover-letter-generator", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": "/linkedin-summary-generator", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/compare/novoresume", "priority": "0.7", "changefreq": "monthly"},
     {"loc": "/best-free-resume-builder", "priority": "0.7", "changefreq": "monthly"},
 ]
