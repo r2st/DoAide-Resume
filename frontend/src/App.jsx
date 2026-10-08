@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import InstallPrompt from './components/InstallPrompt'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import ATSChecker from './pages/ATSChecker'
@@ -13,6 +14,7 @@ import HowATSWorks from './pages/blog/HowATSWorks'
 
 export default function App() {
   return (
+    <>
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,5 +29,7 @@ export default function App() {
         <Route path="/embed" element={<Embed />} />
       </Routes>
     </Layout>
+    <InstallPrompt />
+    </>
   )
 }

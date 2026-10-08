@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ToolTracker from './components/ToolTracker';
+import SocialProofBar from './components/SocialProofBar';
 import HomePage from './pages/HomePage';
 import TemplatesPage from './pages/TemplatesPage';
 import AtsCheckerPage from './pages/AtsCheckerPage';
@@ -22,7 +24,9 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
+      <ToolTracker />
       <main className="flex-1">
+        <SocialProofBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/templates" element={<TemplatesPage />} />

@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import ResumeEditor from '../components/ResumeEditor';
+import RecentTools from '../components/RecentTools';
+import TrendingTools from '../components/TrendingTools';
 import ResumePreview from '../components/ResumePreview';
 import TemplateSelector from '../components/TemplateSelector';
 import AtsScoreCard from '../components/AtsScoreCard';
@@ -191,6 +193,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <RecentTools />
+
       {/* Career Tools Section */}
       <section className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xl font-bold text-gray-800 text-center mb-2">More Free Career Tools</h2>
@@ -347,6 +351,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <TrendingTools />
 
       {/* You Might Also Need */}
       <section className="bg-gray-50 py-16">
