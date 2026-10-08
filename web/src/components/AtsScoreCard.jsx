@@ -86,29 +86,50 @@ export default function AtsScoreCard({ score, onClose }) {
             <ScoreCircle score={overallScore} />
           </div>
 
-          {/* Breakdown */}
+          {/* Breakdown with Pass/Fail */}
           {breakdown.length > 0 && (
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Score Breakdown</h3>
-              <div className="space-y-2">
-                {breakdown.map((item, idx) => (
-                  <div key={idx} className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{item.category}</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-32 bg-gray-200 rounded-full h-2">
+              <h3 className="text-sm font-semibold text-gray-700 mb-3">Section-wise Breakdown</h3>
+              <div className="space-y-3">
+                {breakdown.map((item, idx) => {
+                  const status = item.score >= 80 ? 'pass' : item.score >= 50 ? 'warn' : 'fail';
+                  const statusConfig = {
+                    pass: { label: 'PASS', bg: 'bg-green-100', text: 'text-green-700', bar: '#059669' },
+                    warn: { label: 'NEEDS WORK', bg: 'bg-yellow-100', text: 'text-yellow-700', bar: '#d97706' },
+                    fail: { label: 'FAIL', bg: 'bg-red-100', text: 'text-red-700', bar: '#dc2626' },
+                  }[status];
+                  return (
+                    <div key={idx} className="border border-gray-100 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className="text-sm font-medium text-gray-700">{item.category}</span>
+                        <div className="flex items-center gap-2">
+                          {item.rawScore !== undefined && (
+                            <span className="text-xs text-gray-400">{item.rawScore}/{item.maxScore}</span>
+                          )}
+                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${statusConfig.bg} ${statusConfig.text}`}>
+                            {statusConfig.label}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
                           className="h-2 rounded-full transition-all"
-                          style={{
-                            width: `${item.score}%`,
-                            backgroundColor:
-                              item.score >= 80 ? '#059669' : item.score >= 60 ? '#d97706' : '#dc2626',
-                          }}
+                          style={{ width: `${item.score}%`, backgroundColor: statusConfig.bar }}
                         />
                       </div>
-                      <span className="w-8 text-right font-medium text-gray-700">{item.score}</span>
+                      {item.tips && item.tips.length > 0 && (
+                        <ul className="mt-1.5 space-y-0.5">
+                          {item.tips.map((tip, tIdx) => (
+                            <li key={tIdx} className="text-xs text-gray-500 flex items-start gap-1">
+                              <span className="text-gray-400 mt-px">&#8226;</span>
+                              <span>{tip}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

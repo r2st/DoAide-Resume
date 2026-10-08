@@ -131,6 +131,9 @@ export default function AtsCheckerPage() {
         breakdown: result.breakdown.map((item) => ({
           category: item.category,
           score: item.maxScore > 0 ? Math.round((item.score / item.maxScore) * 100) : 0,
+          rawScore: item.score,
+          maxScore: item.maxScore,
+          tips: item.tips || [],
         })),
         keywordsFound: result.keywords.found || [],
         keywordsMissing: result.keywords.missing || [],
