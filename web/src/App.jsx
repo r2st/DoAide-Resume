@@ -22,7 +22,7 @@ import FresherResumeTemplate from './pages/guides/FresherResumeTemplate';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col" style={{ background: '#0A0A0B' }}>
       <Header />
       <ToolTracker />
       <main className="flex-1">

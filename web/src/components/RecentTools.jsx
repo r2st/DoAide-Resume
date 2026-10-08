@@ -13,8 +13,8 @@ export default function RecentTools() {
 
   return (
     <section className="max-w-5xl mx-auto px-4 pt-6 pb-2">
-      <div className="p-4 rounded-xl bg-blue-50 border border-blue-100">
-        <div className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-3">
+      <div className="p-4 rounded-xl" style={{ background: 'rgba(240,180,41,0.08)', border: '1px solid #2A2A2D' }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#F0B429' }}>
           Pick up where you left off
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1">
@@ -22,10 +22,11 @@ export default function RecentTools() {
             <Link
               key={tool.path}
               to={tool.path}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-gray-800 text-xs font-medium whitespace-nowrap no-underline hover:border-blue-300 hover:text-blue-600 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap no-underline transition-colors"
+              style={{ background: '#1A1A1D', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
             >
               {tool.name}
-              <span className="text-blue-600 font-bold">Continue &rarr;</span>
+              <span className="font-bold" style={{ color: '#F0B429' }}>Continue &rarr;</span>
             </Link>
           ))}
         </div>

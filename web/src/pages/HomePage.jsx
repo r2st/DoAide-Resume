@@ -27,8 +27,8 @@ const features = [
     title: 'Free Forever',
     description: 'No hidden charges, no premium plans, no login required. Build and download your resume completely free.',
     icon: (
-      <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
@@ -36,8 +36,8 @@ const features = [
     title: 'AI Enhancement',
     description: 'Improve your bullet points and summary with AI-powered suggestions tailored to your industry.',
     icon: (
-      <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
   },
@@ -45,8 +45,8 @@ const features = [
     title: '5 Professional Templates',
     description: 'Modern, Classic, Minimalist, Creative, and ATS-Friendly templates to match any job application.',
     icon: (
-      <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
       </svg>
     ),
   },
@@ -54,8 +54,8 @@ const features = [
     title: 'ATS Optimized',
     description: 'Check your resume against ATS systems. Get a score and actionable tips to improve your chances.',
     icon: (
-      <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
@@ -63,8 +63,8 @@ const features = [
     title: 'Instant PDF Download',
     description: 'Download your resume as a professional PDF with one click. No watermarks, no sign-up.',
     icon: (
-      <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
   },
@@ -72,8 +72,8 @@ const features = [
     title: 'Made for India',
     description: 'Templates designed for CA, MBA, Engineers, Teachers, and freshers applying to Indian companies.',
     icon: (
-      <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg className="w-8 h-8" fill="none" stroke="#F0B429" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
   },
@@ -172,18 +172,21 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
+      <section style={{ background: '#0A0A0B' }}>
         <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-            Build Your Resume in Minutes — 100% Free
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-6" style={{ fontFamily: "'Instrument Serif', Georgia, serif", color: '#E5E7EB' }}>
+            Build your resume.<br /><span style={{ color: '#F0B429', fontStyle: 'italic' }}>Land the job.</span>
           </h1>
-          <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-            AI-powered resume builder designed for Indian job seekers. Professional templates,
-            ATS optimization, instant PDF download. No login required.
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-8 leading-relaxed" style={{ color: '#9CA3AF' }}>
+            AI-powered resume builder for Indian job seekers — professional templates,
+            ATS optimization, instant PDF. No login required.
           </p>
           <button
             onClick={scrollToBuilder}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-50 transition-all transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-8 py-4 font-bold text-lg rounded-xl transition-all transform hover:-translate-y-0.5"
+            style={{ background: '#F0B429', color: '#0A0A0B', boxShadow: '0 0 20px rgba(240,180,41,0.15)' }}
+            onMouseEnter={e => e.currentTarget.style.background = '#D4A017'}
+            onMouseLeave={e => e.currentTarget.style.background = '#F0B429'}
           >
             Start Building Your Resume
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,39 +200,23 @@ export default function HomePage() {
 
       {/* Career Tools Section */}
       <section className="max-w-5xl mx-auto px-4 py-10">
-        <h2 className="text-xl font-bold text-gray-800 text-center mb-2">More Free Career Tools</h2>
-        <p className="text-gray-500 text-center text-sm mb-6">No login required — use any tool instantly</p>
+        <h2 className="text-xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>More Free Career Tools</h2>
+        <p className="text-center text-sm mb-6" style={{ color: '#6B7280' }}>No login required — use any tool instantly</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          <Link to="/templates" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
-            <span className="text-2xl block mb-2">🎨</span>
-            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Templates</div>
-            <div className="text-xs text-gray-400 mt-1">5 professional designs</div>
-            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
-          </Link>
-          <Link to="/ats-checker" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
-            <span className="text-2xl block mb-2">✅</span>
-            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">ATS Checker</div>
-            <div className="text-xs text-gray-400 mt-1">Check ATS compatibility</div>
-            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
-          </Link>
-          <Link to="/cover-letter-generator" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
-            <span className="text-2xl block mb-2">✉️</span>
-            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Cover Letter</div>
-            <div className="text-xs text-gray-400 mt-1">Generate cover letters</div>
-            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
-          </Link>
-          <Link to="/linkedin-summary-generator" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
-            <span className="text-2xl block mb-2">💼</span>
-            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">LinkedIn Summary</div>
-            <div className="text-xs text-gray-400 mt-1">Optimize your profile</div>
-            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
-          </Link>
-          <Link to="/interview-preparation" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
-            <span className="text-2xl block mb-2">🎯</span>
-            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Interview Prep</div>
-            <div className="text-xs text-gray-400 mt-1">Practice questions</div>
-            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
-          </Link>
+          {[
+            { to: '/templates', icon: '🎨', name: 'Templates', desc: '5 professional designs' },
+            { to: '/ats-checker', icon: '✅', name: 'ATS Checker', desc: 'Check ATS compatibility' },
+            { to: '/cover-letter-generator', icon: '✉️', name: 'Cover Letter', desc: 'Generate cover letters' },
+            { to: '/linkedin-summary-generator', icon: '💼', name: 'LinkedIn Summary', desc: 'Optimize your profile' },
+            { to: '/interview-preparation', icon: '🎯', name: 'Interview Prep', desc: 'Practice questions' },
+          ].map((tool) => (
+            <Link key={tool.to} to={tool.to} className="group block p-4 rounded-xl transition-all text-center no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+              <span className="text-2xl block mb-2">{tool.icon}</span>
+              <div className="text-sm font-semibold transition-colors" style={{ color: '#E5E7EB' }}>{tool.name}</div>
+              <div className="text-xs mt-1" style={{ color: '#6B7280' }}>{tool.desc}</div>
+              <span className="text-xs font-bold mt-2 block opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#F0B429' }}>Try Now →</span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -238,13 +225,14 @@ export default function HomePage() {
         {/* Job Role Selector and Export Buttons */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
           <div className="w-full sm:w-auto">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium mb-1" style={{ color: '#9CA3AF' }}>
               Quick fill by job role
             </label>
             <select
               value={selectedRole}
               onChange={(e) => handleRoleSelect(e.target.value)}
-              className="w-full sm:w-72 px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+              className="w-full sm:w-72 px-3 py-2.5 rounded-lg text-sm focus:outline-none focus:ring-2"
+              style={{ background: '#111113', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
             >
               <option value="">Select a role for suggestions...</option>
               {Object.keys(jobRoleSuggestions).map((role) => (
@@ -256,7 +244,8 @@ export default function HomePage() {
             <button
               onClick={handleExportPdf}
               disabled={isExporting}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 font-medium rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              style={{ background: '#F0B429', color: '#0A0A0B' }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -265,7 +254,8 @@ export default function HomePage() {
             </button>
             <button
               onClick={handleCheckAts}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 text-white font-medium rounded-lg hover:bg-amber-600 transition text-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 font-medium rounded-lg transition text-sm"
+              style={{ background: '#1A1A1D', color: '#F0B429', border: '1px solid #2A2A2D' }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -292,7 +282,8 @@ export default function HomePage() {
             <div className="mb-4">
               <button
                 onClick={() => setShowTemplateSelector(!showTemplateSelector)}
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition"
+                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition"
+                style={{ background: '#1A1A1D', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
@@ -301,7 +292,7 @@ export default function HomePage() {
               </button>
             </div>
             {showTemplateSelector && (
-              <div className="mb-6 p-4 bg-white rounded-xl shadow-sm border border-gray-200">
+              <div className="mb-6 p-4 rounded-xl shadow-sm" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
                 <TemplateSelector
                   selected={selectedTemplate}
                   onSelect={setSelectedTemplate}
@@ -329,23 +320,24 @@ export default function HomePage() {
       )}
 
       {/* Features Grid */}
-      <section className="bg-white py-16">
+      <section className="py-16" style={{ background: '#0A0A0B' }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-            Everything You Need to Land Your Dream Job
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4" style={{ color: '#E5E7EB', fontFamily: "'Instrument Serif', Georgia, serif" }}>
+            Everything you need to <span style={{ color: '#F0B429', fontStyle: 'italic' }}>land the job</span>
           </h2>
-          <p className="text-gray-500 text-center mb-12 max-w-2xl mx-auto">
-            A complete resume building toolkit -- no sign-up, no hidden fees, no watermarks.
+          <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
+            A complete resume building toolkit — no sign-up, no hidden fees, no watermarks.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="p-6 bg-gray-50 rounded-xl border border-gray-100 hover:shadow-md transition-shadow"
+                className="p-6 rounded-xl transition-shadow hover:shadow-lg"
+                style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}
               >
                 <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold mb-2" style={{ color: '#E5E7EB' }}>{feature.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{feature.description}</p>
               </div>
             ))}
           </div>
@@ -355,34 +347,34 @@ export default function HomePage() {
       <TrendingTools />
 
       {/* You Might Also Need */}
-      <section className="bg-gray-50 py-16">
+      <section className="py-16" style={{ background: '#111113' }}>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">You Might Also Need</h2>
-          <p className="text-gray-500 text-center mb-10">More free tools from DoAide to help your career and business</p>
+          <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>You Might Also Need</h2>
+          <p className="text-center mb-10" style={{ color: '#6B7280' }}>More free tools from DoAide to help your career and business</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+            <a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
               <span className="text-2xl mb-2 block">📄</span>
-              <h3 className="text-base font-semibold text-gray-800 mb-1">Document Generator</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">Rent receipts, salary slips, experience letters — free PDF download.</p>
+              <h3 className="text-base font-semibold mb-1" style={{ color: '#E5E7EB' }}>Document Generator</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>Rent receipts, salary slips, experience letters — free PDF download.</p>
             </a>
-            <a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+            <a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
               <span className="text-2xl mb-2 block">🏷️</span>
-              <h3 className="text-base font-semibold text-gray-800 mb-1">GST Tools</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">GST calculator, GSTIN verification, HSN code lookup, and filing dates.</p>
+              <h3 className="text-base font-semibold mb-1" style={{ color: '#E5E7EB' }}>GST Tools</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>GST calculator, GSTIN verification, HSN code lookup, and filing dates.</p>
             </a>
-            <a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+            <a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
               <span className="text-2xl mb-2 block">📊</span>
-              <h3 className="text-base font-semibold text-gray-800 mb-1">409A Valuations</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">Independent, defensible startup valuations with AI-assisted intake.</p>
+              <h3 className="text-base font-semibold mb-1" style={{ color: '#E5E7EB' }}>409A Valuations</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>Independent, defensible startup valuations with AI-assisted intake.</p>
             </a>
-            <a href="https://contracts.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
-              <span className="text-2xl mb-2 block">📋</span>
-              <h3 className="text-base font-semibold text-gray-800 mb-1">Contracts</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">Draft NDAs, service agreements, and employment contracts with AI.</p>
+            <a href="https://job.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+              <span className="text-2xl mb-2 block">💼</span>
+              <h3 className="text-base font-semibold mb-1" style={{ color: '#E5E7EB' }}>AutoApply Jobs</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>AI finds, matches, and applies to jobs for you.</p>
             </a>
           </div>
           <p className="text-center mt-6">
-            <a href="https://doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:text-blue-700 font-medium no-underline">
+            <a href="https://doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm font-medium no-underline" style={{ color: '#F0B429' }}>
               Explore all DoAide tools &rarr;
             </a>
           </p>
