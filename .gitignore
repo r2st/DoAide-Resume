@@ -18,3 +18,7 @@ keys/
 coverage/
 .vite/
 *.timestamp-*
+
+# Environment
+.env*
+!.env.example
