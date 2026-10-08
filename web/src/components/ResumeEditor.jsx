@@ -1,5 +1,30 @@
 import { useState } from 'react';
 
+function SectionCard({ id, title, collapsed, onToggle, children }) {
+  const isCollapsed = collapsed[id];
+  return (
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+      <button
+        type="button"
+        onClick={() => onToggle(id)}
+        className="w-full flex items-center justify-between px-4 py-3 bg-blue-600 text-white hover:bg-blue-700 transition"
+      >
+        <span className="font-semibold text-sm">{title}</span>
+        <span
+          className={`transform transition-transform duration-200 ${isCollapsed ? '-rotate-90' : ''}`}
+        >
+          ▼
+        </span>
+      </button>
+      <div
+        className={`transition-all duration-200 ease-in-out ${isCollapsed ? 'max-h-0 overflow-hidden opacity-0' : 'max-h-[5000px] opacity-100'}`}
+      >
+        <div className="p-4 space-y-4">{children}</div>
+      </div>
+    </div>
+  );
+}
+
 export default function ResumeEditor({ data, setData, onAiEnhance }) {
   const [collapsed, setCollapsed] = useState({});
 
@@ -81,35 +106,10 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
   const removeBtnClass =
     'flex items-center justify-center w-7 h-7 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-full transition text-lg leading-none';
 
-  const SectionCard = ({ id, title, children }) => {
-    const isCollapsed = collapsed[id];
-    return (
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <button
-          type="button"
-          onClick={() => toggle(id)}
-          className="w-full flex items-center justify-between px-4 py-3 bg-blue-600 text-white hover:bg-blue-700 transition"
-        >
-          <span className="font-semibold text-sm">{title}</span>
-          <span
-            className={`transform transition-transform duration-200 ${isCollapsed ? '-rotate-90' : ''}`}
-          >
-            ▼
-          </span>
-        </button>
-        <div
-          className={`transition-all duration-200 ease-in-out ${isCollapsed ? 'max-h-0 overflow-hidden opacity-0' : 'max-h-[5000px] opacity-100'}`}
-        >
-          <div className="p-4 space-y-4">{children}</div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="space-y-4 pb-8">
       {/* Personal Info */}
-      <SectionCard id="personal" title="Personal Information">
+      <SectionCard id="personal" title="Personal Information" collapsed={collapsed} onToggle={toggle}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             { field: 'name', label: 'Full Name', type: 'text', placeholder: 'John Doe' },
@@ -134,7 +134,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Summary */}
-      <SectionCard id="summary" title="Professional Summary">
+      <SectionCard id="summary" title="Professional Summary" collapsed={collapsed} onToggle={toggle}>
         <div>
           <label className={labelClass}>Summary</label>
           <textarea
@@ -157,7 +157,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Experience */}
-      <SectionCard id="experience" title="Work Experience">
+      <SectionCard id="experience" title="Work Experience" collapsed={collapsed} onToggle={toggle}>
         {data.experience.map((exp, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start">
@@ -303,7 +303,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Education */}
-      <SectionCard id="education" title="Education">
+      <SectionCard id="education" title="Education" collapsed={collapsed} onToggle={toggle}>
         {data.education.map((edu, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start">
@@ -400,7 +400,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Skills */}
-      <SectionCard id="skills" title="Skills">
+      <SectionCard id="skills" title="Skills" collapsed={collapsed} onToggle={toggle}>
         {data.skills.map((skill, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start">
@@ -448,7 +448,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Projects */}
-      <SectionCard id="projects" title="Projects">
+      <SectionCard id="projects" title="Projects" collapsed={collapsed} onToggle={toggle}>
         {data.projects.map((proj, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start">
@@ -520,7 +520,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Certifications */}
-      <SectionCard id="certifications" title="Certifications">
+      <SectionCard id="certifications" title="Certifications" collapsed={collapsed} onToggle={toggle}>
         {data.certifications.map((cert, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start">
@@ -579,7 +579,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Languages */}
-      <SectionCard id="languages" title="Languages">
+      <SectionCard id="languages" title="Languages" collapsed={collapsed} onToggle={toggle}>
         {data.languages.map((lang, i) => (
           <div key={i} className="relative border border-gray-200 rounded-lg p-4">
             <div className="flex justify-between items-start mb-3">
@@ -632,7 +632,7 @@ export default function ResumeEditor({ data, setData, onAiEnhance }) {
       </SectionCard>
 
       {/* Hobbies */}
-      <SectionCard id="hobbies" title="Hobbies & Interests">
+      <SectionCard id="hobbies" title="Hobbies & Interests" collapsed={collapsed} onToggle={toggle}>
         <div className="space-y-2">
           {data.hobbies.map((hobby, i) => (
             <div key={i} className="flex items-center gap-2">
