@@ -29,6 +29,24 @@ const templateOptions = [
     description: 'Optimized for applicant tracking systems',
     preview: 'ats',
   },
+  {
+    id: 'fresher',
+    name: 'Fresher',
+    description: 'Education-first layout for graduates',
+    preview: 'fresher',
+  },
+  {
+    id: 'technical',
+    name: 'Technical',
+    description: 'IT/Engineering with skills sidebar',
+    preview: 'technical',
+  },
+  {
+    id: 'design',
+    name: 'Design',
+    description: 'Bold creative with hero header',
+    preview: 'design',
+  },
 ];
 
 const presetColors = [
@@ -84,6 +102,55 @@ function MiniPreview({ type, color }) {
           <div className="h-1.5 w-full bg-gray-200 rounded" />
           <div className="h-1.5 w-full bg-gray-200 rounded" />
           <div className="h-1.5 w-2/3 bg-gray-200 rounded" />
+        </div>
+      </div>
+    );
+  }
+  if (type === 'fresher') {
+    return (
+      <div className="w-full h-24 bg-white rounded overflow-hidden border border-gray-200 p-2 space-y-1">
+        <div className="h-3 w-2/5 mx-auto rounded" style={{ backgroundColor: color }} />
+        <div className="h-1 w-1/2 mx-auto bg-gray-200 rounded" />
+        <div className="h-2 w-full rounded" style={{ backgroundColor: color, opacity: 0.1 }} />
+        <div className="h-1.5 w-full bg-gray-200 rounded" />
+        <div className="h-1.5 w-full bg-gray-200 rounded" />
+        <div className="h-1.5 w-3/4 bg-gray-200 rounded" />
+      </div>
+    );
+  }
+  if (type === 'technical') {
+    return (
+      <div className="w-full h-24 flex rounded overflow-hidden border border-gray-200">
+        <div className="w-1/3 h-full bg-gray-800 p-1.5 space-y-1">
+          <div className="h-2 w-full rounded" style={{ backgroundColor: color, opacity: 0.7 }} />
+          <div className="h-1 w-full bg-gray-600 rounded" />
+          <div className="h-1 w-3/4 bg-gray-600 rounded" />
+          <div className="h-1 w-full bg-gray-600 rounded" />
+        </div>
+        <div className="w-2/3 h-full bg-white p-2 space-y-1">
+          <div className="h-2 w-3/4 rounded" style={{ backgroundColor: color }} />
+          <div className="h-1.5 w-full bg-gray-200 rounded" />
+          <div className="h-1.5 w-full bg-gray-200 rounded" />
+          <div className="h-1.5 w-5/6 bg-gray-200 rounded" />
+        </div>
+      </div>
+    );
+  }
+  if (type === 'design') {
+    return (
+      <div className="w-full h-24 rounded overflow-hidden border border-gray-200">
+        <div className="h-10 w-full relative" style={{ background: `linear-gradient(135deg, ${color}, ${color}dd)` }}>
+          <div className="absolute bottom-1.5 left-2 h-2.5 w-2/5 bg-white/30 rounded" />
+        </div>
+        <div className="bg-white p-1.5 flex gap-1.5">
+          <div className="w-3/5 space-y-1">
+            <div className="h-1.5 w-full bg-gray-200 rounded" />
+            <div className="h-1.5 w-full bg-gray-200 rounded" />
+          </div>
+          <div className="w-2/5 space-y-1">
+            <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.15 }} />
+            <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.15 }} />
+          </div>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-import { ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate } from '../templates';
+import { ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate, FresherTemplate, TechnicalTemplate, DesignTemplate } from '../templates';
 
 const templates = {
   modern: ModernTemplate,
@@ -6,6 +6,9 @@ const templates = {
   minimalist: MinimalistTemplate,
   creative: CreativeTemplate,
   ats: AtsTemplate,
+  fresher: FresherTemplate,
+  technical: TechnicalTemplate,
+  design: DesignTemplate,
 };
 
 export default function ResumePreview({ data, template = 'modern', templateColor = '#2563eb' }) {
