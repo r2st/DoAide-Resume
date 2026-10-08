@@ -13,8 +13,12 @@ const EXPECTED_ROUTES = [
   '/guides/cover-letter',
   '/guides/best-resume-format-india',
   '/guides/fresher-resume-template',
+  '/guides/best-resume-format-freshers-2026',
+  '/guides/cover-letter-it-jobs',
   '/compare/novoresume',
   '/best-free-resume-builder',
+  '/compare/canva',
+  '/compare/best-resume-builders',
 ];
 
 const SITEMAP_PAGES = [
@@ -30,13 +34,17 @@ const SITEMAP_PAGES = [
   '/guides/cover-letter',
   '/guides/best-resume-format-india',
   '/guides/fresher-resume-template',
+  '/guides/best-resume-format-freshers-2026',
+  '/guides/cover-letter-it-jobs',
   '/compare/novoresume',
   '/best-free-resume-builder',
+  '/compare/canva',
+  '/compare/best-resume-builders',
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 14 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(14);
+  it('has 18 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(18);
   });
 
   it('every sitemap page has a matching route', () => {
@@ -55,5 +63,10 @@ describe('Route and sitemap coverage', () => {
     expect(EXPECTED_ROUTES).toContain('/interview-preparation');
     expect(EXPECTED_ROUTES).toContain('/guides/best-resume-format-india');
     expect(EXPECTED_ROUTES).toContain('/guides/fresher-resume-template');
+  });
+
+  it('new blog and guide routes are present', () => {
+    expect(EXPECTED_ROUTES).toContain('/guides/best-resume-format-freshers-2026');
+    expect(EXPECTED_ROUTES).toContain('/guides/cover-letter-it-jobs');
   });
 });
