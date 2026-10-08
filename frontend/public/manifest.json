@@ -1,0 +1,32 @@
+{
+  "name": "DoAide Resume AI — Free ATS Resume Checker & Builder",
+  "short_name": "DoAide Resume",
+  "description": "Free ATS Resume Checker and AI Resume Builder. Check your resume's ATS compatibility score instantly.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#0A0A0A",
+  "background_color": "#0A0A0A",
+  "orientation": "any",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
