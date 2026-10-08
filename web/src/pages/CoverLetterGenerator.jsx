@@ -48,6 +48,28 @@ Sincerely,
 ${d.name || '[Your Name]'}
 ${d.email ? d.email : ''}${d.phone ? '\n' + d.phone : ''}`,
   },
+  it_professional: {
+    label: 'IT / Software Engineer',
+    generate: (d) => `Dear ${d.hiringManager || 'Hiring Manager'},
+
+I am writing to apply for the ${d.jobTitle} position at ${d.company}. With ${d.yearsExp || 'significant'} years of experience in software development and IT, I bring a strong track record of delivering scalable, production-grade solutions.
+
+${d.currentRole ? `As a ${d.currentRole}${d.currentCompany ? ` at ${d.currentCompany}` : ''}, ${d.achievement1 || 'I have architected and shipped features used by thousands of users while maintaining high code quality and test coverage'}.` : ''}
+
+${d.achievement2 ? `${d.achievement2}.` : ''}
+
+${d.skills ? `My technical stack includes ${d.skills}. I follow engineering best practices including code reviews, CI/CD pipelines, and agile methodologies.` : 'I am proficient across the modern development stack and follow engineering best practices including code reviews, CI/CD pipelines, and agile methodologies.'}
+
+${d.whyCompany ? `I am particularly interested in ${d.company} because ${d.whyCompany}.` : `I am drawn to ${d.company}'s engineering culture and the opportunity to solve complex technical challenges at scale.`}
+
+I am comfortable working in fast-paced environments, collaborating with cross-functional teams, and mentoring junior developers. I would welcome the chance to discuss how I can contribute to ${d.company}'s engineering goals.
+
+Thank you for your consideration.
+
+Best regards,
+${d.name || '[Your Name]'}
+${d.email ? d.email : ''}${d.phone ? '\n' + d.phone : ''}${d.linkedin ? '\n' + d.linkedin : ''}`,
+  },
   career_change: {
     label: 'Career Change',
     generate: (d) => `Dear ${d.hiringManager || 'Hiring Manager'},
@@ -72,7 +94,7 @@ ${d.email ? d.email : ''}${d.phone ? '\n' + d.phone : ''}`,
 
 export default function CoverLetterGenerator() {
   const [form, setForm] = useState({
-    name: '', email: '', phone: '',
+    name: '', email: '', phone: '', linkedin: '',
     jobTitle: '', company: '', hiringManager: '',
     currentRole: '', currentCompany: '', yearsExp: '',
     industry: '', previousField: '',
@@ -193,6 +215,9 @@ export default function CoverLetterGenerator() {
                 <input className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Email" value={form.email} onChange={handleChange('email')} />
                 <input className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Phone" value={form.phone} onChange={handleChange('phone')} />
                 <input className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Years of Experience" value={form.yearsExp} onChange={handleChange('yearsExp')} />
+                {template === 'it_professional' && (
+                  <input className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 col-span-full" placeholder="LinkedIn Profile URL (optional)" value={form.linkedin} onChange={handleChange('linkedin')} />
+                )}
               </div>
             </div>
 
