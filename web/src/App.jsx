@@ -22,6 +22,8 @@ import BestResumeFormatIndia from './pages/guides/BestResumeFormatIndia';
 import FresherResumeTemplate from './pages/guides/FresherResumeTemplate';
 import BestResumeFormatFreshers2026 from './pages/guides/BestResumeFormatFreshers2026';
 import CoverLetterForITJobs from './pages/guides/CoverLetterForITJobs';
+import VsZety from './pages/compare/VsZety';
+import AtsFloatingWidget from './components/AtsFloatingWidget';
 
 export default function App() {
   return (
@@ -49,10 +51,12 @@ export default function App() {
           <Route path="/guides/fresher-resume-template" element={<FresherResumeTemplate />} />
           <Route path="/guides/best-resume-format-freshers-2026" element={<BestResumeFormatFreshers2026 />} />
           <Route path="/guides/cover-letter-it-jobs" element={<CoverLetterForITJobs />} />
+          <Route path="/compare/zety" element={<VsZety />} />
         </Routes>
       </main>
       <Footer />
       <ReferralBanner />
+      <AtsFloatingWidget />
     </div>
   );
 }

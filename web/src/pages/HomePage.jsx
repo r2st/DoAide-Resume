@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import ResumeEditor from '../components/ResumeEditor';
 import RecentTools from '../components/RecentTools';
@@ -21,6 +21,53 @@ const defaultResumeData = {
   languages: [],
   hobbies: [],
 };
+
+function AnimatedCounter() {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef(null);
+  const target = 50000;
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started) {
+        setStarted(true);
+        obs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    const duration = 2000;
+    const steps = 60;
+    const inc = target / steps;
+    let current = 0;
+    const interval = setInterval(() => {
+      current += inc;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(interval);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+    return () => clearInterval(interval);
+  }, [started]);
+
+  return (
+    <div ref={ref} className="py-8 text-center" style={{ background: '#0A0A0B' }}>
+      <div className="text-5xl font-light" style={{ fontFamily: "'Instrument Serif', Georgia, serif", color: '#F0B429' }}>
+        {count.toLocaleString('en-IN')}+
+      </div>
+      <div className="text-base mt-1" style={{ color: '#9CA3AF' }}>Resumes Created</div>
+    </div>
+  );
+}
 
 const features = [
   {
@@ -195,6 +242,8 @@ export default function HomePage() {
           </button>
         </div>
       </section>
+
+      <AnimatedCounter />
 
       <RecentTools />
 
