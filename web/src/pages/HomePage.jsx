@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import ResumeEditor from '../components/ResumeEditor';
 import ResumePreview from '../components/ResumePreview';
 import TemplateSelector from '../components/TemplateSelector';
@@ -188,6 +188,44 @@ export default function HomePage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </button>
+        </div>
+      </section>
+
+      {/* Career Tools Section */}
+      <section className="max-w-5xl mx-auto px-4 py-10">
+        <h2 className="text-xl font-bold text-gray-800 text-center mb-2">More Free Career Tools</h2>
+        <p className="text-gray-500 text-center text-sm mb-6">No login required — use any tool instantly</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <Link to="/templates" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
+            <span className="text-2xl block mb-2">🎨</span>
+            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Templates</div>
+            <div className="text-xs text-gray-400 mt-1">5 professional designs</div>
+            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
+          </Link>
+          <Link to="/ats-checker" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
+            <span className="text-2xl block mb-2">✅</span>
+            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">ATS Checker</div>
+            <div className="text-xs text-gray-400 mt-1">Check ATS compatibility</div>
+            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
+          </Link>
+          <Link to="/cover-letter-generator" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
+            <span className="text-2xl block mb-2">✉️</span>
+            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Cover Letter</div>
+            <div className="text-xs text-gray-400 mt-1">Generate cover letters</div>
+            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
+          </Link>
+          <Link to="/linkedin-summary-generator" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
+            <span className="text-2xl block mb-2">💼</span>
+            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">LinkedIn Summary</div>
+            <div className="text-xs text-gray-400 mt-1">Optimize your profile</div>
+            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
+          </Link>
+          <Link to="/interview-preparation" className="group block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all text-center no-underline">
+            <span className="text-2xl block mb-2">🎯</span>
+            <div className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">Interview Prep</div>
+            <div className="text-xs text-gray-400 mt-1">Practice questions</div>
+            <span className="text-xs font-bold text-blue-600 mt-2 block opacity-0 group-hover:opacity-100 transition-opacity">Try Now →</span>
+          </Link>
         </div>
       </section>
 
