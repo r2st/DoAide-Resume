@@ -12,6 +12,8 @@ import CoverLetterGenerator from './pages/CoverLetterGenerator';
 import LinkedinSummaryGenerator from './pages/LinkedinSummaryGenerator';
 import VsNovoresume from './pages/compare/VsNovoresume';
 import BestFreeResumeBuilder from './pages/compare/BestFreeResumeBuilder';
+import VsCanva from './pages/compare/VsCanva';
+import BestResumeBuilders from './pages/compare/BestResumeBuilders';
 import InterviewPrepPage from './pages/InterviewPrepPage';
 import BestResumeFormatIndia from './pages/guides/BestResumeFormatIndia';
 import FresherResumeTemplate from './pages/guides/FresherResumeTemplate';
@@ -33,6 +35,8 @@ export default function App() {
           <Route path="/guides/cover-letter" element={<CoverLetterGuide />} />
           <Route path="/compare/novoresume" element={<VsNovoresume />} />
           <Route path="/best-free-resume-builder" element={<BestFreeResumeBuilder />} />
+          <Route path="/compare/canva" element={<VsCanva />} />
+          <Route path="/compare/best-resume-builders" element={<BestResumeBuilders />} />
           <Route path="/interview-preparation" element={<InterviewPrepPage />} />
           <Route path="/guides/best-resume-format-india" element={<BestResumeFormatIndia />} />
           <Route path="/guides/fresher-resume-template" element={<FresherResumeTemplate />} />
