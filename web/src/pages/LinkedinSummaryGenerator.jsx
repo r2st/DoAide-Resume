@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../components/ShareButtons';
 
 const ROLES = {
   'Software Engineer': { keywords: ['software development', 'scalable systems', 'engineering'], tone: 'technical' },
@@ -250,6 +251,10 @@ export default function LinkedinSummaryGenerator() {
               </div>
             )}
           </div>
+        </div>
+
+        <div className="py-6">
+          <ShareButtons text="Generate a LinkedIn summary for free — no login needed!" toolName="LinkedIn Summary Generator" />
         </div>
 
         {/* FAQ Section */}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../components/ShareButtons';
 
 const TONES = [
   { id: 'professional', label: 'Professional', desc: 'Formal and polished' },
@@ -299,6 +300,10 @@ export default function CoverLetterGenerator() {
               </ul>
             </div>
           </div>
+        </div>
+
+        <div className="py-6">
+          <ShareButtons text="Generate a professional cover letter for free — no login needed!" toolName="Cover Letter Generator" />
         </div>
 
         {/* FAQ Section */}

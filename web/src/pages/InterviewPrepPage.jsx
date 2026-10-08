@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../components/ShareButtons';
 
 const QUESTION_BANK = {
   behavioral: [
@@ -253,6 +254,10 @@ export default function InterviewPrepPage() {
           </div>
         </section>
       )}
+
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        <ShareButtons text="Practice interview questions for free — no login needed!" toolName="Interview Prep Tool" />
+      </div>
 
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-4">

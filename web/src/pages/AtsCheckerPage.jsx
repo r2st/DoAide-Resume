@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AtsScoreCard from '../components/AtsScoreCard';
 import { checkAtsScore } from '../lib/atsChecker';
+import ShareButtons from '../components/ShareButtons';
 
 function parseResumeText(text) {
   if (!text || !text.trim()) return null;
@@ -250,6 +251,10 @@ export default function AtsCheckerPage() {
       {atsScore && (
         <AtsScoreCard score={atsScore} onClose={() => setAtsScore(null)} />
       )}
+
+      <div className="max-w-4xl mx-auto px-4 py-6">
+        <ShareButtons text="Check your resume's ATS score for free — no login needed!" toolName="ATS Resume Checker" />
+      </div>
 
       {/* ATS Optimization Tips */}
       <section className="bg-gray-50 py-16">
