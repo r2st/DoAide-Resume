@@ -71,23 +71,28 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">DoAide Tools</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://gst.doaide.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
                   DoAide GST
                 </a>
               </li>
               <li>
-                <a
-                  href="https://docs.doaide.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
                   DoAide Docs
+                </a>
+              </li>
+              <li>
+                <a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  409A Valuations
+                </a>
+              </li>
+              <li>
+                <a href="https://contracts.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Contracts
+                </a>
+              </li>
+              <li>
+                <a href="https://invoicer.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  Invoicer
                 </a>
               </li>
             </ul>

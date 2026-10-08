@@ -309,6 +309,41 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* You Might Also Need */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">You Might Also Need</h2>
+          <p className="text-gray-500 text-center mb-10">More free tools from DoAide to help your career and business</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+              <span className="text-2xl mb-2 block">📄</span>
+              <h3 className="text-base font-semibold text-gray-800 mb-1">Document Generator</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Rent receipts, salary slips, experience letters — free PDF download.</p>
+            </a>
+            <a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+              <span className="text-2xl mb-2 block">🏷️</span>
+              <h3 className="text-base font-semibold text-gray-800 mb-1">GST Tools</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">GST calculator, GSTIN verification, HSN code lookup, and filing dates.</p>
+            </a>
+            <a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+              <span className="text-2xl mb-2 block">📊</span>
+              <h3 className="text-base font-semibold text-gray-800 mb-1">409A Valuations</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Independent, defensible startup valuations with AI-assisted intake.</p>
+            </a>
+            <a href="https://contracts.doaide.com" target="_blank" rel="noopener noreferrer" className="block p-5 bg-white rounded-xl border border-gray-200 hover:shadow-md hover:border-blue-300 transition-all no-underline">
+              <span className="text-2xl mb-2 block">📋</span>
+              <h3 className="text-base font-semibold text-gray-800 mb-1">Contracts</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">Draft NDAs, service agreements, and employment contracts with AI.</p>
+            </a>
+          </div>
+          <p className="text-center mt-6">
+            <a href="https://doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:text-blue-700 font-medium no-underline">
+              Explore all DoAide tools &rarr;
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
