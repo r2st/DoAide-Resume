@@ -183,7 +183,7 @@ export default function HomePage() {
           </p>
           <button
             onClick={scrollToBuilder}
-            className="inline-flex items-center gap-2 px-8 py-4 font-bold text-lg rounded-xl transition-all transform hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 min-h-[48px] w-full sm:w-auto font-bold text-lg rounded-xl transition-all transform hover:-translate-y-0.5"
             style={{ background: '#F0B429', color: '#0A0A0B', boxShadow: '0 0 20px rgba(240,180,41,0.15)' }}
             onMouseEnter={e => e.currentTarget.style.background = '#D4A017'}
             onMouseLeave={e => e.currentTarget.style.background = '#F0B429'}
@@ -202,7 +202,7 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>More Free Career Tools</h2>
         <p className="text-center text-sm mb-6" style={{ color: '#6B7280' }}>No login required — use any tool instantly</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
             { to: '/templates', icon: '🎨', name: 'Templates', desc: '5 professional designs' },
             { to: '/ats-checker', icon: '✅', name: 'ATS Checker', desc: 'Check ATS compatibility' },
@@ -210,11 +210,12 @@ export default function HomePage() {
             { to: '/linkedin-summary-generator', icon: '💼', name: 'LinkedIn Summary', desc: 'Optimize your profile' },
             { to: '/interview-preparation', icon: '🎯', name: 'Interview Prep', desc: 'Practice questions' },
           ].map((tool) => (
-            <Link key={tool.to} to={tool.to} className="group block p-4 rounded-xl transition-all text-center no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-              <span className="text-2xl block mb-2">{tool.icon}</span>
-              <div className="text-sm font-semibold transition-colors" style={{ color: '#E5E7EB' }}>{tool.name}</div>
-              <div className="text-xs mt-1" style={{ color: '#6B7280' }}>{tool.desc}</div>
-              <span className="text-xs font-bold mt-2 block opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: '#F0B429' }}>Try Now →</span>
+            <Link key={tool.to} to={tool.to} className="group flex sm:block items-center gap-3 sm:text-center p-4 min-h-[44px] rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+              <span className="text-2xl sm:block sm:mb-2">{tool.icon}</span>
+              <div>
+                <div className="text-sm font-semibold transition-colors" style={{ color: '#E5E7EB' }}>{tool.name}</div>
+                <div className="text-xs mt-0.5 sm:mt-1" style={{ color: '#6B7280' }}>{tool.desc}</div>
+              </div>
             </Link>
           ))}
         </div>
@@ -231,7 +232,7 @@ export default function HomePage() {
             <select
               value={selectedRole}
               onChange={(e) => handleRoleSelect(e.target.value)}
-              className="w-full sm:w-72 px-3 py-2.5 rounded-lg text-sm focus:outline-none focus:ring-2"
+              className="w-full sm:w-72 px-3 py-2.5 min-h-[44px] rounded-lg text-base sm:text-sm focus:outline-none focus:ring-2"
               style={{ background: '#111113', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
             >
               <option value="">Select a role for suggestions...</option>
@@ -240,11 +241,11 @@ export default function HomePage() {
               ))}
             </select>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
             <button
               onClick={handleExportPdf}
               disabled={isExporting}
-              className="inline-flex items-center gap-2 px-5 py-2.5 font-medium rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[44px] font-medium rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               style={{ background: '#F0B429', color: '#0A0A0B' }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +255,7 @@ export default function HomePage() {
             </button>
             <button
               onClick={handleCheckAts}
-              className="inline-flex items-center gap-2 px-5 py-2.5 font-medium rounded-lg transition text-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[44px] font-medium rounded-lg transition text-sm"
               style={{ background: '#1A1A1D', color: '#F0B429', border: '1px solid #2A2A2D' }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,7 +283,7 @@ export default function HomePage() {
             <div className="mb-4">
               <button
                 onClick={() => setShowTemplateSelector(!showTemplateSelector)}
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition"
+                className="inline-flex items-center gap-2 px-4 py-2 min-h-[44px] text-sm font-medium rounded-lg transition"
                 style={{ background: '#1A1A1D', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

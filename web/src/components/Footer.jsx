@@ -48,38 +48,38 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#E5E7EB' }}>Product</h4>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Resume Builder</Link></li>
-              <li><Link to="/templates" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Templates</Link></li>
-              <li><Link to="/ats-checker" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>ATS Checker</Link></li>
-              <li><Link to="/cover-letter-generator" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Cover Letter</Link></li>
+            <ul className="space-y-0">
+              <li><Link to="/" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Resume Builder</Link></li>
+              <li><Link to="/templates" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Templates</Link></li>
+              <li><Link to="/ats-checker" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>ATS Checker</Link></li>
+              <li><Link to="/cover-letter-generator" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Cover Letter</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#E5E7EB' }}>Guides</h4>
-            <ul className="space-y-2">
-              <li><Link to="/guides/resume-writing" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Resume Writing</Link></li>
-              <li><Link to="/guides/ats-resume" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>ATS Resume</Link></li>
-              <li><Link to="/guides/fresher-resume" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Fresher Resume</Link></li>
-              <li><Link to="/guides/cover-letter" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Cover Letter</Link></li>
+            <ul className="space-y-0">
+              <li><Link to="/guides/resume-writing" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Resume Writing</Link></li>
+              <li><Link to="/guides/ats-resume" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>ATS Resume</Link></li>
+              <li><Link to="/guides/fresher-resume" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Fresher Resume</Link></li>
+              <li><Link to="/guides/cover-letter" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Cover Letter</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#E5E7EB' }}>More from DoAide</h4>
-            <ul className="space-y-2">
-              <li><a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Docs</a></li>
-              <li><a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>GST Bot</a></li>
-              <li><a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>409A Valuations</a></li>
-              <li><a href="https://job.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline" style={{ color: '#6B7280' }}>Jobs</a></li>
+            <ul className="space-y-0">
+              <li><a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Docs</a></li>
+              <li><a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>GST Bot</a></li>
+              <li><a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>409A Valuations</a></li>
+              <li><a href="https://job.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Jobs</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-10 pt-6" style={{ borderTop: '1px solid #2A2A2D' }}>
+        <div className="flex flex-wrap justify-center gap-2 mt-10 pt-6" style={{ borderTop: '1px solid #2A2A2D' }}>
           {DOAIDE_PRODUCTS.map((p) => (
-            <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="text-xs no-underline transition-colors" style={{ color: '#6B7280' }} onMouseEnter={e => e.target.style.color = '#F0B429'} onMouseLeave={e => e.target.style.color = '#6B7280'}>
+            <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="text-xs no-underline transition-colors min-h-[44px] inline-flex items-center px-2" style={{ color: '#6B7280' }} onMouseEnter={e => e.target.style.color = '#F0B429'} onMouseLeave={e => e.target.style.color = '#6B7280'}>
               {p.name}
             </a>
           ))}

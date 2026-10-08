@@ -34,6 +34,21 @@ body {
   color: var(--doaide-text-on-gold);
 }
 
+input,
+select,
+textarea {
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: inherit;
+  }
+}
+
 @media print {
   body * { visibility: hidden; }
   .resume-preview, .resume-preview * { visibility: visible; }

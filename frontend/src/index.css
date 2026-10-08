@@ -25,10 +25,17 @@ input, textarea, select {
   color: white;
   border-radius: 8px;
   padding: 10px 14px;
-  font-size: 14px;
+  min-height: 44px;
+  font-size: 1rem;
   width: 100%;
   outline: none;
   transition: border-color 0.2s;
+}
+
+@media (min-width: 640px) {
+  input, textarea, select {
+    font-size: 14px;
+  }
 }
 
 input:focus, textarea:focus, select:focus {
