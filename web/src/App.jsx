@@ -20,6 +20,8 @@ import BestResumeBuilders from './pages/compare/BestResumeBuilders';
 import InterviewPrepPage from './pages/InterviewPrepPage';
 import BestResumeFormatIndia from './pages/guides/BestResumeFormatIndia';
 import FresherResumeTemplate from './pages/guides/FresherResumeTemplate';
+import BestResumeFormatFreshers2026 from './pages/guides/BestResumeFormatFreshers2026';
+import CoverLetterForITJobs from './pages/guides/CoverLetterForITJobs';
 
 export default function App() {
   return (
@@ -45,6 +47,8 @@ export default function App() {
           <Route path="/interview-preparation" element={<InterviewPrepPage />} />
           <Route path="/guides/best-resume-format-india" element={<BestResumeFormatIndia />} />
           <Route path="/guides/fresher-resume-template" element={<FresherResumeTemplate />} />
+          <Route path="/guides/best-resume-format-freshers-2026" element={<BestResumeFormatFreshers2026 />} />
+          <Route path="/guides/cover-letter-it-jobs" element={<CoverLetterForITJobs />} />
         </Routes>
       </main>
       <Footer />
