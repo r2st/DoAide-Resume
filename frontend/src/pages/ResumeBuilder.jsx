@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { buildResume } from '../api'
+import ShareButtons from '../components/ShareButtons'
 
 const INITIAL = {
   full_name: '',
@@ -103,6 +104,10 @@ export default function ResumeBuilder() {
           >
             Start Over
           </button>
+        </div>
+
+        <div className="mt-6">
+          <ShareButtons text="Build an ATS-optimized resume in minutes — free AI tool on DoAide Resume" url="https://resume.doaide.com/builder" toolName="AI Resume Builder" />
         </div>
       </div>
     )

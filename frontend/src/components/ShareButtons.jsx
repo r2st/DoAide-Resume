@@ -1,8 +1,8 @@
 import { useState, useMemo } from 'react'
 
-export default function ShareButtons({ score, url = 'https://resume.doaide.com', toolName = 'ATS Resume Checker' }) {
+export default function ShareButtons({ score, text: customText, url = 'https://resume.doaide.com', toolName = 'ATS Resume Checker' }) {
   const [copied, setCopied] = useState(false)
-  const text = `I scored ${score}/100 on my ATS resume check! Check yours free:`
+  const text = customText || `I scored ${score}/100 on my ATS resume check! Check yours free:`
 
   const shareLinks = {
     twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
