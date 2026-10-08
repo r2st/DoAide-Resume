@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ToolTracker from './components/ToolTracker';
 import SocialProofBar from './components/SocialProofBar';
+import ReferralBanner from './components/ReferralBanner';
 import HomePage from './pages/HomePage';
 import TemplatesPage from './pages/TemplatesPage';
 import AtsCheckerPage from './pages/AtsCheckerPage';
@@ -47,6 +48,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <ReferralBanner />
     </div>
   );
 }
