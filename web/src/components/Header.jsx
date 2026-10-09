@@ -23,6 +23,7 @@ const NAV_LINKS = [
   { to: '/templates', label: 'Templates' },
   { to: '/ats-checker', label: 'ATS Checker' },
   { to: '/cover-letter-generator', label: 'Cover Letter' },
+  { to: '/tools/interview-prep', label: 'Interview Prep' },
   { to: '/guides/resume-writing', label: 'Guides' },
 ];
 

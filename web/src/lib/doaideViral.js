@@ -41,6 +41,7 @@ export const TOOL_MAP = {
   '/cover-letter-generator': 'Cover Letter',
   '/linkedin-summary-generator': 'LinkedIn Summary',
   '/interview-preparation': 'Interview Prep',
+  '/tools/interview-prep': 'Interview Prep Checklist',
 };
 
 export function trackReferral() {

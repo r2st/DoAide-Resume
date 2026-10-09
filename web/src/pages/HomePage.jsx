@@ -251,13 +251,14 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>More Free Career Tools</h2>
         <p className="text-center text-sm mb-6" style={{ color: '#6B7280' }}>No login required — use any tool instantly</p>
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {[
             { to: '/templates', icon: '🎨', name: 'Templates', desc: '5 professional designs' },
             { to: '/ats-checker', icon: '✅', name: 'ATS Checker', desc: 'Check ATS compatibility' },
             { to: '/cover-letter-generator', icon: '✉️', name: 'Cover Letter', desc: 'Generate cover letters' },
             { to: '/linkedin-summary-generator', icon: '💼', name: 'LinkedIn Summary', desc: 'Optimize your profile' },
             { to: '/interview-preparation', icon: '🎯', name: 'Interview Prep', desc: 'Practice questions' },
+            { to: '/tools/interview-prep', icon: '📋', name: 'Interview Checklist', desc: 'Preparation checklist' },
           ].map((tool) => (
             <Link key={tool.to} to={tool.to} className="group flex sm:block items-center gap-3 sm:text-center p-4 min-h-[44px] rounded-xl transition-all no-underline" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
               <span className="text-2xl sm:block sm:mb-2">{tool.icon}</span>

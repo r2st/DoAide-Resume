@@ -20,6 +20,7 @@ const EXPECTED_ROUTES = [
   '/compare/canva',
   '/compare/best-resume-builders',
   '/compare/zety',
+  '/tools/interview-prep',
 ];
 
 const SITEMAP_PAGES = [
@@ -42,11 +43,12 @@ const SITEMAP_PAGES = [
   '/compare/canva',
   '/compare/best-resume-builders',
   '/compare/zety',
+  '/tools/interview-prep',
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 19 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(19);
+  it('has 20 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(20);
   });
 
   it('every sitemap page has a matching route', () => {
@@ -66,6 +68,7 @@ describe('Route and sitemap coverage', () => {
     expect(EXPECTED_ROUTES).toContain('/guides/best-resume-format-india');
     expect(EXPECTED_ROUTES).toContain('/guides/fresher-resume-template');
     expect(EXPECTED_ROUTES).toContain('/compare/zety');
+    expect(EXPECTED_ROUTES).toContain('/tools/interview-prep');
   });
 
   it('new blog and guide routes are present', () => {
