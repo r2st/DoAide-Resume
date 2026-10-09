@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import health, sitemap, seo, ai_enhance, advisor
+from app.routers import health, sitemap, seo, ai_enhance, advisor, ats_checker, cover_letter
 
 app = FastAPI(title="DoAide Resume API", version="1.0.0")
 
@@ -17,3 +17,5 @@ app.include_router(sitemap.router)
 app.include_router(seo.router, prefix="/api")
 app.include_router(ai_enhance.router, prefix="/api")
 app.include_router(advisor.router, prefix="/api")
+app.include_router(ats_checker.router, prefix="/api")
+app.include_router(cover_letter.router, prefix="/api")

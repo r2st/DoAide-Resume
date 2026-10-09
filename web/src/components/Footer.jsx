@@ -57,12 +57,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#E5E7EB' }}>Guides</h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider mb-3" style={{ color: '#E5E7EB' }}>Guides & Blog</h4>
             <ul className="space-y-0">
               <li><Link to="/guides/resume-writing" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Resume Writing</Link></li>
               <li><Link to="/guides/ats-resume" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>ATS Resume</Link></li>
-              <li><Link to="/guides/fresher-resume" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Fresher Resume</Link></li>
-              <li><Link to="/guides/cover-letter" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Cover Letter</Link></li>
+              <li><Link to="/blog/resume-building-2026" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>Resume Building 2026</Link></li>
+              <li><Link to="/blog/ats-optimization-2026" className="text-sm hover:text-white transition-colors no-underline min-h-[44px] flex items-center" style={{ color: '#6B7280' }}>ATS Optimization 2026</Link></li>
             </ul>
           </div>
 

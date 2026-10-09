@@ -6,3 +6,5 @@ export { default as AtsTemplate } from './AtsTemplate';
 export { default as FresherTemplate } from './FresherTemplate';
 export { default as TechnicalTemplate } from './TechnicalTemplate';
 export { default as DesignTemplate } from './DesignTemplate';
+export { default as ExecutiveTemplate } from './ExecutiveTemplate';
+export { default as TwoColumnTemplate } from './TwoColumnTemplate';

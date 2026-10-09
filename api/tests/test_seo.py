@@ -3,7 +3,7 @@ def test_pages_endpoint(client):
     assert r.status_code == 200
     data = r.json()
     pages = data["pages"]
-    assert len(pages) == 11
+    assert len(pages) == 14
 
 
 def test_pages_have_required_fields(client):

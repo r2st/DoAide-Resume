@@ -74,6 +74,20 @@ function parseResumeText(text) {
   };
 }
 
+async function fetchAiAnalysis(resumeText, jobDescription) {
+  try {
+    const res = await fetch('/api/ats/check', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ resume_text: resumeText, job_description: jobDescription }),
+    });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 const atsTips = [
   {
     title: 'Use Standard Section Headings',
@@ -113,37 +127,40 @@ export default function AtsCheckerPage() {
   const [resumeText, setResumeText] = useState('');
   const [jobDescription, setJobDescription] = useState('');
   const [atsScore, setAtsScore] = useState(null);
+  const [aiAnalysis, setAiAnalysis] = useState(null);
   const [isChecking, setIsChecking] = useState(false);
 
-  const handleCheck = () => {
+  const handleCheck = async () => {
     if (!resumeText.trim()) {
       alert('Please paste your resume text first.');
       return;
     }
 
     setIsChecking(true);
+    setAiAnalysis(null);
 
-    setTimeout(() => {
-      const parsedData = parseResumeText(resumeText);
-      const result = checkAtsScore(parsedData, jobDescription);
-      setAtsScore({
-        overall: result.score,
-        breakdown: result.breakdown.map((item) => ({
-          category: item.category,
-          score: item.maxScore > 0 ? Math.round((item.score / item.maxScore) * 100) : 0,
-          rawScore: item.score,
-          maxScore: item.maxScore,
-          tips: item.tips || [],
-        })),
-        keywordsFound: result.keywords.found || [],
-        keywordsMissing: result.keywords.missing || [],
-        tips: [
-          ...result.overallTips,
-          ...result.breakdown.flatMap((item) => item.tips || []),
-        ],
-      });
-      setIsChecking(false);
-    }, 500);
+    const parsedData = parseResumeText(resumeText);
+    const result = checkAtsScore(parsedData, jobDescription);
+    setAtsScore({
+      overall: result.score,
+      breakdown: result.breakdown.map((item) => ({
+        category: item.category,
+        score: item.maxScore > 0 ? Math.round((item.score / item.maxScore) * 100) : 0,
+        rawScore: item.score,
+        maxScore: item.maxScore,
+        tips: item.tips || [],
+      })),
+      keywordsFound: result.keywords.found || [],
+      keywordsMissing: result.keywords.missing || [],
+      tips: [
+        ...result.overallTips,
+        ...result.breakdown.flatMap((item) => item.tips || []),
+      ],
+    });
+
+    const ai = await fetchAiAnalysis(resumeText, jobDescription);
+    if (ai) setAiAnalysis(ai);
+    setIsChecking(false);
   };
 
   return (
@@ -253,6 +270,91 @@ export default function AtsCheckerPage() {
       {/* ATS Score Modal */}
       {atsScore && (
         <AtsScoreCard score={atsScore} onClose={() => setAtsScore(null)} />
+      )}
+
+      {/* AI-Powered Analysis */}
+      {aiAnalysis && (
+        <section className="max-w-5xl mx-auto px-4 py-8">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-4">
+              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h2 className="text-xl font-bold text-gray-800">AI-Powered Analysis</h2>
+              <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full font-medium">Gemini AI</span>
+            </div>
+
+            {/* AI Score */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="flex items-center gap-3">
+                <div className={`text-4xl font-extrabold ${aiAnalysis.score >= 70 ? 'text-green-600' : aiAnalysis.score >= 50 ? 'text-amber-600' : 'text-red-600'}`}>
+                  {aiAnalysis.score}
+                </div>
+                <div className="text-sm text-gray-500">/ 100</div>
+              </div>
+              <p className="text-sm text-gray-700 leading-relaxed">{aiAnalysis.summary}</p>
+            </div>
+
+            {/* Section Scores */}
+            {aiAnalysis.section_scores && Object.keys(aiAnalysis.section_scores).length > 0 && (
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">Section Breakdown</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {Object.entries(aiAnalysis.section_scores).map(([key, val]) => (
+                    <div key={key} className="bg-white rounded-lg border border-gray-100 p-3">
+                      <div className="text-xs text-gray-500 capitalize mb-1">{key}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="flex-1 bg-gray-100 rounded-full h-2">
+                          <div className={`h-2 rounded-full ${val >= 70 ? 'bg-green-500' : val >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${val}%` }} />
+                        </div>
+                        <span className="text-sm font-semibold text-gray-700">{val}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Keywords */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              {aiAnalysis.keyword_matches.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-green-700 mb-2">Keywords Found ({aiAnalysis.keyword_matches.length})</h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {aiAnalysis.keyword_matches.map((kw, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-green-100 text-green-800 text-xs rounded-full">{kw}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {aiAnalysis.missing_keywords.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-red-700 mb-2">Missing Keywords ({aiAnalysis.missing_keywords.length})</h3>
+                  <div className="flex flex-wrap gap-1.5">
+                    {aiAnalysis.missing_keywords.map((kw, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-red-100 text-red-800 text-xs rounded-full">{kw}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Suggestions */}
+            {aiAnalysis.suggestions.length > 0 && (
+              <div>
+                <h3 className="text-sm font-semibold text-gray-700 mb-2">Improvement Suggestions</h3>
+                <ul className="space-y-2">
+                  {aiAnalysis.suggestions.map((s, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="flex-shrink-0 w-5 h-5 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">{i + 1}</span>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
       )}
 
       <div className="max-w-4xl mx-auto px-4 py-6">

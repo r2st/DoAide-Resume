@@ -25,6 +25,8 @@ import CoverLetterForITJobs from './pages/guides/CoverLetterForITJobs';
 import VsZety from './pages/compare/VsZety';
 import InterviewPrepChecklist from './pages/tools/InterviewPrepChecklist';
 import AdvisorPage from './pages/AdvisorPage';
+import ResumeBuilding2026 from './pages/blog/ResumeBuilding2026';
+import AtsOptimization2026 from './pages/blog/AtsOptimization2026';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
 import FeedbackWidget from './components/FeedbackWidget';
 
@@ -57,6 +59,8 @@ export default function App() {
           <Route path="/compare/zety" element={<VsZety />} />
           <Route path="/tools/interview-prep" element={<InterviewPrepChecklist />} />
           <Route path="/advisor" element={<AdvisorPage />} />
+          <Route path="/blog/resume-building-2026" element={<ResumeBuilding2026 />} />
+          <Route path="/blog/ats-optimization-2026" element={<AtsOptimization2026 />} />
         </Routes>
       </main>
       <Footer />

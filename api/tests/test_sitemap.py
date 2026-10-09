@@ -12,7 +12,7 @@ def test_sitemap_valid_xml(client):
     root = ET.fromstring(r.text)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = root.findall("s:url", ns)
-    assert len(urls) == 11
+    assert len(urls) == 23
 
 
 def test_sitemap_contains_homepage(client):
@@ -33,12 +33,20 @@ def test_sitemap_contains_all_pages(client):
         "/ats-checker",
         "/cover-letter-generator",
         "/linkedin-summary-generator",
+        "/interview-preparation",
+        "/advisor",
+        "/tools/interview-prep",
         "/guides/resume-writing",
         "/guides/ats-resume",
         "/guides/fresher-resume",
         "/guides/cover-letter",
+        "/guides/best-resume-format-india",
         "/compare/novoresume",
+        "/compare/canva",
+        "/compare/zety",
         "/best-free-resume-builder",
+        "/blog/resume-building-2026",
+        "/blog/ats-optimization-2026",
     ]:
         assert f"https://resume.doaide.com{path}" in r.text
 

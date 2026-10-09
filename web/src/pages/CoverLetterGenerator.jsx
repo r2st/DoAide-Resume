@@ -106,16 +106,49 @@ export default function CoverLetterGenerator() {
   const [tone, setTone] = useState('professional');
   const [generated, setGenerated] = useState('');
   const [copied, setCopied] = useState(false);
+  const [isAiGenerating, setIsAiGenerating] = useState(false);
+  const [useAi, setUseAi] = useState(false);
 
   useEffect(() => {
     document.title = 'Free Cover Letter Generator India | DoAide Resume';
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.content = 'Generate professional cover letters for free. Templates for freshers, experienced professionals, and career changers. No login required.';
+    if (meta) meta.content = 'Generate professional cover letters for free. AI-powered or template-based. Templates for freshers, experienced professionals, and career changers. No login required.';
   }, []);
 
   const handleChange = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
+    if (useAi && form.jobTitle && form.company) {
+      setIsAiGenerating(true);
+      try {
+        const res = await fetch('/api/cover-letter/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            job_title: form.jobTitle,
+            company: form.company,
+            qualifications: [form.skills, form.achievement1, form.achievement2].filter(Boolean).join('. '),
+            experience_years: form.yearsExp,
+            tone,
+          }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setGenerated(data.cover_letter);
+        } else {
+          handleTemplateFallback();
+        }
+      } catch {
+        handleTemplateFallback();
+      } finally {
+        setIsAiGenerating(false);
+      }
+      return;
+    }
+    handleTemplateFallback();
+  };
+
+  const handleTemplateFallback = () => {
     const tmpl = TEMPLATES[template];
     let text = tmpl.generate(form);
     if (tone === 'confident') {
@@ -207,6 +240,27 @@ export default function CoverLetterGenerator() {
               </div>
             </div>
 
+            {/* AI Toggle */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-lg font-semibold text-gray-800">AI-Powered Generation</h2>
+                  <p className="text-sm text-gray-500">Use Gemini AI to write a tailored cover letter</p>
+                </div>
+                <button
+                  onClick={() => setUseAi(!useAi)}
+                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${useAi ? 'bg-emerald-600' : 'bg-gray-300'}`}
+                >
+                  <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${useAi ? 'translate-x-6' : 'translate-x-1'}`} />
+                </button>
+              </div>
+              {useAi && (
+                <p className="mt-2 text-xs text-emerald-600 bg-emerald-50 rounded-lg p-2">
+                  AI mode uses your job title, company, qualifications, and tone to generate a unique cover letter. Template selection is ignored in AI mode.
+                </p>
+              )}
+            </div>
+
             {/* Personal Details */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
               <h2 className="text-lg font-semibold text-gray-800 mb-3">Your Details</h2>
@@ -268,9 +322,10 @@ export default function CoverLetterGenerator() {
 
             <button
               onClick={handleGenerate}
-              className="w-full py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition text-lg"
+              disabled={isAiGenerating}
+              className="w-full py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition text-lg disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Generate Cover Letter
+              {isAiGenerating ? 'AI is writing...' : useAi ? 'Generate with AI' : 'Generate Cover Letter'}
             </button>
           </div>
 

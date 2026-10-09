@@ -47,6 +47,18 @@ const templateOptions = [
     description: 'Bold creative with hero header',
     preview: 'design',
   },
+  {
+    id: 'executive',
+    name: 'Executive',
+    description: 'Elegant serif layout for senior roles',
+    preview: 'executive',
+  },
+  {
+    id: 'twocolumn',
+    name: 'Two Column',
+    description: 'Dark sidebar with skills & contact',
+    preview: 'twocolumn',
+  },
 ];
 
 const presetColors = [
@@ -151,6 +163,45 @@ function MiniPreview({ type, color }) {
             <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.15 }} />
             <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.15 }} />
           </div>
+        </div>
+      </div>
+    );
+  }
+  if (type === 'executive') {
+    return (
+      <div className="w-full h-24 bg-white rounded overflow-hidden border border-gray-200" style={{ borderTop: `3px solid ${color}` }}>
+        <div className="p-2 space-y-1">
+          <div className="h-2 w-2/5 mx-auto bg-gray-700 rounded" />
+          <div className="h-1 w-1/2 mx-auto bg-gray-300 rounded" />
+          <div className="flex gap-1.5 mt-1">
+            <div className="w-3/5 space-y-1">
+              <div className="h-1.5 w-full bg-gray-200 rounded" />
+              <div className="h-1.5 w-full bg-gray-200 rounded" />
+              <div className="h-1.5 w-3/4 bg-gray-200 rounded" />
+            </div>
+            <div className="w-2/5 space-y-1">
+              <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.2 }} />
+              <div className="h-1.5 w-full rounded" style={{ backgroundColor: color, opacity: 0.2 }} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (type === 'twocolumn') {
+    return (
+      <div className="w-full h-24 flex rounded overflow-hidden border border-gray-200">
+        <div className="w-1/3 h-full p-1.5 space-y-1.5" style={{ background: `rgb(30,30,60)` }}>
+          <div className="w-6 h-6 rounded-full mx-auto" style={{ backgroundColor: color }} />
+          <div className="h-1 w-3/4 mx-auto rounded" style={{ backgroundColor: color, opacity: 0.5 }} />
+          <div className="h-1 w-full bg-gray-600 rounded" />
+          <div className="h-1 w-3/4 bg-gray-600 rounded" />
+        </div>
+        <div className="w-2/3 h-full bg-white p-2 space-y-1">
+          <div className="h-2 w-3/4 rounded" style={{ backgroundColor: color }} />
+          <div className="h-1.5 w-full bg-gray-200 rounded" />
+          <div className="h-1.5 w-full bg-gray-200 rounded" />
+          <div className="h-1.5 w-5/6 bg-gray-200 rounded" />
         </div>
       </div>
     );

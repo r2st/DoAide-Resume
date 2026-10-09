@@ -75,10 +75,31 @@ PAGE_METADATA = [
     },
     {
         "path": "/best-free-resume-builder",
-        "title": "Best Free Resume Builder 2025 - No Hidden Costs | DoAide Resume",
+        "title": "Best Free Resume Builder 2026 - No Hidden Costs | DoAide Resume",
         "description": "Looking for the best free resume builder? DoAide Resume offers AI-powered writing, ATS optimization, and PDF export with zero cost.",
-        "keywords": ["best free resume builder", "free resume builder no cost", "resume builder 2025", "truly free resume maker"],
+        "keywords": ["best free resume builder", "free resume builder no cost", "resume builder 2026", "truly free resume maker"],
         "og_image": "https://resume.doaide.com/og-best-free.png",
+    },
+    {
+        "path": "/blog/resume-building-2026",
+        "title": "How to Build a Resume That Gets Interviews in 2026 | DoAide Resume",
+        "description": "Complete guide to building a resume that gets interviews in 2026. ATS optimization, formatting tips, action verbs, and AI tools for Indian job seekers.",
+        "keywords": ["resume building guide 2026", "how to build a resume", "resume tips India", "ATS resume guide"],
+        "og_image": "https://resume.doaide.com/og-blog-resume.png",
+    },
+    {
+        "path": "/blog/ats-optimization-2026",
+        "title": "ATS Optimization: Beat Applicant Tracking Systems in 2026 | DoAide Resume",
+        "description": "Learn how to beat ATS in 2026. Keyword strategy, formatting rules, section optimization, and common myths debunked for Indian job seekers.",
+        "keywords": ["ATS optimization", "beat ATS", "applicant tracking system tips", "ATS resume India 2026"],
+        "og_image": "https://resume.doaide.com/og-blog-ats.png",
+    },
+    {
+        "path": "/advisor",
+        "title": "Free Career AI Advisor | DoAide Resume",
+        "description": "Get personalized career advice from our AI advisor. Resume tips, interview preparation, salary negotiation, and career planning for Indian professionals.",
+        "keywords": ["career advisor AI", "career guidance India", "resume advice", "interview tips AI"],
+        "og_image": "https://resume.doaide.com/og-advisor.png",
     },
 ]
 
