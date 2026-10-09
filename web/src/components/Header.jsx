@@ -24,6 +24,7 @@ const NAV_LINKS = [
   { to: '/ats-checker', label: 'ATS Checker' },
   { to: '/cover-letter-generator', label: 'Cover Letter' },
   { to: '/tools/interview-prep', label: 'Interview Prep' },
+  { to: '/advisor', label: 'Career Advisor' },
   { to: '/guides/resume-writing', label: 'Guides' },
 ];
 

@@ -21,6 +21,7 @@ const EXPECTED_ROUTES = [
   '/compare/best-resume-builders',
   '/compare/zety',
   '/tools/interview-prep',
+  '/advisor',
 ];
 
 const SITEMAP_PAGES = [
@@ -44,11 +45,12 @@ const SITEMAP_PAGES = [
   '/compare/best-resume-builders',
   '/compare/zety',
   '/tools/interview-prep',
+  '/advisor',
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 20 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(20);
+  it('has 21 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(21);
   });
 
   it('every sitemap page has a matching route', () => {

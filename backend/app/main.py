@@ -15,6 +15,7 @@ from app.models import (
 )
 from app.scorer import score_resume, match_job, get_resume_tips
 from app.ai_builder import generate_resume_sections
+from app.routers.advisor import router as advisor_router
 
 FEEDBACK_FILE = Path(__file__).resolve().parent.parent / "feedback.json"
 
@@ -43,6 +44,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+app.include_router(advisor_router, prefix="/api")
 
 
 @app.get("/health")

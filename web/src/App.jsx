@@ -24,6 +24,7 @@ import BestResumeFormatFreshers2026 from './pages/guides/BestResumeFormatFresher
 import CoverLetterForITJobs from './pages/guides/CoverLetterForITJobs';
 import VsZety from './pages/compare/VsZety';
 import InterviewPrepChecklist from './pages/tools/InterviewPrepChecklist';
+import AdvisorPage from './pages/AdvisorPage';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
 import FeedbackWidget from './components/FeedbackWidget';
 
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="/guides/cover-letter-it-jobs" element={<CoverLetterForITJobs />} />
           <Route path="/compare/zety" element={<VsZety />} />
           <Route path="/tools/interview-prep" element={<InterviewPrepChecklist />} />
+          <Route path="/advisor" element={<AdvisorPage />} />
         </Routes>
       </main>
       <Footer />
