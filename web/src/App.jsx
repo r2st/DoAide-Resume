@@ -25,6 +25,7 @@ import CoverLetterForITJobs from './pages/guides/CoverLetterForITJobs';
 import VsZety from './pages/compare/VsZety';
 import InterviewPrepChecklist from './pages/tools/InterviewPrepChecklist';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
+import FeedbackWidget from './components/FeedbackWidget';
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export default function App() {
       <Footer />
       <ReferralBanner />
       <AtsFloatingWidget />
+      <FeedbackWidget />
     </div>
   );
 }

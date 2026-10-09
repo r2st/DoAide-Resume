@@ -1,9 +1,12 @@
 import hashlib
 import json
+from datetime import datetime, timezone
+from pathlib import Path
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
 
 from app.database import init_db, get_db
 from app.models import (
@@ -12,6 +15,12 @@ from app.models import (
 )
 from app.scorer import score_resume, match_job, get_resume_tips
 from app.ai_builder import generate_resume_sections
+
+FEEDBACK_FILE = Path(__file__).resolve().parent.parent / "feedback.json"
+
+
+class FeedbackInput(BaseModel):
+    message: str = Field(..., min_length=1, max_length=2000)
 
 
 @asynccontextmanager
@@ -129,3 +138,20 @@ async def get_history(limit: int = 20):
         )
         rows = await cursor.fetchall()
         return [{"id": r[0], "type": r[1], "score": r[2], "created_at": r[3]} for r in rows]
+
+
+@app.post("/api/feedback")
+async def submit_feedback(input_data: FeedbackInput):
+    entry = {
+        "message": input_data.message,
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+    }
+    data = []
+    if FEEDBACK_FILE.exists():
+        try:
+            data = json.loads(FEEDBACK_FILE.read_text())
+        except (json.JSONDecodeError, OSError):
+            data = []
+    data.append(entry)
+    FEEDBACK_FILE.write_text(json.dumps(data, indent=2))
+    return {"status": "ok"}
