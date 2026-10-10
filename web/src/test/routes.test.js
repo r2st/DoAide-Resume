@@ -24,6 +24,9 @@ const EXPECTED_ROUTES = [
   '/advisor',
   '/blog/resume-building-2026',
   '/blog/ats-optimization-2026',
+  '/blog/resume-format-freshers-2026',
+  '/blog/ats-friendly-resume',
+  '/blog/resume-mistakes',
 ];
 
 const SITEMAP_PAGES = [
@@ -50,11 +53,14 @@ const SITEMAP_PAGES = [
   '/advisor',
   '/blog/resume-building-2026',
   '/blog/ats-optimization-2026',
+  '/blog/resume-format-freshers-2026',
+  '/blog/ats-friendly-resume',
+  '/blog/resume-mistakes',
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 23 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(23);
+  it('has 26 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(26);
   });
 
   it('every sitemap page has a matching route', () => {
@@ -82,5 +88,8 @@ describe('Route and sitemap coverage', () => {
     expect(EXPECTED_ROUTES).toContain('/guides/cover-letter-it-jobs');
     expect(EXPECTED_ROUTES).toContain('/blog/resume-building-2026');
     expect(EXPECTED_ROUTES).toContain('/blog/ats-optimization-2026');
+    expect(EXPECTED_ROUTES).toContain('/blog/resume-format-freshers-2026');
+    expect(EXPECTED_ROUTES).toContain('/blog/ats-friendly-resume');
+    expect(EXPECTED_ROUTES).toContain('/blog/resume-mistakes');
   });
 });

@@ -12,7 +12,7 @@ def test_sitemap_valid_xml(client):
     root = ET.fromstring(r.text)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = root.findall("s:url", ns)
-    assert len(urls) == 23
+    assert len(urls) == 26
 
 
 def test_sitemap_contains_homepage(client):

@@ -30,6 +30,9 @@ PAGES = [
     {"loc": "/best-free-resume-builder", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/resume-building-2026", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/ats-optimization-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/resume-format-freshers-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/ats-friendly-resume", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/resume-mistakes", "priority": "0.8", "changefreq": "monthly"},
 ]
 
 

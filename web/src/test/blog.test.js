@@ -12,4 +12,22 @@ describe('Blog posts exist', () => {
     expect(mod.default).toBeDefined();
     expect(typeof mod.default).toBe('function');
   });
+
+  it('ResumeFormatFreshers2026 module exports a default component', async () => {
+    const mod = await import('../pages/blog/ResumeFormatFreshers2026');
+    expect(mod.default).toBeDefined();
+    expect(typeof mod.default).toBe('function');
+  });
+
+  it('AtsFriendlyResume module exports a default component', async () => {
+    const mod = await import('../pages/blog/AtsFriendlyResume');
+    expect(mod.default).toBeDefined();
+    expect(typeof mod.default).toBe('function');
+  });
+
+  it('ResumeMistakes module exports a default component', async () => {
+    const mod = await import('../pages/blog/ResumeMistakes');
+    expect(mod.default).toBeDefined();
+    expect(typeof mod.default).toBe('function');
+  });
 });

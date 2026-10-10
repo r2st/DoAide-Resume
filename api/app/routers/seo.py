@@ -101,6 +101,27 @@ PAGE_METADATA = [
         "keywords": ["career advisor AI", "career guidance India", "resume advice", "interview tips AI"],
         "og_image": "https://resume.doaide.com/og-advisor.png",
     },
+    {
+        "path": "/blog/resume-format-freshers-2026",
+        "title": "Resume Format for Freshers 2026: Complete Guide with Examples | DoAide Resume",
+        "description": "Best resume format for freshers in 2026. Step-by-step guide with examples, templates, and ATS tips for Indian graduates entering the job market.",
+        "keywords": ["resume format freshers", "fresher resume 2026", "resume template freshers India", "first resume guide"],
+        "og_image": "https://resume.doaide.com/og-blog-freshers.png",
+    },
+    {
+        "path": "/blog/ats-friendly-resume",
+        "title": "ATS-Friendly Resume: How to Beat Applicant Tracking Systems | DoAide Resume",
+        "description": "Complete guide to creating an ATS-friendly resume. Formatting rules, keyword optimization, and section-by-section strategies for Indian job seekers.",
+        "keywords": ["ATS-friendly resume", "beat ATS", "ATS resume format", "applicant tracking system tips"],
+        "og_image": "https://resume.doaide.com/og-blog-ats-friendly.png",
+    },
+    {
+        "path": "/blog/resume-mistakes",
+        "title": "Top 10 Resume Mistakes That Cost You Interviews | DoAide Resume",
+        "description": "Avoid these 10 common resume mistakes that get your application rejected. With examples, fixes, and free tools for Indian job seekers.",
+        "keywords": ["resume mistakes", "common resume errors", "resume tips India", "resume dos and donts"],
+        "og_image": "https://resume.doaide.com/og-blog-mistakes.png",
+    },
 ]
 
 

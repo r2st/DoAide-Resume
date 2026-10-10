@@ -27,6 +27,9 @@ import InterviewPrepChecklist from './pages/tools/InterviewPrepChecklist';
 import AdvisorPage from './pages/AdvisorPage';
 import ResumeBuilding2026 from './pages/blog/ResumeBuilding2026';
 import AtsOptimization2026 from './pages/blog/AtsOptimization2026';
+import ResumeFormatFreshers2026 from './pages/blog/ResumeFormatFreshers2026';
+import AtsFriendlyResume from './pages/blog/AtsFriendlyResume';
+import ResumeMistakes from './pages/blog/ResumeMistakes';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
 import FeedbackWidget from './components/FeedbackWidget';
 
@@ -61,6 +64,9 @@ export default function App() {
           <Route path="/advisor" element={<AdvisorPage />} />
           <Route path="/blog/resume-building-2026" element={<ResumeBuilding2026 />} />
           <Route path="/blog/ats-optimization-2026" element={<AtsOptimization2026 />} />
+          <Route path="/blog/resume-format-freshers-2026" element={<ResumeFormatFreshers2026 />} />
+          <Route path="/blog/ats-friendly-resume" element={<AtsFriendlyResume />} />
+          <Route path="/blog/resume-mistakes" element={<ResumeMistakes />} />
         </Routes>
       </main>
       <Footer />
