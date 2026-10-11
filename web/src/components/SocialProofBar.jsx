@@ -23,7 +23,7 @@ export default function SocialProofBar() {
   return (
     <div className="flex items-center justify-center gap-4 flex-wrap py-2 text-xs text-gray-400">
       <span>{data.count.toLocaleString()} people used this today</span>
-      <span className="text-amber-500">{starStr} {data.rating}/5 from {data.ratingCount.toLocaleString()} users</span>
+      <span className="text-teal-500">{starStr} {data.rating}/5 from {data.ratingCount.toLocaleString()} users</span>
     </div>
   );
 }

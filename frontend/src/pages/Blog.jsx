@@ -29,7 +29,7 @@ export default function Blog() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          Resume <span className="text-brand-gold">Blog</span>
+          Resume <span className="text-brand-primary">Blog</span>
         </h1>
         <p className="text-brand-muted">Expert tips and guides to help you create the perfect ATS-optimized resume</p>
       </div>
@@ -39,14 +39,14 @@ export default function Blog() {
           <Link
             key={post.slug}
             to={`/blog/${post.slug}`}
-            className="block border border-brand-border rounded-xl p-6 bg-brand-card hover:border-brand-gold/50 transition-colors group"
+            className="block border border-brand-border rounded-xl p-6 bg-brand-card hover:border-brand-primary/50 transition-colors group"
           >
             <div className="flex items-center gap-3 text-brand-muted text-sm mb-3">
               <span>{post.date}</span>
               <span>·</span>
               <span>{post.readTime}</span>
             </div>
-            <h2 className="text-xl font-bold mb-2 group-hover:text-brand-gold transition-colors">
+            <h2 className="text-xl font-bold mb-2 group-hover:text-brand-primary transition-colors">
               {post.title}
             </h2>
             <p className="text-brand-muted">{post.excerpt}</p>

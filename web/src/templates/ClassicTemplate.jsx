@@ -171,7 +171,7 @@ const ClassicTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
                     {edu.degree}{edu.field && ` in ${edu.field}`}
                   </span>
                   {edu.institution && (
-                    <span style={{ fontSize: '10pt', fontStyle: 'italic', color: '#444' }}>
+                    <span style={{ fontSize: '10pt', color: '#444' }}>
                       , {edu.institution}
                     </span>
                   )}
@@ -221,7 +221,7 @@ const ClassicTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
                 <div style={{ fontSize: '9.5pt', color: '#444', marginTop: '1mm' }}>{proj.description}</div>
               )}
               {proj.technologies && (
-                <div style={{ fontSize: '9pt', color: '#666', fontStyle: 'italic' }}>
+                <div style={{ fontSize: '9pt', color: '#666' }}>
                   Technologies: {proj.technologies}
                 </div>
               )}

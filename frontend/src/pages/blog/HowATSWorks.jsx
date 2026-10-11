@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function HowATSWorks() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <Link to="/blog" className="text-brand-gold text-sm mb-6 inline-block hover:underline">← Back to Blog</Link>
+      <Link to="/blog" className="text-brand-primary text-sm mb-6 inline-block hover:underline">← Back to Blog</Link>
 
       <article>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">How ATS Systems Work: The Complete Guide for Job Seekers</h1>
@@ -60,10 +60,10 @@ export default function HowATSWorks() {
           <h2 className="text-xl font-bold text-white mt-8 mb-3">The Human Factor</h2>
           <p>Remember: passing the ATS is just the first step. Your resume also needs to impress the recruiter who reviews it. The best resumes are optimized for both machines and humans — clear formatting, relevant keywords, and compelling achievements.</p>
 
-          <div className="mt-12 p-6 border border-brand-gold/30 rounded-xl bg-brand-gold/5">
-            <h3 className="text-lg font-bold text-brand-gold mb-2">Test Your Resume Against ATS</h3>
+          <div className="mt-12 p-6 border border-brand-primary/30 rounded-xl bg-brand-primary/5">
+            <h3 className="text-lg font-bold text-brand-primary mb-2">Test Your Resume Against ATS</h3>
             <p className="mb-4">See how your resume performs with our free ATS Score Checker — instant results, no signup required.</p>
-            <Link to="/ats-checker" className="inline-block px-6 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors">
+            <Link to="/ats-checker" className="inline-block px-6 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors">
               Check My ATS Score →
             </Link>
           </div>

@@ -246,7 +246,7 @@ const FresherTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
                   </span>
                 )}
               </div>
-              <div style={{ fontSize: '10pt', color: '#444', fontStyle: 'italic' }}>
+              <div style={{ fontSize: '10pt', color: '#444' }}>
                 {job.company || job.organization}
               </div>
               {(job.bullets || job.responsibilities || job.description) && (

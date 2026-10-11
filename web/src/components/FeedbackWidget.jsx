@@ -76,7 +76,7 @@ export default function FeedbackWidget() {
                 type="submit"
                 disabled={status === 'sending' || status === 'sent' || !text.trim()}
                 className="text-sm font-semibold px-4 py-1.5 rounded-lg transition-colors disabled:opacity-50"
-                style={{ background: '#F0B429', color: '#0A0A0B' }}
+                style={{ background: '#0D9488', color: '#FFFFFF' }}
               >
                 {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent!' : status === 'error' ? 'Retry' : 'Submit'}
               </button>

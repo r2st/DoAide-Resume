@@ -256,9 +256,9 @@ function CountdownTimer() {
   const secs = timeLeft !== null ? timeLeft % 60 : duration % 60;
 
   return (
-    <div className="p-6 rounded-2xl" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-      <h3 className="text-lg font-bold mb-4" style={{ color: '#E5E7EB' }}>Mock Answer Timer</h3>
-      <p className="text-sm mb-4" style={{ color: '#6B7280' }}>Practice keeping your answers concise. Select a time limit and start speaking when you press Start.</p>
+    <div className="p-6 rounded-2xl" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+      <h3 className="text-lg font-bold mb-4" style={{ color: 'var(--da-text, #1E293B)' }}>Mock Answer Timer</h3>
+      <p className="text-sm mb-4" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Practice keeping your answers concise. Select a time limit and start speaking when you press Start.</p>
 
       <div className="flex gap-2 mb-6">
         {[30, 60, 90].map(d => (
@@ -267,9 +267,9 @@ function CountdownTimer() {
             onClick={() => { setDuration(d); if (!isRunning) setTimeLeft(null); }}
             className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
             style={{
-              background: duration === d ? '#D4AF37' : '#222225',
-              color: duration === d ? '#0A0A0B' : '#9CA3AF',
-              border: `1px solid ${duration === d ? '#D4AF37' : '#2A2A2D'}`,
+              background: duration === d ? '#0D9488' : '#222225',
+              color: duration === d ? '#0A0A0B' : 'var(--da-text-secondary, #64748B)',
+              border: `1px solid ${duration === d ? '#0D9488' : 'var(--da-border, #E2E8F0)'}`,
             }}
           >
             {d}s
@@ -283,7 +283,7 @@ function CountdownTimer() {
             <circle cx="50" cy="50" r="45" fill="none" stroke="#2A2A2D" strokeWidth="6" />
             <circle
               cx="50" cy="50" r="45" fill="none"
-              stroke={timeLeft === 0 ? '#ef4444' : '#D4AF37'}
+              stroke={timeLeft === 0 ? '#ef4444' : '#0D9488'}
               strokeWidth="6" strokeLinecap="round"
               strokeDasharray={`${2 * Math.PI * 45}`}
               strokeDashoffset={`${2 * Math.PI * 45 * (1 - pct / 100)}`}
@@ -303,7 +303,7 @@ function CountdownTimer() {
 
         <div className="flex gap-3">
           {!isRunning ? (
-            <button onClick={start} className="px-6 py-2.5 rounded-lg text-sm font-bold transition-colors" style={{ background: '#D4AF37', color: '#0A0A0B' }}>
+            <button onClick={start} className="px-6 py-2.5 rounded-lg text-sm font-bold transition-colors" style={{ background: '#0D9488', color: '#FFFFFF' }}>
               {timeLeft === 0 ? 'Restart' : 'Start'}
             </button>
           ) : (
@@ -317,21 +317,21 @@ function CountdownTimer() {
   );
 }
 
-function ChecklistSection({ title, items, color = '#D4AF37' }) {
+function ChecklistSection({ title, items, color = '#0D9488' }) {
   const [checked, setChecked] = useState(() => new Array(items.length).fill(false));
 
   const toggle = (idx) => setChecked(prev => { const next = [...prev]; next[idx] = !next[idx]; return next; });
   const done = checked.filter(Boolean).length;
 
   return (
-    <div className="p-6 rounded-2xl mb-6" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+    <div className="p-6 rounded-2xl mb-6" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-bold" style={{ color: '#E5E7EB' }}>{title}</h3>
+        <h3 className="text-lg font-bold" style={{ color: 'var(--da-text, #1E293B)' }}>{title}</h3>
         <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ background: `${color}22`, color }}>
           {done}/{items.length} done
         </span>
       </div>
-      <div className="w-full h-1.5 rounded-full mb-4" style={{ background: '#2A2A2D' }}>
+      <div className="w-full h-1.5 rounded-full mb-4" style={{ background: 'var(--da-border, #E2E8F0)' }}>
         <div className="h-full rounded-full transition-all duration-300" style={{ width: `${(done / items.length) * 100}%`, background: color }} />
       </div>
       <ul className="space-y-2">
@@ -389,27 +389,27 @@ export default function InterviewPrepChecklist() {
   };
 
   return (
-    <div style={{ background: '#0A0A0B' }}>
+    <div style={{ background: 'var(--da-bg, #FFFFFF)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <section style={{ background: 'linear-gradient(135deg, #1A1A1D 0%, #2A2A2D 100%)' }}>
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: '#E5E7EB' }}>
-            Interview Preparation <span style={{ color: '#D4AF37' }}>Checklist</span>
+          <h1 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: 'var(--da-text, #1E293B)' }}>
+            Interview Preparation <span style={{ color: '#0D9488' }}>Checklist</span>
           </h1>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9CA3AF' }}>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--da-text-secondary, #64748B)' }}>
             Get a personalised interview checklist based on your role and experience level.
             Technical topics, behavioral questions, company research items, and logistics — all in one place.
           </p>
-          <p className="text-sm mt-4" style={{ color: '#6B7280' }}>Free forever &bull; No login required &bull; Made for Indian job seekers</p>
+          <p className="text-sm mt-4" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Free forever &bull; No login required &bull; Made for Indian job seekers</p>
         </div>
       </section>
 
       {/* Input Section */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <div className="p-6 sm:p-8 rounded-2xl" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-          <h2 className="text-xl font-bold mb-6" style={{ color: '#E5E7EB' }}>Generate Your Checklist</h2>
+        <div className="p-6 sm:p-8 rounded-2xl" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+          <h2 className="text-xl font-bold mb-6" style={{ color: 'var(--da-text, #1E293B)' }}>Generate Your Checklist</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
@@ -420,7 +420,7 @@ export default function InterviewPrepChecklist() {
                 onChange={e => setRole(e.target.value)}
                 placeholder="e.g. Frontend Developer, Product Manager..."
                 className="w-full px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2"
-                style={{ background: '#222225', border: '1px solid #333', color: '#E5E7EB', '--tw-ring-color': '#D4AF37' }}
+                style={{ background: 'var(--da-surface-hover, #F0FDFA)', border: '1px solid #333', color: 'var(--da-text, #1E293B)', '--tw-ring-color': '#0D9488' }}
               />
             </div>
             <div>
@@ -429,7 +429,7 @@ export default function InterviewPrepChecklist() {
                 value={level}
                 onChange={e => setLevel(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl text-sm focus:outline-none focus:ring-2"
-                style={{ background: '#222225', border: '1px solid #333', color: level ? '#E5E7EB' : '#6B7280', '--tw-ring-color': '#D4AF37' }}
+                style={{ background: 'var(--da-surface-hover, #F0FDFA)', border: '1px solid #333', color: level ? '#E5E7EB' : '#6B7280', '--tw-ring-color': '#0D9488' }}
               >
                 <option value="">Select experience level...</option>
                 {EXPERIENCE_LEVELS.map(l => (
@@ -444,7 +444,7 @@ export default function InterviewPrepChecklist() {
               onClick={handleGenerate}
               disabled={!level}
               className="inline-flex items-center gap-2 px-8 py-3 font-bold text-lg rounded-xl transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-              style={{ background: '#D4AF37', color: '#0A0A0B' }}
+              style={{ background: '#0D9488', color: '#FFFFFF' }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -458,7 +458,7 @@ export default function InterviewPrepChecklist() {
       {/* Generated Checklist */}
       {checklist && (
         <section className="max-w-4xl mx-auto px-4 pb-12">
-          <ChecklistSection title="Technical Topics to Review" items={checklist.technical} color="#D4AF37" />
+          <ChecklistSection title="Technical Topics to Review" items={checklist.technical} color="#0D9488" />
           {checklist.roleSpecific.length > 0 && (
             <ChecklistSection title={`Role-Specific Preparation${role ? ` — ${role}` : ''}`} items={checklist.roleSpecific} color="#22d3ee" />
           )}
@@ -470,29 +470,29 @@ export default function InterviewPrepChecklist() {
 
       {/* Common Interview Questions */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>Common Interview Questions</h2>
-        <p className="text-center text-sm mb-8" style={{ color: '#6B7280' }}>Expert tips and example answers for the most frequently asked questions</p>
+        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Common Interview Questions</h2>
+        <p className="text-center text-sm mb-8" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Expert tips and example answers for the most frequently asked questions</p>
 
         <div className="space-y-3">
           {Object.entries(COMMON_QUESTIONS).map(([question, data], idx) => (
-            <div key={idx} className="rounded-2xl overflow-hidden" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+            <div key={idx} className="rounded-2xl overflow-hidden" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
               <button
                 onClick={() => setExpandedQ(expandedQ === idx ? null : idx)}
                 className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer"
                 style={{ background: 'transparent', border: 'none' }}
               >
-                <span className="text-base font-semibold" style={{ color: '#E5E7EB' }}>{question}</span>
-                <svg className={`w-5 h-5 flex-shrink-0 transition-transform ${expandedQ === idx ? 'rotate-180' : ''}`} fill="none" stroke="#D4AF37" viewBox="0 0 24 24">
+                <span className="text-base font-semibold" style={{ color: 'var(--da-text, #1E293B)' }}>{question}</span>
+                <svg className={`w-5 h-5 flex-shrink-0 transition-transform ${expandedQ === idx ? 'rotate-180' : ''}`} fill="none" stroke="#0D9488" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {expandedQ === idx && (
                 <div className="px-6 pb-5">
-                  <div className="mb-3 p-3 rounded-xl" style={{ background: '#222225' }}>
-                    <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#D4AF37' }}>Tip</div>
+                  <div className="mb-3 p-3 rounded-xl" style={{ background: 'var(--da-surface-hover, #F0FDFA)' }}>
+                    <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#0D9488' }}>Tip</div>
                     <p className="text-sm leading-relaxed" style={{ color: '#D1D5DB' }}>{data.tip}</p>
                   </div>
-                  <div className="p-3 rounded-xl" style={{ background: '#222225' }}>
+                  <div className="p-3 rounded-xl" style={{ background: 'var(--da-surface-hover, #F0FDFA)' }}>
                     <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#34d399' }}>Example</div>
                     <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: '#D1D5DB' }}>{data.example}</p>
                   </div>
@@ -505,21 +505,21 @@ export default function InterviewPrepChecklist() {
 
       {/* STAR Method */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>{STAR_METHOD.title}</h2>
-        <p className="text-center text-sm mb-8 max-w-2xl mx-auto" style={{ color: '#6B7280' }}>{STAR_METHOD.description}</p>
+        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>{STAR_METHOD.title}</h2>
+        <p className="text-center text-sm mb-8 max-w-2xl mx-auto" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>{STAR_METHOD.description}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {STAR_METHOD.steps.map((step, idx) => (
-            <div key={idx} className="p-5 rounded-2xl" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+            <div key={idx} className="p-5 rounded-2xl" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
               <div className="flex items-center gap-3 mb-3">
-                <span className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold" style={{ background: '#D4AF37', color: '#0A0A0B' }}>
+                <span className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold" style={{ background: '#0D9488', color: '#FFFFFF' }}>
                   {step.letter}
                 </span>
-                <span className="text-base font-bold" style={{ color: '#E5E7EB' }}>{step.label}</span>
+                <span className="text-base font-bold" style={{ color: 'var(--da-text, #1E293B)' }}>{step.label}</span>
               </div>
-              <p className="text-sm mb-3 leading-relaxed" style={{ color: '#9CA3AF' }}>{step.desc}</p>
-              <div className="p-3 rounded-xl" style={{ background: '#222225' }}>
-                <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#D4AF37' }}>Template</div>
+              <p className="text-sm mb-3 leading-relaxed" style={{ color: 'var(--da-text-secondary, #64748B)' }}>{step.desc}</p>
+              <div className="p-3 rounded-xl" style={{ background: 'var(--da-surface-hover, #F0FDFA)' }}>
+                <div className="text-xs font-semibold uppercase tracking-wide mb-1" style={{ color: '#0D9488' }}>Template</div>
                 <p className="text-sm italic leading-relaxed" style={{ color: '#D1D5DB' }}>{step.template}</p>
               </div>
             </div>
@@ -529,8 +529,8 @@ export default function InterviewPrepChecklist() {
 
       {/* Countdown Timer */}
       <section className="max-w-4xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>Practice Timer</h2>
-        <p className="text-center text-sm mb-8" style={{ color: '#6B7280' }}>Time your mock answers to stay concise and impactful</p>
+        <h2 className="text-2xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Practice Timer</h2>
+        <p className="text-center text-sm mb-8" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Time your mock answers to stay concise and impactful</p>
         <div className="max-w-sm mx-auto">
           <CountdownTimer />
         </div>
@@ -543,14 +543,14 @@ export default function InterviewPrepChecklist() {
 
       {/* Cross-sell */}
       <section className="max-w-4xl mx-auto px-4 py-6">
-        <div className="p-4 rounded-xl text-center" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-          <p className="text-sm" style={{ color: '#9CA3AF' }}>
+        <div className="p-4 rounded-xl text-center" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+          <p className="text-sm" style={{ color: 'var(--da-text-secondary, #64748B)' }}>
             Make sure your resume is interview-ready too.{' '}
-            <Link to="/ats-checker" className="font-semibold underline" style={{ color: '#D4AF37' }}>
+            <Link to="/ats-checker" className="font-semibold underline" style={{ color: '#0D9488' }}>
               Check your ATS score
             </Link>{' '}
             or{' '}
-            <Link to="/" className="font-semibold underline" style={{ color: '#D4AF37' }}>
+            <Link to="/" className="font-semibold underline" style={{ color: '#0D9488' }}>
               build a new resume
             </Link>.
           </p>
@@ -558,27 +558,27 @@ export default function InterviewPrepChecklist() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16" style={{ background: '#111113' }}>
+      <section className="py-16" style={{ background: 'var(--da-bg-alt, #F8FFFE)' }}>
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>Frequently Asked Questions</h2>
-          <p className="text-center text-sm mb-8" style={{ color: '#6B7280' }}>Everything you need to know about interview preparation in India</p>
+          <h2 className="text-2xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Frequently Asked Questions</h2>
+          <p className="text-center text-sm mb-8" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Everything you need to know about interview preparation in India</p>
 
           <div className="space-y-3">
             {FAQ_DATA.map((faq, idx) => (
-              <div key={idx} className="rounded-2xl overflow-hidden" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
+              <div key={idx} className="rounded-2xl overflow-hidden" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer"
                   style={{ background: 'transparent', border: 'none' }}
                 >
-                  <span className="text-sm font-semibold" style={{ color: '#E5E7EB' }}>{faq.question}</span>
-                  <svg className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} fill="none" stroke="#D4AF37" viewBox="0 0 24 24">
+                  <span className="text-sm font-semibold" style={{ color: 'var(--da-text, #1E293B)' }}>{faq.question}</span>
+                  <svg className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} fill="none" stroke="#0D9488" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {expandedFaq === idx && (
                   <div className="px-6 pb-5">
-                    <p className="text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>{faq.answer}</p>
+                    <p className="text-sm leading-relaxed" style={{ color: 'var(--da-text-secondary, #64748B)' }}>{faq.answer}</p>
                   </div>
                 )}
               </div>

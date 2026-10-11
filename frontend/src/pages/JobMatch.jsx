@@ -31,7 +31,7 @@ export default function JobMatch() {
     <div className="max-w-5xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          Job Match <span className="text-brand-gold">Scorer</span>
+          Job Match <span className="text-brand-primary">Scorer</span>
         </h1>
         <p className="text-brand-muted">Compare your resume against a job description to see your keyword match</p>
       </div>
@@ -64,7 +64,7 @@ export default function JobMatch() {
           <button
             onClick={handleMatch}
             disabled={loading}
-            className="w-full py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors disabled:opacity-50"
+            className="w-full py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors disabled:opacity-50"
           >
             {loading ? 'Analyzing Match...' : 'Check Job Match'}
           </button>
@@ -115,7 +115,7 @@ export default function JobMatch() {
               <ul className="space-y-2">
                 {result.suggestions.map((s, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
-                    <span className="text-brand-gold mt-0.5">→</span>
+                    <span className="text-brand-primary mt-0.5">→</span>
                     <span className="text-brand-muted">{s}</span>
                   </li>
                 ))}
@@ -125,7 +125,7 @@ export default function JobMatch() {
 
           <button
             onClick={() => { setResult(null); setResumeText(''); setJobDesc('') }}
-            className="w-full py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-gold transition-colors"
+            className="w-full py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-primary transition-colors"
           >
             Check Another Match
           </button>

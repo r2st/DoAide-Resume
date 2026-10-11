@@ -35,7 +35,7 @@ import FeedbackWidget from './components/FeedbackWidget';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: '#0A0A0B' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'var(--da-bg)' }}>
       <Header />
       <ToolTracker />
       <main className="flex-1">

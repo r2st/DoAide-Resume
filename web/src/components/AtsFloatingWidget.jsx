@@ -30,7 +30,7 @@ export default function AtsFloatingWidget() {
       <button
         onClick={() => navigate('/ats-checker')}
         className="relative flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm shadow-lg transition-transform hover:-translate-y-0.5"
-        style={{ background: '#F0B429', color: '#0A0A0B', boxShadow: '0 0 20px rgba(240,180,41,0.3)' }}
+        style={{ background: '#0D9488', color: '#FFFFFF', boxShadow: '0 0 20px rgba(13,148,136,0.3)' }}
       >
         <span className="absolute -top-1 -right-1 flex h-3 w-3">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-300 opacity-75" />

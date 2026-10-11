@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function CommonResumeMistakes() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
-      <Link to="/blog" className="text-brand-gold text-sm mb-6 inline-block hover:underline">← Back to Blog</Link>
+      <Link to="/blog" className="text-brand-primary text-sm mb-6 inline-block hover:underline">← Back to Blog</Link>
 
       <article>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">10 Common Resume Mistakes That Get You Rejected Instantly</h1>
@@ -42,10 +42,10 @@ export default function CommonResumeMistakes() {
           <h2 className="text-xl font-bold text-white mt-8 mb-3">10. Not Including a Skills Section</h2>
           <p>ATS systems scan for specific keywords, and a skills section is the fastest way to ensure they are found. List technical skills, tools, certifications, and relevant competencies.</p>
 
-          <div className="mt-12 p-6 border border-brand-gold/30 rounded-xl bg-brand-gold/5">
-            <h3 className="text-lg font-bold text-brand-gold mb-2">Find Mistakes in Your Resume</h3>
+          <div className="mt-12 p-6 border border-brand-primary/30 rounded-xl bg-brand-primary/5">
+            <h3 className="text-lg font-bold text-brand-primary mb-2">Find Mistakes in Your Resume</h3>
             <p className="mb-4">Our free ATS checker identifies these mistakes and more — try it now.</p>
-            <Link to="/ats-checker" className="inline-block px-6 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors">
+            <Link to="/ats-checker" className="inline-block px-6 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors">
               Check My Resume →
             </Link>
           </div>

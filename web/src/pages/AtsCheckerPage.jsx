@@ -166,12 +166,12 @@ export default function AtsCheckerPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-amber-500 to-orange-600 text-white py-16">
+      <section className="bg-gradient-to-br from-teal-500 to-teal-700 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-4">
             Free ATS Resume Score Checker
           </h1>
-          <p className="text-lg text-amber-100 max-w-2xl mx-auto">
+          <p className="text-lg text-teal-100 max-w-2xl mx-auto">
             Over 90% of large companies use Applicant Tracking Systems to filter resumes before a human ever sees them.
             Check your resume's ATS compatibility score and get actionable improvement tips.
           </p>
@@ -204,7 +204,7 @@ export default function AtsCheckerPage() {
               onChange={(e) => setResumeText(e.target.value)}
               placeholder={"Paste the full text of your resume here...\n\nExample:\nJohn Doe\njohn@email.com | +91 98765 43210\n\nSummary\nExperienced software engineer with 5+ years...\n\nExperience\n- Led a team of 5 engineers at XYZ Corp\n- Developed REST APIs serving 100K users\n\nSkills\nJavaScript, React, Node.js, Python, AWS"}
               rows={16}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-y font-mono"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 resize-y font-mono"
             />
             <p className="mt-1 text-xs text-gray-400">
               {resumeText.length > 0 ? `${resumeText.split(/\s+/).filter(Boolean).length} words` : 'Tip: Copy all the text from your resume file and paste it here'}
@@ -221,7 +221,7 @@ export default function AtsCheckerPage() {
               onChange={(e) => setJobDescription(e.target.value)}
               placeholder={"Paste the job description here for keyword matching...\n\nThis helps us check how well your resume aligns with the specific role you're applying for.\n\nExample:\nWe are looking for a Senior Software Engineer with experience in React, Node.js, and AWS. The candidate should have 5+ years of experience building scalable web applications..."}
               rows={16}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 resize-y font-mono"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 resize-y font-mono"
             />
             <p className="mt-1 text-xs text-gray-400">
               {jobDescription.length > 0 ? `${jobDescription.split(/\s+/).filter(Boolean).length} words` : 'Adding a job description enables keyword matching analysis'}
@@ -234,7 +234,7 @@ export default function AtsCheckerPage() {
           <button
             onClick={handleCheck}
             disabled={isChecking || !resumeText.trim()}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-amber-500 text-white font-bold text-lg rounded-xl hover:bg-amber-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-teal-500 text-white font-bold text-lg rounded-xl hover:bg-teal-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
           >
             {isChecking ? (
               <>
@@ -275,19 +275,19 @@ export default function AtsCheckerPage() {
       {/* AI-Powered Analysis */}
       {aiAnalysis && (
         <section className="max-w-5xl mx-auto px-4 py-8">
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
+          <div className="rounded-2xl border border-teal-200 bg-teal-50 p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
-              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               <h2 className="text-xl font-bold text-gray-800">AI-Powered Analysis</h2>
-              <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full font-medium">Gemini AI</span>
+              <span className="text-xs bg-teal-200 text-teal-800 px-2 py-0.5 rounded-full font-medium">Gemini AI</span>
             </div>
 
             {/* AI Score */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
               <div className="flex items-center gap-3">
-                <div className={`text-4xl font-extrabold ${aiAnalysis.score >= 70 ? 'text-green-600' : aiAnalysis.score >= 50 ? 'text-amber-600' : 'text-red-600'}`}>
+                <div className={`text-4xl font-extrabold ${aiAnalysis.score >= 70 ? 'text-green-600' : aiAnalysis.score >= 50 ? 'text-teal-600' : 'text-red-600'}`}>
                   {aiAnalysis.score}
                 </div>
                 <div className="text-sm text-gray-500">/ 100</div>
@@ -305,7 +305,7 @@ export default function AtsCheckerPage() {
                       <div className="text-xs text-gray-500 capitalize mb-1">{key}</div>
                       <div className="flex items-center gap-2">
                         <div className="flex-1 bg-gray-100 rounded-full h-2">
-                          <div className={`h-2 rounded-full ${val >= 70 ? 'bg-green-500' : val >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${val}%` }} />
+                          <div className={`h-2 rounded-full ${val >= 70 ? 'bg-green-500' : val >= 50 ? 'bg-teal-500' : 'bg-red-500'}`} style={{ width: `${val}%` }} />
                         </div>
                         <span className="text-sm font-semibold text-gray-700">{val}</span>
                       </div>
@@ -346,7 +346,7 @@ export default function AtsCheckerPage() {
                 <ul className="space-y-2">
                   {aiAnalysis.suggestions.map((s, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                      <span className="flex-shrink-0 w-5 h-5 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">{i + 1}</span>
+                      <span className="flex-shrink-0 w-5 h-5 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-xs font-bold mt-0.5">{i + 1}</span>
                       {s}
                     </li>
                   ))}
@@ -377,7 +377,7 @@ export default function AtsCheckerPage() {
                 className="p-5 bg-white rounded-xl border border-gray-100 shadow-sm"
               >
                 <div className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-sm font-bold">
+                  <span className="flex-shrink-0 w-7 h-7 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center text-sm font-bold">
                     {idx + 1}
                   </span>
                   <div>

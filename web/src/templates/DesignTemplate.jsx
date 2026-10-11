@@ -165,7 +165,7 @@ const DesignTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
       <div style={styles.body}>
         {summary && (
           <div style={styles.section}>
-            <p style={{ fontSize: '10pt', color: '#444', lineHeight: '1.7', margin: 0, fontStyle: 'italic' }}>
+            <p style={{ fontSize: '10pt', color: '#444', lineHeight: '1.7', margin: 0 }}>
               {summary}
             </p>
           </div>

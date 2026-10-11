@@ -267,7 +267,7 @@ const ModernTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
                 </div>
                 {proj.description && <div style={styles.projectDesc}>{proj.description}</div>}
                 {proj.technologies && (
-                  <div style={{ fontSize: '8.5pt', color: '#666', fontStyle: 'italic' }}>
+                  <div style={{ fontSize: '8.5pt', color: '#666' }}>
                     Technologies: {proj.technologies}
                   </div>
                 )}

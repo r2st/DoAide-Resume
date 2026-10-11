@@ -81,10 +81,10 @@ export default function AtsFriendlyResume() {
     };
   }, []);
 
-  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#F0B429', marginTop: '2.5rem', marginBottom: '0.75rem' };
-  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: '#E5E7EB', marginTop: '1.5rem', marginBottom: '0.5rem' };
-  const p = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
-  const li = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
+  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#0D9488', marginTop: '2.5rem', marginBottom: '0.75rem' };
+  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: 'var(--da-text, #1E293B)', marginTop: '1.5rem', marginBottom: '0.5rem' };
+  const p = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
+  const li = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
 
   return (
     <div>
@@ -103,7 +103,7 @@ export default function AtsFriendlyResume() {
         </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: '#0A0A0B' }}>
+      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: 'var(--da-bg, #FFFFFF)' }}>
         <p style={p}>
           You have the right skills, the right experience, and you apply to the perfect job. Two weeks pass with no response. You assume the company found a better candidate — but the truth is, no human ever read your resume. An Applicant Tracking System rejected it automatically because of formatting issues, missing keywords, or both.
         </p>
@@ -116,9 +116,9 @@ export default function AtsFriendlyResume() {
           An Applicant Tracking System is software that automates the hiring pipeline. When you submit a resume through Naukri, LinkedIn India, a company careers page, or even email, the ATS performs three critical functions:
         </p>
         <ul style={{ listStyle: 'decimal', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Parsing:</strong> The system extracts data from your resume — name, contact details, work history, education, skills — and converts it into a structured database record.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Scoring:</strong> It compares your parsed data against the job requirements, assigning a relevance score based on keyword matches, experience level, and qualifications.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Ranking:</strong> Candidates are ranked by score. Only the top 10-25% are forwarded to human recruiters for review.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Parsing:</strong> The system extracts data from your resume — name, contact details, work history, education, skills — and converts it into a structured database record.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Scoring:</strong> It compares your parsed data against the job requirements, assigning a relevance score based on keyword matches, experience level, and qualifications.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Ranking:</strong> Candidates are ranked by score. Only the top 10-25% are forwarded to human recruiters for review.</li>
         </ul>
         <p style={p}>
           If the ATS cannot parse your resume correctly, your score drops to zero regardless of your actual qualifications. This is why formatting matters as much as content.
@@ -133,7 +133,7 @@ export default function AtsFriendlyResume() {
 
         <h3 style={h3}>Step 2: Use a Single-Column Layout</h3>
         <p style={p}>
-          Multi-column layouts are the number one ATS killer. When a resume uses two or three columns, the parser reads content in the wrong order — mixing skills with job titles, shuffling dates, and producing garbled output. Stick to a clean, single-column layout. All our <Link to="/templates" style={{ color: '#F0B429' }}>resume templates</Link> are designed with this in mind.
+          Multi-column layouts are the number one ATS killer. When a resume uses two or three columns, the parser reads content in the wrong order — mixing skills with job titles, shuffling dates, and producing garbled output. Stick to a clean, single-column layout. All our <Link to="/templates" style={{ color: '#0D9488' }}>resume templates</Link> are designed with this in mind.
         </p>
 
         <h3 style={h3}>Step 3: Use Standard Section Headings</h3>
@@ -187,13 +187,13 @@ export default function AtsFriendlyResume() {
           Do not dump keywords into a hidden section or stuff them randomly. Weave them into your experience bullets:
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Poor:</strong> "Skills: Python, Machine Learning, Data Analysis, SQL, TensorFlow"</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Good:</strong> "Built a Machine Learning pipeline using Python and TensorFlow that automated Data Analysis for 50,000+ customer records, reducing processing time by 65%. Wrote SQL queries for ETL workflows."</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Poor:</strong> "Skills: Python, Machine Learning, Data Analysis, SQL, TensorFlow"</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Good:</strong> "Built a Machine Learning pipeline using Python and TensorFlow that automated Data Analysis for 50,000+ customer records, reducing processing time by 65%. Wrote SQL queries for ETL workflows."</li>
         </ul>
 
         <h3 style={h3}>Verify Your Keywords</h3>
         <p style={p}>
-          Use the <Link to="/ats-checker" style={{ color: '#F0B429' }}>free ATS Score Checker</Link> to see exactly which keywords match the job description and which are missing. It gives you an actionable report with specific suggestions for improvement.
+          Use the <Link to="/ats-checker" style={{ color: '#0D9488' }}>free ATS Score Checker</Link> to see exactly which keywords match the job description and which are missing. It gives you an actionable report with specific suggestions for improvement.
         </p>
 
         <h2 style={h2}>Section-by-Section ATS Optimization</h2>
@@ -210,7 +210,7 @@ export default function AtsFriendlyResume() {
 
         <h3 style={h3}>Work Experience</h3>
         <p style={p}>
-          Use the structure: Job Title | Company Name | Date Range. This is what every ATS expects. Each bullet point should contain at least one keyword from the job description, combined with a quantified achievement. The <Link to="/" style={{ color: '#F0B429' }}>DoAide resume builder</Link> automatically suggests improvements to your bullet points.
+          Use the structure: Job Title | Company Name | Date Range. This is what every ATS expects. Each bullet point should contain at least one keyword from the job description, combined with a quantified achievement. The <Link to="/" style={{ color: '#0D9488' }}>DoAide resume builder</Link> automatically suggests improvements to your bullet points.
         </p>
 
         <h3 style={h3}>Skills Section</h3>
@@ -225,11 +225,11 @@ export default function AtsFriendlyResume() {
 
         <h2 style={h2}>Common ATS Mistakes and How to Fix Them</h2>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Using fancy templates:</strong> Canva templates with sidebars, icons, and skill meters look good to humans but fail ATS parsing. Switch to a clean <Link to="/templates" style={{ color: '#F0B429' }}>ATS-optimised template</Link>.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Keyword stuffing with white text:</strong> Some candidates hide keywords in white-coloured text. Modern ATS systems detect this and flag your application for rejection. Never do this.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Sending the same resume to every job:</strong> Each job description has unique keyword requirements. Customise your resume for every application. It takes 15 minutes and doubles your callback rate.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Using non-standard date formats:</strong> Stick to "Jan 2024 - Present" or "2024 - Present". Avoid formats like "1/2024" or "January 2024 to current" that some parsers misinterpret.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Forgetting the cover letter:</strong> Many ATS systems accept and parse cover letters alongside resumes. A well-written <Link to="/cover-letter-generator" style={{ color: '#F0B429' }}>cover letter</Link> adds more keyword matches and shows genuine interest.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Using fancy templates:</strong> Canva templates with sidebars, icons, and skill meters look good to humans but fail ATS parsing. Switch to a clean <Link to="/templates" style={{ color: '#0D9488' }}>ATS-optimised template</Link>.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Keyword stuffing with white text:</strong> Some candidates hide keywords in white-coloured text. Modern ATS systems detect this and flag your application for rejection. Never do this.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Sending the same resume to every job:</strong> Each job description has unique keyword requirements. Customise your resume for every application. It takes 15 minutes and doubles your callback rate.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Using non-standard date formats:</strong> Stick to "Jan 2024 - Present" or "2024 - Present". Avoid formats like "1/2024" or "January 2024 to current" that some parsers misinterpret.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Forgetting the cover letter:</strong> Many ATS systems accept and parse cover letters alongside resumes. A well-written <Link to="/cover-letter-generator" style={{ color: '#0D9488' }}>cover letter</Link> adds more keyword matches and shows genuine interest.</li>
         </ul>
 
         <h2 style={h2}>How to Test Your Resume's ATS Score</h2>
@@ -237,7 +237,7 @@ export default function AtsFriendlyResume() {
           Before submitting any application, follow this testing process:
         </p>
         <ul style={{ listStyle: 'decimal', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}>Paste your resume text and the job description into the <Link to="/ats-checker" style={{ color: '#F0B429' }}>ATS Score Checker</Link>.</li>
+          <li style={li}>Paste your resume text and the job description into the <Link to="/ats-checker" style={{ color: '#0D9488' }}>ATS Score Checker</Link>.</li>
           <li style={li}>Review the keyword match report — aim for 70% or higher coverage.</li>
           <li style={li}>Check the section analysis to ensure all sections are detected correctly.</li>
           <li style={li}>Copy your resume into a plain text editor (Notepad or TextEdit). If the content appears garbled, jumbled, or in the wrong order, ATS will struggle too.</li>
@@ -259,25 +259,25 @@ export default function AtsFriendlyResume() {
             'ATS score above 70% verified with checker tool',
           ].map((item, i) => (
             <li key={i} style={{ ...li, display: 'flex', alignItems: 'flex-start', gap: '0.5rem', paddingLeft: 0 }}>
-              <span style={{ color: '#F0B429', fontWeight: 'bold' }}>&#10003;</span> {item}
+              <span style={{ color: '#0D9488', fontWeight: 'bold' }}>&#10003;</span> {item}
             </li>
           ))}
         </ul>
 
-        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-          <h3 className="text-xl font-bold mb-2" style={{ color: '#E5E7EB' }}>Check your resume's ATS score now</h3>
-          <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>Paste your resume and job description to get an AI-powered ATS compatibility analysis — keyword matching, formatting checks, and improvement suggestions. 100% free.</p>
-          <Link to="/ats-checker" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#F0B429', color: '#0A0A0B' }}>
+        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+          <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Check your resume's ATS score now</h3>
+          <p className="text-sm mb-4" style={{ color: 'var(--da-text-secondary, #64748B)' }}>Paste your resume and job description to get an AI-powered ATS compatibility analysis — keyword matching, formatting checks, and improvement suggestions. 100% free.</p>
+          <Link to="/ats-checker" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#0D9488', color: '#FFFFFF' }}>
             Check ATS Score Free
           </Link>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: '#6B7280' }}>
+        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>
           <span>Related:</span>
-          <Link to="/blog/resume-building-2026" className="no-underline" style={{ color: '#F0B429' }}>Resume Building Guide 2026</Link>
-          <Link to="/blog/resume-format-freshers-2026" className="no-underline" style={{ color: '#F0B429' }}>Fresher Resume Format Guide</Link>
-          <Link to="/" className="no-underline" style={{ color: '#F0B429' }}>Free Resume Builder</Link>
-          <Link to="/cover-letter-generator" className="no-underline" style={{ color: '#F0B429' }}>Cover Letter Generator</Link>
+          <Link to="/blog/resume-building-2026" className="no-underline" style={{ color: '#0D9488' }}>Resume Building Guide 2026</Link>
+          <Link to="/blog/resume-format-freshers-2026" className="no-underline" style={{ color: '#0D9488' }}>Fresher Resume Format Guide</Link>
+          <Link to="/" className="no-underline" style={{ color: '#0D9488' }}>Free Resume Builder</Link>
+          <Link to="/cover-letter-generator" className="no-underline" style={{ color: '#0D9488' }}>Cover Letter Generator</Link>
         </div>
       </article>
     </div>

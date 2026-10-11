@@ -5,12 +5,12 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: '#0a0a0a',
-          gold: '#F0B429',
-          'gold-hover': '#D4A017',
-          card: '#141414',
-          border: '#2a2a2a',
-          muted: '#888888',
+          dark: '#0F172A',
+          primary: '#0D9488',
+          'primary-hover': '#0F766E',
+          card: '#F8FFFE',
+          border: '#E2E8F0',
+          muted: '#64748B',
         },
       },
     },

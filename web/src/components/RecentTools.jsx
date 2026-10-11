@@ -13,8 +13,8 @@ export default function RecentTools() {
 
   return (
     <section className="max-w-5xl mx-auto px-4 pt-6 pb-2">
-      <div className="p-4 rounded-xl" style={{ background: 'rgba(240,180,41,0.08)', border: '1px solid #2A2A2D' }}>
-        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#F0B429' }}>
+      <div className="p-4 rounded-xl" style={{ background: 'rgba(13,148,136,0.08)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+        <div className="text-xs font-semibold uppercase tracking-wide mb-3" style={{ color: '#0D9488' }}>
           Pick up where you left off
         </div>
         <div className="flex gap-2 overflow-x-auto pb-1">
@@ -23,10 +23,10 @@ export default function RecentTools() {
               key={tool.path}
               to={tool.path}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap no-underline transition-colors"
-              style={{ background: '#1A1A1D', border: '1px solid #2A2A2D', color: '#E5E7EB' }}
+              style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)', color: 'var(--da-text, #1E293B)' }}
             >
               {tool.name}
-              <span className="font-bold" style={{ color: '#F0B429' }}>Continue &rarr;</span>
+              <span className="font-bold" style={{ color: '#0D9488' }}>Continue &rarr;</span>
             </Link>
           ))}
         </div>

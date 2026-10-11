@@ -167,7 +167,7 @@ export default function TemplatesPage() {
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">ATS Compatible</span>
                   <span className="px-2.5 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">Customizable Colors</span>
-                  <span className="px-2.5 py-1 bg-amber-100 text-amber-700 text-xs font-medium rounded-full">PDF Export</span>
+                  <span className="px-2.5 py-1 bg-teal-100 text-teal-700 text-xs font-medium rounded-full">PDF Export</span>
                 </div>
               </div>
             </div>

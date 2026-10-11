@@ -81,10 +81,10 @@ export default function ResumeFormatFreshers2026() {
     };
   }, []);
 
-  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#F0B429', marginTop: '2.5rem', marginBottom: '0.75rem' };
-  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: '#E5E7EB', marginTop: '1.5rem', marginBottom: '0.5rem' };
-  const p = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
-  const li = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
+  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#0D9488', marginTop: '2.5rem', marginBottom: '0.75rem' };
+  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: 'var(--da-text, #1E293B)', marginTop: '1.5rem', marginBottom: '0.5rem' };
+  const p = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
+  const li = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
 
   return (
     <div>
@@ -103,7 +103,7 @@ export default function ResumeFormatFreshers2026() {
         </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: '#0A0A0B' }}>
+      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: 'var(--da-bg, #FFFFFF)' }}>
         <p style={p}>
           Every year, over 1.5 million engineering graduates, 300,000 MBA students, and hundreds of thousands of arts, science, and commerce graduates enter the Indian job market. Most of them face the same terrifying question: how do I write a resume when I have no work experience? The answer is simpler than you think — but only if you use the right format and know what to include.
         </p>
@@ -116,7 +116,7 @@ export default function ResumeFormatFreshers2026() {
           As a fresher, you are competing against thousands of candidates with similar qualifications. A B.Tech from a tier-2 college with a 7.5 CGPA describes hundreds of applicants for any given TCS or Infosys opening. What separates the candidates who get interview calls from those who do not is not grades — it is how clearly and professionally they present their qualifications.
         </p>
         <p style={p}>
-          A well-formatted resume signals professionalism, attention to detail, and communication skills — exactly the qualities recruiters look for in freshers who lack professional experience. More importantly, a properly formatted resume passes through ATS filters that automatically reject poorly structured documents. You can <Link to="/ats-checker" style={{ color: '#F0B429' }}>check your ATS score for free</Link> before applying.
+          A well-formatted resume signals professionalism, attention to detail, and communication skills — exactly the qualities recruiters look for in freshers who lack professional experience. More importantly, a properly formatted resume passes through ATS filters that automatically reject poorly structured documents. You can <Link to="/ats-checker" style={{ color: '#0D9488' }}>check your ATS score for free</Link> before applying.
         </p>
 
         <h2 style={h2}>Best Resume Format for Freshers</h2>
@@ -136,7 +136,7 @@ export default function ResumeFormatFreshers2026() {
 
         <h3 style={h3}>3. Combination Format (Use Carefully)</h3>
         <p style={p}>
-          This blends chronological and functional approaches — a skills summary at the top followed by chronological experience. It can work for freshers who have significant project work or internships, but keep it simple and single-column. Our <Link to="/templates" style={{ color: '#F0B429' }}>fresher-friendly templates</Link> use this approach.
+          This blends chronological and functional approaches — a skills summary at the top followed by chronological experience. It can work for freshers who have significant project work or internships, but keep it simple and single-column. Our <Link to="/templates" style={{ color: '#0D9488' }}>fresher-friendly templates</Link> use this approach.
         </p>
 
         <h2 style={h2}>Essential Sections for a Fresher Resume</h2>
@@ -151,8 +151,8 @@ export default function ResumeFormatFreshers2026() {
           Write 2-3 sentences that state your degree, key skills, and what you are looking for. Be specific, not generic.
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Weak:</strong> "Seeking a challenging position where I can utilise my skills and grow professionally."</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Strong:</strong> "B.Tech Computer Science graduate (CGPA 8.2) with hands-on experience in Python, React, and AWS through 3 academic projects and a 6-month internship. Seeking a software development role at a product-focused company."</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Weak:</strong> "Seeking a challenging position where I can utilise my skills and grow professionally."</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Strong:</strong> "B.Tech Computer Science graduate (CGPA 8.2) with hands-on experience in Python, React, and AWS through 3 academic projects and a 6-month internship. Seeking a software development role at a product-focused company."</li>
         </ul>
 
         <h3 style={h3}>3. Education</h3>
@@ -162,11 +162,11 @@ export default function ResumeFormatFreshers2026() {
 
         <h3 style={h3}>4. Projects</h3>
         <p style={p}>
-          This is where freshers can truly shine. Include 2-4 of your best academic or personal projects. For each project, mention: the project name, technologies used, a one-line description of what it does, and your specific contribution. Use the <strong style={{ color: '#E5E7EB' }}>Action Verb + Task + Result</strong> formula.
+          This is where freshers can truly shine. Include 2-4 of your best academic or personal projects. For each project, mention: the project name, technologies used, a one-line description of what it does, and your specific contribution. Use the <strong style={{ color: 'var(--da-text, #1E293B)' }}>Action Verb + Task + Result</strong> formula.
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Weak:</strong> "Made a web application for college."</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Strong:</strong> "Built a full-stack placement portal using React and Node.js, serving 2,000+ students with real-time job notifications and reducing manual coordination by 80%."</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Weak:</strong> "Made a web application for college."</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Strong:</strong> "Built a full-stack placement portal using React and Node.js, serving 2,000+ students with real-time job notifications and reducing manual coordination by 80%."</li>
         </ul>
 
         <h3 style={h3}>5. Skills</h3>
@@ -191,22 +191,22 @@ export default function ResumeFormatFreshers2026() {
 
         <h2 style={h2}>Formatting Rules for Fresher Resumes</h2>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Length:</strong> Strictly one page. No exceptions. If your resume spills to a second page, cut the weakest content.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Font:</strong> Use Arial, Calibri, or Helvetica at 10-11pt. Your name can be 14-16pt. Never use decorative fonts.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Margins:</strong> 0.5 to 0.75 inches on all sides. Going below 0.5 inches makes the resume look cramped.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Layout:</strong> Single column only. Multi-column layouts confuse ATS parsers and often render poorly on different screens.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>File format:</strong> Save as PDF. Name the file professionally: "Firstname_Lastname_Resume.pdf", not "resume_final_v3_new.pdf".</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>No images:</strong> Skip photographs, logos, skill bars, and infographics. ATS cannot read them.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Consistent spacing:</strong> Use 1.0-1.15 line spacing. Keep spacing between sections uniform.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Length:</strong> Strictly one page. No exceptions. If your resume spills to a second page, cut the weakest content.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Font:</strong> Use Arial, Calibri, or Helvetica at 10-11pt. Your name can be 14-16pt. Never use decorative fonts.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Margins:</strong> 0.5 to 0.75 inches on all sides. Going below 0.5 inches makes the resume look cramped.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Layout:</strong> Single column only. Multi-column layouts confuse ATS parsers and often render poorly on different screens.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>File format:</strong> Save as PDF. Name the file professionally: "Firstname_Lastname_Resume.pdf", not "resume_final_v3_new.pdf".</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>No images:</strong> Skip photographs, logos, skill bars, and infographics. ATS cannot read them.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Consistent spacing:</strong> Use 1.0-1.15 line spacing. Keep spacing between sections uniform.</li>
         </ul>
 
         <h2 style={h2}>Common Fresher Resume Mistakes</h2>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Including personal details:</strong> Date of birth, father's name, marital status, religion, nationality, and passport number do not belong on a resume. Indian freshers commonly include these — do not.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Using a template with graphics:</strong> Those colourful Canva templates with progress bars and icons look nice but fail ATS scans. Use an <Link to="/templates" style={{ color: '#F0B429' }}>ATS-optimized template</Link> instead.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Writing "CV" instead of "Resume":</strong> In India, a resume (1-2 pages) is what companies want for entry-level positions. A CV (curriculum vitae) is for academic and research positions.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Listing every subject you studied:</strong> Recruiters do not need your entire course list. Mention only specialisations or relevant coursework if it directly relates to the job.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Forgetting to proofread:</strong> One typo can eliminate you from consideration. Use spell-check, read aloud, and ask a friend to review.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Including personal details:</strong> Date of birth, father's name, marital status, religion, nationality, and passport number do not belong on a resume. Indian freshers commonly include these — do not.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Using a template with graphics:</strong> Those colourful Canva templates with progress bars and icons look nice but fail ATS scans. Use an <Link to="/templates" style={{ color: '#0D9488' }}>ATS-optimized template</Link> instead.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Writing "CV" instead of "Resume":</strong> In India, a resume (1-2 pages) is what companies want for entry-level positions. A CV (curriculum vitae) is for academic and research positions.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Listing every subject you studied:</strong> Recruiters do not need your entire course list. Mention only specialisations or relevant coursework if it directly relates to the job.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Forgetting to proofread:</strong> One typo can eliminate you from consideration. Use spell-check, read aloud, and ask a friend to review.</li>
         </ul>
 
         <h2 style={h2}>Using AI Tools to Build Your Fresher Resume</h2>
@@ -214,10 +214,10 @@ export default function ResumeFormatFreshers2026() {
           AI tools have made resume building dramatically easier for freshers. Here is how to use them effectively:
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>AI-powered resume builder:</strong> Our <Link to="/" style={{ color: '#F0B429' }}>free resume builder</Link> uses AI to suggest better bullet points, stronger action verbs, and relevant keywords based on your target role.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>ATS score checking:</strong> Before applying, run your resume through the <Link to="/ats-checker" style={{ color: '#F0B429' }}>ATS checker</Link> to identify missing keywords and formatting issues.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Cover letter generation:</strong> Many companies expect a cover letter even from freshers. Use the <Link to="/cover-letter-generator" style={{ color: '#F0B429' }}>cover letter generator</Link> to create one tailored to each application.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Interview preparation:</strong> Once you land an interview, use our <Link to="/interview-preparation" style={{ color: '#F0B429' }}>interview preparation tool</Link> to practise common questions for freshers.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>AI-powered resume builder:</strong> Our <Link to="/" style={{ color: '#0D9488' }}>free resume builder</Link> uses AI to suggest better bullet points, stronger action verbs, and relevant keywords based on your target role.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>ATS score checking:</strong> Before applying, run your resume through the <Link to="/ats-checker" style={{ color: '#0D9488' }}>ATS checker</Link> to identify missing keywords and formatting issues.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Cover letter generation:</strong> Many companies expect a cover letter even from freshers. Use the <Link to="/cover-letter-generator" style={{ color: '#0D9488' }}>cover letter generator</Link> to create one tailored to each application.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Interview preparation:</strong> Once you land an interview, use our <Link to="/interview-preparation" style={{ color: '#0D9488' }}>interview preparation tool</Link> to practise common questions for freshers.</li>
         </ul>
 
         <h2 style={h2}>Final Checklist Before You Apply</h2>
@@ -235,25 +235,25 @@ export default function ResumeFormatFreshers2026() {
             'ATS score checked and above 70%',
           ].map((item, i) => (
             <li key={i} style={{ ...li, display: 'flex', alignItems: 'flex-start', gap: '0.5rem', paddingLeft: 0 }}>
-              <span style={{ color: '#F0B429', fontWeight: 'bold' }}>&#10003;</span> {item}
+              <span style={{ color: '#0D9488', fontWeight: 'bold' }}>&#10003;</span> {item}
             </li>
           ))}
         </ul>
 
-        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-          <h3 className="text-xl font-bold mb-2" style={{ color: '#E5E7EB' }}>Ready to build your fresher resume?</h3>
-          <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>Use our free AI-powered resume builder with fresher-friendly templates, ATS optimization, and instant PDF download. No login required.</p>
-          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#F0B429', color: '#0A0A0B' }}>
+        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+          <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Ready to build your fresher resume?</h3>
+          <p className="text-sm mb-4" style={{ color: 'var(--da-text-secondary, #64748B)' }}>Use our free AI-powered resume builder with fresher-friendly templates, ATS optimization, and instant PDF download. No login required.</p>
+          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#0D9488', color: '#FFFFFF' }}>
             Start Building Free
           </Link>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: '#6B7280' }}>
+        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>
           <span>Related:</span>
-          <Link to="/blog/resume-building-2026" className="no-underline" style={{ color: '#F0B429' }}>Resume Building Guide 2026</Link>
-          <Link to="/blog/ats-friendly-resume" className="no-underline" style={{ color: '#F0B429' }}>ATS-Friendly Resume Guide</Link>
-          <Link to="/ats-checker" className="no-underline" style={{ color: '#F0B429' }}>Free ATS Checker</Link>
-          <Link to="/templates" className="no-underline" style={{ color: '#F0B429' }}>Resume Templates</Link>
+          <Link to="/blog/resume-building-2026" className="no-underline" style={{ color: '#0D9488' }}>Resume Building Guide 2026</Link>
+          <Link to="/blog/ats-friendly-resume" className="no-underline" style={{ color: '#0D9488' }}>ATS-Friendly Resume Guide</Link>
+          <Link to="/ats-checker" className="no-underline" style={{ color: '#0D9488' }}>Free ATS Checker</Link>
+          <Link to="/templates" className="no-underline" style={{ color: '#0D9488' }}>Resume Templates</Link>
         </div>
       </article>
     </div>

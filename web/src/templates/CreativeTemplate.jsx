@@ -247,7 +247,7 @@ const CreativeTemplate = ({ data = {}, templateColor = '#2563eb' }) => {
                     </div>
                   )}
                   {proj.technologies && (
-                    <div style={{ fontSize: '8pt', color: templateColor, marginTop: '1mm', fontStyle: 'italic' }}>
+                    <div style={{ fontSize: '8pt', color: templateColor, marginTop: '1mm' }}>
                       {proj.technologies}
                     </div>
                   )}

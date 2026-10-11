@@ -8,10 +8,10 @@ export default function ResumeBuilding2026() {
     if (meta) meta.content = 'Complete guide to building a resume that gets interviews in 2026. ATS optimization, formatting tips, action verbs, and AI tools for Indian job seekers.';
   }, []);
 
-  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#F0B429', marginTop: '2.5rem', marginBottom: '0.75rem' };
-  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: '#E5E7EB', marginTop: '1.5rem', marginBottom: '0.5rem' };
-  const p = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
-  const li = { color: '#9CA3AF', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
+  const h2 = { fontSize: '1.5rem', fontWeight: '700', color: '#0D9488', marginTop: '2.5rem', marginBottom: '0.75rem' };
+  const h3 = { fontSize: '1.15rem', fontWeight: '600', color: 'var(--da-text, #1E293B)', marginTop: '1.5rem', marginBottom: '0.5rem' };
+  const p = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '1rem', fontSize: '0.95rem' };
+  const li = { color: 'var(--da-text-secondary, #64748B)', lineHeight: '1.75', marginBottom: '0.5rem', fontSize: '0.95rem', paddingLeft: '0.5rem' };
 
   return (
     <div>
@@ -23,14 +23,14 @@ export default function ResumeBuilding2026() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
             How to Build a Resume That Gets Interviews in 2026
           </h1>
-          <p className="text-lg text-amber-100 max-w-2xl mx-auto">
+          <p className="text-lg text-teal-100 max-w-2xl mx-auto">
             A complete, practical guide for Indian job seekers — from formatting to AI-powered optimization.
           </p>
-          <div className="mt-4 text-sm text-amber-200">October 2026 &middot; 10 min read</div>
+          <div className="mt-4 text-sm text-teal-200">October 2026 &middot; 10 min read</div>
         </div>
       </section>
 
-      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: '#0A0A0B' }}>
+      <article className="max-w-3xl mx-auto px-4 py-12" style={{ background: 'var(--da-bg, #FFFFFF)' }}>
         <p style={p}>
           The Indian job market in 2026 is more competitive than ever. With over 1.5 million engineering graduates entering the workforce annually and companies receiving hundreds of applications for every opening, your resume has roughly 6-7 seconds to make an impression. Whether you are a fresher from IIT, a mid-career professional switching from TCS to a startup, or an MBA graduate targeting consulting firms, the fundamentals of a strong resume remain the same — but the tools and expectations have evolved significantly.
         </p>
@@ -60,7 +60,7 @@ export default function ResumeBuilding2026() {
 
         <h3 style={h3}>3. Work Experience</h3>
         <p style={p}>
-          This is the heart of your resume. For each role, include your job title, company name, location, and dates. Then add 3-5 bullet points that follow the formula: <strong style={{ color: '#E5E7EB' }}>Action Verb + Task + Result</strong>. Always quantify when possible.
+          This is the heart of your resume. For each role, include your job title, company name, location, and dates. Then add 3-5 bullet points that follow the formula: <strong style={{ color: 'var(--da-text, #1E293B)' }}>Action Verb + Task + Result</strong>. Always quantify when possible.
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
           <li style={li}>Weak: "Worked on customer projects"</li>
@@ -82,11 +82,11 @@ export default function ResumeBuilding2026() {
           Start every bullet point with a powerful action verb. Here are the most effective ones categorized by impact:
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Leadership:</strong> Led, Directed, Managed, Orchestrated, Spearheaded</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Achievement:</strong> Achieved, Delivered, Exceeded, Surpassed, Boosted</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Technical:</strong> Developed, Engineered, Architected, Implemented, Automated</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Efficiency:</strong> Streamlined, Optimized, Reduced, Consolidated, Accelerated</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Collaboration:</strong> Coordinated, Facilitated, Mentored, Partnered, Trained</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Leadership:</strong> Led, Directed, Managed, Orchestrated, Spearheaded</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Achievement:</strong> Achieved, Delivered, Exceeded, Surpassed, Boosted</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Technical:</strong> Developed, Engineered, Architected, Implemented, Automated</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Efficiency:</strong> Streamlined, Optimized, Reduced, Consolidated, Accelerated</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Collaboration:</strong> Coordinated, Facilitated, Mentored, Partnered, Trained</li>
         </ul>
 
         <h2 style={h2}>Formatting Best Practices</h2>
@@ -105,12 +105,12 @@ export default function ResumeBuilding2026() {
 
         <h2 style={h2}>Common Mistakes to Avoid</h2>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Sending the same resume everywhere</strong> — Customize for each role. Mirror the job description's keywords.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Including irrelevant information</strong> — Your 10th class marks and hobbies like "listening to music" do not belong on an experienced professional's resume.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Using an unprofessional email</strong> — coolboy2003@gmail.com will get your resume rejected before anyone reads it.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Listing duties instead of achievements</strong> — "Responsible for testing" says nothing. "Reduced production bugs by 40% through automated testing framework" says everything.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Typos and grammatical errors</strong> — Proofread twice. Have someone else review it. Use spell-check tools.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Ignoring ATS optimization</strong> — A beautiful resume that gets filtered out by ATS is useless. <Link to="/ats-checker" style={{ color: '#F0B429' }}>Check your ATS score</Link> before applying.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Sending the same resume everywhere</strong> — Customize for each role. Mirror the job description's keywords.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Including irrelevant information</strong> — Your 10th class marks and hobbies like "listening to music" do not belong on an experienced professional's resume.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Using an unprofessional email</strong> — coolboy2003@gmail.com will get your resume rejected before anyone reads it.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Listing duties instead of achievements</strong> — "Responsible for testing" says nothing. "Reduced production bugs by 40% through automated testing framework" says everything.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Typos and grammatical errors</strong> — Proofread twice. Have someone else review it. Use spell-check tools.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Ignoring ATS optimization</strong> — A beautiful resume that gets filtered out by ATS is useless. <Link to="/ats-checker" style={{ color: '#0D9488' }}>Check your ATS score</Link> before applying.</li>
         </ul>
 
         <h2 style={h2}>Using AI Tools to Improve Your Resume</h2>
@@ -118,10 +118,10 @@ export default function ResumeBuilding2026() {
           AI has transformed resume building in 2026. Here is how to use it effectively without making your resume sound robotic:
         </p>
         <ul style={{ listStyle: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>AI bullet point enhancement:</strong> Take your raw achievement and let AI rewrite it with stronger action verbs and better structure. Our <Link to="/" style={{ color: '#F0B429' }}>free resume builder</Link> does this automatically.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>ATS score checking:</strong> Run your resume through an <Link to="/ats-checker" style={{ color: '#F0B429' }}>ATS checker</Link> to identify missing keywords and formatting issues before you apply.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Cover letter generation:</strong> Use AI to draft a <Link to="/cover-letter-generator" style={{ color: '#F0B429' }}>tailored cover letter</Link> that matches your resume to the specific job.</li>
-          <li style={li}><strong style={{ color: '#E5E7EB' }}>Skills suggestions:</strong> AI can recommend relevant skills based on your target job title, ensuring you do not miss critical keywords.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>AI bullet point enhancement:</strong> Take your raw achievement and let AI rewrite it with stronger action verbs and better structure. Our <Link to="/" style={{ color: '#0D9488' }}>free resume builder</Link> does this automatically.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>ATS score checking:</strong> Run your resume through an <Link to="/ats-checker" style={{ color: '#0D9488' }}>ATS checker</Link> to identify missing keywords and formatting issues before you apply.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Cover letter generation:</strong> Use AI to draft a <Link to="/cover-letter-generator" style={{ color: '#0D9488' }}>tailored cover letter</Link> that matches your resume to the specific job.</li>
+          <li style={li}><strong style={{ color: 'var(--da-text, #1E293B)' }}>Skills suggestions:</strong> AI can recommend relevant skills based on your target job title, ensuring you do not miss critical keywords.</li>
         </ul>
         <p style={p}>
           The key is to use AI as a starting point, then personalize. Hiring managers can spot a fully AI-generated resume — it lacks the specific details and authentic voice that make a candidate memorable.
@@ -141,25 +141,25 @@ export default function ResumeBuilding2026() {
             'File is saved as PDF with a professional filename',
           ].map((item, i) => (
             <li key={i} style={{ ...li, display: 'flex', alignItems: 'flex-start', gap: '0.5rem', paddingLeft: 0 }}>
-              <span style={{ color: '#F0B429', fontWeight: 'bold' }}>&#10003;</span> {item}
+              <span style={{ color: '#0D9488', fontWeight: 'bold' }}>&#10003;</span> {item}
             </li>
           ))}
         </ul>
 
-        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}>
-          <h3 className="text-xl font-bold mb-2" style={{ color: '#E5E7EB' }}>Ready to build your resume?</h3>
-          <p className="text-sm mb-4" style={{ color: '#9CA3AF' }}>Use our free AI-powered resume builder — 10 professional templates, ATS optimization, instant PDF. No login required.</p>
-          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#F0B429', color: '#0A0A0B' }}>
+        <div className="mt-12 p-6 rounded-xl text-center" style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}>
+          <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>Ready to build your resume?</h3>
+          <p className="text-sm mb-4" style={{ color: 'var(--da-text-secondary, #64748B)' }}>Use our free AI-powered resume builder — 10 professional templates, ATS optimization, instant PDF. No login required.</p>
+          <Link to="/" className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-xl transition no-underline" style={{ background: '#0D9488', color: '#FFFFFF' }}>
             Start Building Free
           </Link>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: '#6B7280' }}>
+        <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>
           <span>Related:</span>
-          <Link to="/guides/ats-resume" className="no-underline" style={{ color: '#F0B429' }}>ATS Resume Guide</Link>
-          <Link to="/ats-checker" className="no-underline" style={{ color: '#F0B429' }}>Free ATS Checker</Link>
-          <Link to="/templates" className="no-underline" style={{ color: '#F0B429' }}>Resume Templates</Link>
-          <Link to="/cover-letter-generator" className="no-underline" style={{ color: '#F0B429' }}>Cover Letter Generator</Link>
+          <Link to="/guides/ats-resume" className="no-underline" style={{ color: '#0D9488' }}>ATS Resume Guide</Link>
+          <Link to="/ats-checker" className="no-underline" style={{ color: '#0D9488' }}>Free ATS Checker</Link>
+          <Link to="/templates" className="no-underline" style={{ color: '#0D9488' }}>Resume Templates</Link>
+          <Link to="/cover-letter-generator" className="no-underline" style={{ color: '#0D9488' }}>Cover Letter Generator</Link>
         </div>
       </article>
     </div>

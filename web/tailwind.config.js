@@ -5,6 +5,14 @@ export default {
     extend: {
       colors: {
         primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+        da: {
+          primary: '#0D9488',
+          'primary-hover': '#0F766E',
+          bg: '#FFFFFF',
+          surface: '#F8FFFE',
+          text: '#1E293B',
+          border: '#E2E8F0',
+        },
       },
     },
   },

@@ -110,7 +110,7 @@ export default function FresherResumeTemplate() {
             { degree: "B.Tech / B.E.", focus: "Technical projects, coding skills, hackathons, GitHub profile. Lead with tech stack.", color: "blue" },
             { degree: "MBA", focus: "Case competitions, summer internship, leadership roles, business certifications.", color: "green" },
             { degree: "BCA / MCA", focus: "Software projects, database skills, web development, IT certifications.", color: "purple" },
-            { degree: "B.Com / M.Com", focus: "Tally, accounting software skills, CA articleship, Excel proficiency.", color: "amber" },
+            { degree: "B.Com / M.Com", focus: "Tally, accounting software skills, CA articleship, Excel proficiency.", color: "yellow" },
             { degree: "BA / MA", focus: "Research projects, publications, language skills, writing samples.", color: "pink" },
             { degree: "B.Sc / M.Sc", focus: "Lab projects, research papers, analytical tools, domain expertise.", color: "teal" },
           ].map((item) => (

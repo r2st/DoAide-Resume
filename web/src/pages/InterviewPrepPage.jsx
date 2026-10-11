@@ -237,7 +237,7 @@ export default function InterviewPrepPage() {
             title="Situational Questions"
             tip={TIPS.situational}
             questions={generated.situational}
-            color="amber"
+            color="teal"
           />
 
           <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-xl text-center">
@@ -295,7 +295,7 @@ function QuestionSection({ title, tip, questions, color }) {
   const colorMap = {
     blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', badge: 'bg-blue-100 text-blue-700' },
     green: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-800', badge: 'bg-green-100 text-green-700' },
-    amber: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-800', badge: 'bg-amber-100 text-amber-700' },
+    teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-800', badge: 'bg-teal-100 text-teal-700' },
     purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-800', badge: 'bg-purple-100 text-purple-700' },
   };
   const c = colorMap[color] || colorMap.blue;

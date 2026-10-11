@@ -84,7 +84,7 @@ export default function ResumeBuilder() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-6 text-center">
-          Your <span className="text-brand-gold">ATS-Optimized</span> Resume
+          Your <span className="text-brand-primary">ATS-Optimized</span> Resume
         </h1>
 
         <div className="border border-brand-border rounded-xl p-6 bg-brand-card mb-6">
@@ -94,13 +94,13 @@ export default function ResumeBuilder() {
         <div className="flex gap-4">
           <button
             onClick={copyToClipboard}
-            className="flex-1 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors"
+            className="flex-1 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors"
           >
             Copy to Clipboard
           </button>
           <button
             onClick={() => { setResult(null); setStep(1); setData(INITIAL) }}
-            className="flex-1 py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-gold transition-colors"
+            className="flex-1 py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-primary transition-colors"
           >
             Start Over
           </button>
@@ -117,7 +117,7 @@ export default function ResumeBuilder() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          AI Resume <span className="text-brand-gold">Builder</span>
+          AI Resume <span className="text-brand-primary">Builder</span>
         </h1>
         <p className="text-brand-muted">Enter your details and let AI create an ATS-optimized resume</p>
       </div>
@@ -126,11 +126,11 @@ export default function ResumeBuilder() {
         {[1, 2, 3, 4].map(s => (
           <div key={s} className="flex items-center gap-2">
             <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-              step >= s ? 'bg-brand-gold text-brand-dark' : 'bg-brand-border text-brand-muted'
+              step >= s ? 'bg-brand-primary text-white' : 'bg-brand-border text-brand-muted'
             }`}>
               {s}
             </div>
-            {s < 4 && <div className={`w-8 h-0.5 ${step > s ? 'bg-brand-gold' : 'bg-brand-border'}`} />}
+            {s < 4 && <div className={`w-8 h-0.5 ${step > s ? 'bg-brand-primary' : 'bg-brand-border'}`} />}
           </div>
         ))}
       </div>
@@ -159,7 +159,7 @@ export default function ResumeBuilder() {
                 <textarea placeholder="Brief description of your role and achievements" value={exp.description} onChange={e => updateExperience(i, 'description', e.target.value)} rows={3} />
               </div>
             ))}
-            <button onClick={addExperience} className="w-full py-2 border border-dashed border-brand-border rounded-lg text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-colors">
+            <button onClick={addExperience} className="w-full py-2 border border-dashed border-brand-border rounded-lg text-brand-muted hover:border-brand-primary hover:text-brand-primary transition-colors">
               + Add Experience
             </button>
           </div>
@@ -175,7 +175,7 @@ export default function ResumeBuilder() {
                 <input placeholder="Year (e.g., 2020)" value={edu.year} onChange={e => updateEducation(i, 'year', e.target.value)} />
               </div>
             ))}
-            <button onClick={addEducation} className="w-full py-2 border border-dashed border-brand-border rounded-lg text-brand-muted hover:border-brand-gold hover:text-brand-gold transition-colors">
+            <button onClick={addEducation} className="w-full py-2 border border-dashed border-brand-border rounded-lg text-brand-muted hover:border-brand-primary hover:text-brand-primary transition-colors">
               + Add Education
             </button>
           </div>
@@ -191,13 +191,13 @@ export default function ResumeBuilder() {
                 onChange={e => setSkillInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && addSkill()}
               />
-              <button onClick={addSkill} className="px-4 bg-brand-gold text-brand-dark font-bold rounded-lg whitespace-nowrap">Add</button>
+              <button onClick={addSkill} className="px-4 bg-brand-primary text-white font-bold rounded-lg whitespace-nowrap">Add</button>
             </div>
             <div className="flex flex-wrap gap-2">
               {data.skills.map((skill, i) => (
-                <span key={i} className="px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-sm flex items-center gap-2">
+                <span key={i} className="px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary text-sm flex items-center gap-2">
                   {skill}
-                  <button onClick={() => removeSkill(i)} className="text-brand-gold/50 hover:text-red-400">&times;</button>
+                  <button onClick={() => removeSkill(i)} className="text-brand-primary/50 hover:text-red-400">&times;</button>
                 </span>
               ))}
             </div>
@@ -210,7 +210,7 @@ export default function ResumeBuilder() {
           {step > 1 && (
             <button
               onClick={() => setStep(step - 1)}
-              className="flex-1 py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-gold transition-colors"
+              className="flex-1 py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-primary transition-colors"
             >
               Back
             </button>
@@ -218,7 +218,7 @@ export default function ResumeBuilder() {
           {step < 4 ? (
             <button
               onClick={() => setStep(step + 1)}
-              className="flex-1 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors"
+              className="flex-1 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors"
             >
               Next
             </button>
@@ -226,7 +226,7 @@ export default function ResumeBuilder() {
             <button
               onClick={handleGenerate}
               disabled={loading}
-              className="flex-1 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors disabled:opacity-50"
+              className="flex-1 py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors disabled:opacity-50"
             >
               {loading ? 'Generating Resume...' : 'Generate ATS Resume'}
             </button>

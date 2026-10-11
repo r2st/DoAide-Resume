@@ -22,7 +22,7 @@ export default function Embed() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          Embed <span className="text-brand-gold">ATS Checker</span>
+          Embed <span className="text-brand-primary">ATS Checker</span>
         </h1>
         <p className="text-brand-muted">Add our free ATS resume checker to your website, blog, or career portal</p>
       </div>
@@ -34,7 +34,7 @@ export default function Embed() {
         </pre>
         <button
           onClick={handleCopy}
-          className="px-6 py-2 bg-brand-gold text-brand-dark font-bold rounded-lg hover:bg-brand-gold-hover transition-colors"
+          className="px-6 py-2 bg-brand-primary text-white font-bold rounded-lg hover:bg-brand-primary-hover transition-colors"
         >
           {copied ? 'Copied!' : 'Copy Embed Code'}
         </button>
@@ -44,23 +44,23 @@ export default function Embed() {
         <h2 className="font-bold mb-4">Features</h2>
         <ul className="space-y-3 text-brand-muted text-sm">
           <li className="flex items-start gap-3">
-            <span className="text-brand-gold">✓</span>
+            <span className="text-brand-primary">✓</span>
             <span>Fully responsive — works on desktop and mobile</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-brand-gold">✓</span>
+            <span className="text-brand-primary">✓</span>
             <span>Free to use — no API key required</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-brand-gold">✓</span>
+            <span className="text-brand-primary">✓</span>
             <span>Dark-themed to match modern websites</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-brand-gold">✓</span>
+            <span className="text-brand-primary">✓</span>
             <span>No tracking or cookies on embedded widget</span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-brand-gold">✓</span>
+            <span className="text-brand-primary">✓</span>
             <span>Perfect for career blogs, job boards, and university career centers</span>
           </li>
         </ul>

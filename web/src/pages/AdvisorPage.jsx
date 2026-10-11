@@ -15,7 +15,7 @@ function MessageBubble({ role, text }) {
         className="max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
         style={
           isUser
-            ? { background: '#F0B429', color: '#0A0A0B' }
+            ? { background: '#0D9488', color: '#FFFFFF' }
             : { background: '#1e1e22', color: '#e5e7eb', border: '1px solid #2a2a2d' }
         }
       >
@@ -37,7 +37,7 @@ function TypingIndicator() {
             key={i}
             className="inline-block w-2 h-2 rounded-full"
             style={{
-              background: '#F0B429',
+              background: '#0D9488',
               animation: 'bounce 1.2s infinite',
               animationDelay: `${i * 0.2}s`,
             }}
@@ -111,11 +111,11 @@ export default function AdvisorPage() {
       <div className="text-center mb-8">
         <h1
           className="text-3xl sm:text-4xl font-bold mb-2"
-          style={{ fontFamily: "'Instrument Serif', Georgia, serif", color: '#E5E7EB' }}
+          style={{ fontFamily: "'Inter', system-ui, sans-serif", color: 'var(--da-text, #1E293B)' }}
         >
-          AI Career <em style={{ color: '#F0B429', fontStyle: 'italic' }}>Advisor</em>
+          AI Career <em style={{ color: '#0D9488' }}>Advisor</em>
         </h1>
-        <p className="text-sm" style={{ color: '#9CA3AF' }}>
+        <p className="text-sm" style={{ color: 'var(--da-text-secondary, #64748B)' }}>
           Free AI-powered career advice for Indian job seekers. Ask anything about resumes, interviews, or job search.
         </p>
       </div>
@@ -123,7 +123,7 @@ export default function AdvisorPage() {
       <div
         className="rounded-xl p-4 mb-4"
         style={{
-          background: '#111113',
+          background: 'var(--da-bg-alt, #F8FFFE)',
           border: '1px solid #2a2a2d',
           minHeight: '320px',
           maxHeight: '60vh',
@@ -142,7 +142,7 @@ export default function AdvisorPage() {
                   onClick={() => sendMessage(q)}
                   className="px-3 py-2 rounded-lg text-xs font-medium transition-colors"
                   style={{ background: '#1e1e22', color: '#d1d5db', border: '1px solid #333' }}
-                  onMouseEnter={(e) => (e.target.style.borderColor = '#F0B429')}
+                  onMouseEnter={(e) => (e.target.style.borderColor = '#0D9488')}
                   onMouseLeave={(e) => (e.target.style.borderColor = '#333')}
                 >
                   {q}
@@ -173,7 +173,7 @@ export default function AdvisorPage() {
           type="submit"
           disabled={loading || !input.trim()}
           className="px-5 py-3 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50"
-          style={{ background: '#F0B429', color: '#0A0A0B' }}
+          style={{ background: '#0D9488', color: '#FFFFFF' }}
         >
           Send
         </button>

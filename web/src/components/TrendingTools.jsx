@@ -13,12 +13,12 @@ export default function TrendingTools() {
   }, []);
 
   return (
-    <section className="py-12" style={{ background: '#111113' }}>
+    <section className="py-12" style={{ background: 'var(--da-bg-alt, #F8FFFE)' }}>
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-xl font-bold text-center mb-2" style={{ color: '#E5E7EB' }}>
+        <h2 className="text-xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>
           <span role="img" aria-label="fire">🔥</span> Trending on DoAide
         </h2>
-        <p className="text-center text-sm mb-8" style={{ color: '#6B7280' }}>Popular free tools across DoAide products</p>
+        <p className="text-center text-sm mb-8" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>Popular free tools across DoAide products</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {shown.map((tool) => (
             <a
@@ -27,11 +27,11 @@ export default function TrendingTools() {
               target="_blank"
               rel="noopener noreferrer"
               className="group block p-4 rounded-xl transition-all text-center no-underline"
-              style={{ background: '#1A1A1D', border: '1px solid #2A2A2D' }}
+              style={{ background: 'var(--da-surface, #F8FFFE)', border: '1px solid var(--da-border, #E2E8F0)' }}
             >
               <span className="text-2xl block mb-2">{tool.icon}</span>
-              <div className="text-sm font-semibold transition-colors" style={{ color: '#E5E7EB' }}>{tool.name}</div>
-              <div className="text-xs mt-1" style={{ color: '#6B7280' }}>on {tool.product}</div>
+              <div className="text-sm font-semibold transition-colors" style={{ color: 'var(--da-text, #1E293B)' }}>{tool.name}</div>
+              <div className="text-xs mt-1" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>on {tool.product}</div>
             </a>
           ))}
         </div>

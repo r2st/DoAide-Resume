@@ -52,7 +52,7 @@ export default function ATSChecker() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
-          ATS Resume <span className="text-brand-gold">Score Checker</span>
+          ATS Resume <span className="text-brand-primary">Score Checker</span>
         </h1>
         <p className="text-brand-muted">Paste your resume or upload a file to get your ATS compatibility score</p>
       </div>
@@ -63,7 +63,7 @@ export default function ATSChecker() {
             <button
               onClick={() => setActiveTab('paste')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                activeTab === 'paste' ? 'bg-brand-gold text-brand-dark' : 'bg-brand-border text-white'
+                activeTab === 'paste' ? 'bg-brand-primary text-white' : 'bg-brand-border text-white'
               }`}
             >
               Paste Text
@@ -71,7 +71,7 @@ export default function ATSChecker() {
             <button
               onClick={() => setActiveTab('upload')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                activeTab === 'upload' ? 'bg-brand-gold text-brand-dark' : 'bg-brand-border text-white'
+                activeTab === 'upload' ? 'bg-brand-primary text-white' : 'bg-brand-border text-white'
               }`}
             >
               Upload File
@@ -90,7 +90,7 @@ export default function ATSChecker() {
               <button
                 onClick={handleCheck}
                 disabled={loading}
-                className="w-full py-3 bg-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold-hover transition-colors disabled:opacity-50"
+                className="w-full py-3 bg-brand-primary text-white font-bold rounded-xl hover:bg-brand-primary-hover transition-colors disabled:opacity-50"
               >
                 {loading ? 'Analyzing...' : 'Check ATS Score'}
               </button>
@@ -98,7 +98,7 @@ export default function ATSChecker() {
           ) : (
             <div className="text-center py-12 border-2 border-dashed border-brand-border rounded-xl">
               <p className="text-brand-muted mb-4">Upload your resume (PDF, DOCX, or TXT)</p>
-              <label className="inline-block px-6 py-3 bg-brand-gold text-brand-dark font-bold rounded-xl cursor-pointer hover:bg-brand-gold-hover transition-colors">
+              <label className="inline-block px-6 py-3 bg-brand-primary text-white font-bold rounded-xl cursor-pointer hover:bg-brand-primary-hover transition-colors">
                 Choose File
                 <input
                   type="file"
@@ -131,14 +131,14 @@ export default function ATSChecker() {
                 <div key={i}>
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-sm font-medium">{section.name}</span>
-                    <span className="text-sm text-brand-gold">{section.score}/{section.max_score}</span>
+                    <span className="text-sm text-brand-primary">{section.score}/{section.max_score}</span>
                   </div>
                   <div className="w-full bg-brand-border rounded-full h-2 mb-1">
                     <div
                       className="h-2 rounded-full transition-all duration-700"
                       style={{
                         width: `${(section.score / section.max_score) * 100}%`,
-                        backgroundColor: section.score >= section.max_score * 0.8 ? '#22c55e' : section.score >= section.max_score * 0.5 ? '#F0B429' : '#ef4444',
+                        backgroundColor: section.score >= section.max_score * 0.8 ? '#22c55e' : section.score >= section.max_score * 0.5 ? '#0D9488' : '#ef4444',
                       }}
                     />
                   </div>
@@ -170,7 +170,7 @@ export default function ATSChecker() {
                 {tips.tips.map((tip, i) => (
                   <div key={i} className="flex items-start gap-3 text-sm">
                     <span className={`px-2 py-0.5 rounded text-xs font-medium ${
-                      tip.priority === 'high' ? 'bg-red-500/20 text-red-400' : 'bg-brand-gold/20 text-brand-gold'
+                      tip.priority === 'high' ? 'bg-red-500/20 text-red-400' : 'bg-brand-primary/20 text-brand-primary'
                     }`}>
                       {tip.priority}
                     </span>
@@ -186,7 +186,7 @@ export default function ATSChecker() {
 
           <button
             onClick={() => { setResult(null); setTips(null); setText('') }}
-            className="w-full py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-gold transition-colors"
+            className="w-full py-3 border border-brand-border text-white font-medium rounded-xl hover:border-brand-primary transition-colors"
           >
             Check Another Resume
           </button>
