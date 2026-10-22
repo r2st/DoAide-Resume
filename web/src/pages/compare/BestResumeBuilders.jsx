@@ -23,32 +23,27 @@ const TOOLS = [
   {
     rank: 1, name: 'DoAide Resume', pricing: 'Free Forever', free: true,
     features: ['ATS-optimized templates', 'AI bullet enhancer', 'ATS score checker', 'PDF download (free)', 'India-focused content', 'No login needed', 'Client-side processing', 'Cover letter builder'],
-    verdict: 'Best free resume builder for Indian job seekers. ATS-optimized, AI-powered, completely private.',
-    rating: '4.8', url: '/',
+    verdict: 'Best free resume builder for Indian job seekers. ATS-optimized, AI-powered, completely private.', url: '/',
   },
   {
     rank: 2, name: 'Canva', pricing: 'Free / Rs 3,999/yr', free: false,
     features: ['50+ templates', 'Drag-and-drop editor', 'Design elements', 'PDF download'],
-    verdict: 'Great for creative resumes. Many templates are not ATS-friendly. Premium features require Canva Pro.',
-    rating: '4.5', url: '/compare/canva',
+    verdict: 'Great for creative resumes. Many templates are not ATS-friendly. Premium features require Canva Pro.', url: '/compare/canva',
   },
   {
     rank: 3, name: 'Novoresume', pricing: 'Free / $16/mo', free: false,
     features: ['Modern templates', 'Content suggestions', 'Multiple formats', 'Cover letter'],
-    verdict: 'Polished templates but free tier limits PDF downloads. One-page limit on free plan.',
-    rating: '4.3', url: '/compare/novoresume',
+    verdict: 'Polished templates but free tier limits PDF downloads. One-page limit on free plan.', url: '/compare/novoresume',
   },
   {
     rank: 4, name: 'Zety', pricing: '$2.70/week trial', free: false,
     features: ['Professional templates', 'Content tips', 'Multiple formats'],
-    verdict: 'No truly free tier — requires payment after creating your resume. Templates are professional but generic.',
-    rating: '4.1', url: null,
+    verdict: 'No truly free tier — requires payment after creating your resume. Templates are professional but generic.', url: null,
   },
   {
     rank: 5, name: 'Resume.io', pricing: 'Free / $7.99/mo', free: false,
     features: ['Simple editor', 'Templates', 'PDF download', 'Cover letter'],
-    verdict: 'Free plan limited to one resume with watermark. Paid plans for full features.',
-    rating: '4.0', url: null,
+    verdict: 'Free plan limited to one resume with watermark. Paid plans for full features.', url: null,
   },
 ];
 
@@ -169,8 +164,7 @@ export default function BestResumeBuilders() {
                 ))}
               </div>
               <div className="flex items-center gap-4 text-xs text-gray-400">
-                <span>⭐ {tool.rating}/5</span>
-                {tool.url && <Link to={tool.url} className="text-blue-600 font-medium">
+                                {tool.url && <Link to={tool.url} className="text-blue-600 font-medium">
                   {tool.rank === 1 ? 'Build Resume Free →' : 'See comparison →'}
                 </Link>}
               </div>
