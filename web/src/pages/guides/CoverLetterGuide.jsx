@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../../lib/usePageMeta';
 
 export default function CoverLetterGuide() {
-  useEffect(() => {
-    document.title = 'Cover Letter Format India 2026: Free Tips & Examples | DoAide Resume';
-  }, []);
+  usePageMeta(
+    'Cover Letter Format India 2026: Free Tips & Examples | DoAide Resume',
+    'The cover letter format Indian recruiters expect, with examples and practical tips for freshers and experienced professionals. Free guide from DoAide Resume.',
+  );
 
   return (
     <div>

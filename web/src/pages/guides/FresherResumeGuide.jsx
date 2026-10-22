@@ -1,11 +1,11 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import usePageMeta from "../../lib/usePageMeta";
 
 export default function FresherResumeGuide() {
-  useEffect(() => {
-    document.title =
-      "Resume for Freshers 2026: Free Template, Format & Tips | DoAide";
-  }, []);
+  usePageMeta(
+    "Resume for Freshers 2026: Free Template, Format & Tips | DoAide",
+    "How to write your first resume with no work experience: the right format, which sections to include, and examples for Indian freshers in 2026.",
+  );
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

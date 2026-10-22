@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../../lib/usePageMeta';
 
 const CheckIcon = () => (
   <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,9 +20,10 @@ const PartialIcon = () => (
 );
 
 export default function VsNovoresume() {
-  useEffect(() => {
-    document.title = 'DoAide Resume vs Novoresume 2026: Honest Comparison | DoAide Resume';
-  }, []);
+  usePageMeta(
+    'DoAide Resume vs Novoresume 2026: Honest Comparison | DoAide Resume',
+    'DoAide Resume vs Novoresume compared feature by feature: pricing, privacy, templates and ATS support, to help Indian job seekers choose.',
+  );
 
   const comparisonData = [
     { feature: '100% Free (no paywall)', doaide: 'check', novo: 'cross' },

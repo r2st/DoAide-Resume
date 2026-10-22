@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ToolTracker from './components/ToolTracker';
-import SocialProofBar from './components/SocialProofBar';
 import ReferralBanner from './components/ReferralBanner';
 import HomePage from './pages/HomePage';
 import TemplatesPage from './pages/TemplatesPage';
@@ -39,7 +38,6 @@ export default function App() {
       <Header />
       <ToolTracker />
       <main className="flex-1">
-        <SocialProofBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/templates" element={<TemplatesPage />} />

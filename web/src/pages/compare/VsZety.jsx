@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../../lib/usePageMeta';
 
 const CheckIcon = () => (
   <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,9 +20,10 @@ const PartialIcon = () => (
 );
 
 export default function VsZety() {
-  useEffect(() => {
-    document.title = 'DoAide Resume vs Zety 2026: Honest Comparison | DoAide Resume';
-  }, []);
+  usePageMeta(
+    'DoAide Resume vs Zety 2026: Honest Comparison | DoAide Resume',
+    'DoAide Resume vs Zety compared feature by feature: real cost, templates, ATS support and privacy, for Indian job seekers deciding which to use.',
+  );
 
   const comparisonData = [
     { feature: '100% Free (no paywall)', doaide: 'check', zety: 'cross' },

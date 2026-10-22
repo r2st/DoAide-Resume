@@ -1,10 +1,11 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../../lib/usePageMeta';
 
 export default function ResumeWritingGuide() {
-  useEffect(() => {
-    document.title = 'How to Write a Resume in India 2026 — Complete Guide | DoAide Resume';
-  }, []);
+  usePageMeta(
+    'How to Write a Resume in India 2026 — Complete Guide | DoAide Resume',
+    'How to write a resume that Indian recruiters shortlist and ATS software accepts: choosing a format, writing each section, and tailoring it to the job.',
+  );
 
   return (
     <div>

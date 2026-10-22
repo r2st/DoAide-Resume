@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../../lib/usePageMeta';
 
 const builders = [
   {
@@ -241,9 +241,10 @@ const builders = [
 ];
 
 export default function BestFreeResumeBuilder() {
-  useEffect(() => {
-    document.title = '10 Best Free Resume Builders India 2026 — Compared | DoAide Resume';
-  }, []);
+  usePageMeta(
+    '10 Best Free Resume Builders India 2026 — Compared | DoAide Resume',
+    'The best free resume builders for India in 2026, ranked on whether they are actually free, pass ATS checks, and fit Indian job applications.',
+  );
 
   return (
     <div>

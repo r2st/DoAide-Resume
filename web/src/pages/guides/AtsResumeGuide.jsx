@@ -1,11 +1,11 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import usePageMeta from "../../lib/usePageMeta";
 
 export default function AtsResumeGuide() {
-  useEffect(() => {
-    document.title =
-      "ATS-Friendly Resume: Complete Guide for Indian Job Seekers 2026 | DoAide";
-  }, []);
+  usePageMeta(
+    "ATS-Friendly Resume: Complete Guide for Indian Job Seekers 2026 | DoAide",
+    "Make your resume pass Applicant Tracking Systems used by Indian employers: formatting rules, keywords, section headings and common reasons for rejection.",
+  );
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">

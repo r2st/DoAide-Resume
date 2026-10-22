@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ResumePreview from '../components/ResumePreview';
+import usePageMeta from '../lib/usePageMeta';
 
 const sampleData = {
   personal: {
@@ -110,6 +111,10 @@ const templates = [
 ];
 
 export default function TemplatesPage() {
+  usePageMeta(
+    'Free Resume Templates India — ATS-Friendly, PDF Download | DoAide Resume',
+    'Five free, ATS-compatible resume templates for Indian job seekers. Pick one, fill in your details and download a PDF. No login required.',
+  );
   return (
     <div>
       {/* Hero */}

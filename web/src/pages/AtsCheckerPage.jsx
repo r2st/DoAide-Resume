@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AtsScoreCard from '../components/AtsScoreCard';
 import { checkAtsScore } from '../lib/atsChecker';
 import ShareButtons from '../components/ShareButtons';
+import usePageMeta from '../lib/usePageMeta';
 
 function parseResumeText(text) {
   if (!text || !text.trim()) return null;
@@ -124,6 +125,10 @@ const atsTips = [
 ];
 
 export default function AtsCheckerPage() {
+  usePageMeta(
+    'Free ATS Resume Checker — Check Your Resume Score | DoAide Resume',
+    'Check how well your resume will pass Applicant Tracking Systems. Get an ATS compatibility score and specific fixes. Free, no login required.',
+  );
   const [resumeText, setResumeText] = useState('');
   const [jobDescription, setJobDescription] = useState('');
   const [atsScore, setAtsScore] = useState(null);
