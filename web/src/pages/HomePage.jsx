@@ -4,6 +4,7 @@ import ResumeEditor from '../components/ResumeEditor';
 import RecentTools from '../components/RecentTools';
 import TrendingTools from '../components/TrendingTools';
 import ResumePreview from '../components/ResumePreview';
+import ShareButtons from '../components/ShareButtons';
 import TemplateSelector from '../components/TemplateSelector';
 import AtsScoreCard from '../components/AtsScoreCard';
 import { exportToPdf } from '../lib/pdfExport';
@@ -21,53 +22,6 @@ const defaultResumeData = {
   languages: [],
   hobbies: [],
 };
-
-function AnimatedCounter() {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef(null);
-  const target = 50000;
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started) {
-        setStarted(true);
-        obs.disconnect();
-      }
-    }, { threshold: 0.3 });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 2000;
-    const steps = 60;
-    const inc = target / steps;
-    let current = 0;
-    const interval = setInterval(() => {
-      current += inc;
-      if (current >= target) {
-        setCount(target);
-        clearInterval(interval);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(interval);
-  }, [started]);
-
-  return (
-    <div ref={ref} className="py-8 text-center" style={{ background: 'var(--da-bg, #FFFFFF)' }}>
-      <div className="text-5xl font-light" style={{ fontFamily: "'Inter', system-ui, sans-serif", color: '#0D9488' }}>
-        {count.toLocaleString('en-IN')}+
-      </div>
-      <div className="text-base mt-1" style={{ color: 'var(--da-text-secondary, #64748B)' }}>Resumes Created</div>
-    </div>
-  );
-}
 
 const features = [
   {
@@ -243,8 +197,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AnimatedCounter />
-
       <RecentTools />
 
       {/* Career Tools Section */}
@@ -363,6 +315,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        <ShareButtons
+          toolName="Resume Builder"
+          text="I just built my resume free with DoAide Resume — no login, no watermark. Try it:"
+          url="https://resume.doaide.com/"
+        />
       </section>
 
       {/* ATS Score Modal */}
