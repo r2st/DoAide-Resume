@@ -34,6 +34,10 @@ const AtsFriendlyResume = lazy(() => import('./pages/blog/AtsFriendlyResume'));
 const ResumeMistakes = lazy(() => import('./pages/blog/ResumeMistakes'));
 const AiResumeBuilderFreshers2026 = lazy(() => import('./pages/blog/AiResumeBuilderFreshers2026'));
 const ResumeWithNoExperience = lazy(() => import('./pages/blog/ResumeWithNoExperience'));
+const ResumeScorePage = lazy(() => import('./pages/ResumeScorePage'));
+const KeywordOptimizerPage = lazy(() => import('./pages/KeywordOptimizerPage'));
+const InterviewQuestionsPage = lazy(() => import('./pages/InterviewQuestionsPage'));
+const PortfolioBuilderPage = lazy(() => import('./pages/PortfolioBuilderPage'));
 const BlogIndex = lazy(() => import('./pages/blog/BlogIndex'));
 const MarkdownPost = lazy(() => import('./pages/blog/MarkdownPost'));
 import AtsFloatingWidget from './components/AtsFloatingWidget';
@@ -78,6 +82,10 @@ export default function App() {
           <Route path="/compare/zety" element={<VsZety />} />
           <Route path="/tools/interview-prep" element={<InterviewPrepChecklist />} />
           <Route path="/advisor" element={<AdvisorPage />} />
+          <Route path="/resume-score" element={<ResumeScorePage />} />
+          <Route path="/keyword-optimizer" element={<KeywordOptimizerPage />} />
+          <Route path="/interview-questions" element={<InterviewQuestionsPage />} />
+          <Route path="/portfolio-builder" element={<PortfolioBuilderPage />} />
           <Route path="/blog/resume-building-2026" element={<ResumeBuilding2026 />} />
           <Route path="/blog/ats-optimization-2026" element={<AtsOptimization2026 />} />
           <Route path="/blog/resume-format-freshers-2026" element={<ResumeFormatFreshers2026 />} />

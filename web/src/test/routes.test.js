@@ -23,6 +23,10 @@ const EXPECTED_ROUTES = [
   '/compare/zety',
   '/tools/interview-prep',
   '/advisor',
+  '/resume-score',
+  '/keyword-optimizer',
+  '/interview-questions',
+  '/portfolio-builder',
   '/blog/resume-building-2026',
   '/blog/ats-optimization-2026',
   '/blog/resume-format-freshers-2026',
@@ -56,6 +60,10 @@ const SITEMAP_PAGES = [
   '/compare/zety',
   '/tools/interview-prep',
   '/advisor',
+  '/resume-score',
+  '/keyword-optimizer',
+  '/interview-questions',
+  '/portfolio-builder',
   '/blog/resume-building-2026',
   '/blog/ats-optimization-2026',
   '/blog/resume-format-freshers-2026',
@@ -67,8 +75,8 @@ const SITEMAP_PAGES = [
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 29 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(30);
+  it('has 34 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(34);
   });
 
   it('every sitemap page has a matching route', () => {

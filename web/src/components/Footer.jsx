@@ -35,6 +35,9 @@ export default function Footer() {
               <li><Link to="/templates" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Templates</Link></li>
               <li><Link to="/ats-checker" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>ATS Checker</Link></li>
               <li><Link to="/cover-letter-generator" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Cover Letter</Link></li>
+              <li><Link to="/resume-score" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>AI Resume Score</Link></li>
+              <li><Link to="/keyword-optimizer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Keyword Optimizer</Link></li>
+              <li><Link to="/portfolio-builder" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Portfolio Builder</Link></li>
             </ul>
           </div>
 

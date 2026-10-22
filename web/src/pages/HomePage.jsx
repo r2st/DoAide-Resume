@@ -8,6 +8,7 @@ import ShareButtons from '../components/ShareButtons';
 import TemplateSelector from '../components/TemplateSelector';
 import AtsScoreCard from '../components/AtsScoreCard';
 import { exportToPdf } from '../lib/pdfExport';
+import { exportToDocx } from '../lib/docxExport';
 import { checkAtsScore } from '../lib/atsChecker';
 import { jobRoleSuggestions } from '../lib/jobSuggestions';
 import { IMPORT_STORAGE_KEY } from '../lib/linkedinParser';
@@ -169,6 +170,18 @@ export default function HomePage() {
     }
   };
 
+  const handleExportDocx = async () => {
+    setIsExporting(true);
+    try {
+      await exportToDocx(resumeData, `${resumeData.personal.name || 'resume'}.docx`);
+    } catch (err) {
+      console.error('DOCX export failed:', err);
+      alert('Failed to export DOCX. Please try again.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   const handleCheckAts = () => {
     const adaptedData = {
       personalInfo: resumeData.personal,
@@ -226,9 +239,13 @@ export default function HomePage() {
       <section className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xl font-bold text-center mb-2" style={{ color: 'var(--da-text, #1E293B)' }}>More Free Career Tools</h2>
         <p className="text-center text-sm mb-6" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>No login required — use any tool instantly</p>
-        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
-            { to: '/templates', icon: '🎨', name: 'Templates', desc: '5 professional designs' },
+            { to: '/resume-score', icon: '🤖', name: 'AI Resume Score', desc: 'Get your resume graded' },
+            { to: '/keyword-optimizer', icon: '🔑', name: 'Keyword Optimizer', desc: 'Match any job description' },
+            { to: '/interview-questions', icon: '❓', name: 'Interview Questions', desc: 'From your own resume' },
+            { to: '/portfolio-builder', icon: '🌐', name: 'Portfolio Builder', desc: 'One-file personal site' },
+            { to: '/templates', icon: '🎨', name: 'Templates', desc: 'Professional designs' },
             { to: '/ats-checker', icon: '✅', name: 'ATS Checker', desc: 'Check ATS compatibility' },
             { to: '/cover-letter-generator', icon: '✉️', name: 'Cover Letter', desc: 'Generate cover letters' },
             { to: '/linkedin-summary-generator', icon: '💼', name: 'LinkedIn Summary', desc: 'Optimize your profile' },
@@ -277,6 +294,17 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
               {isExporting ? 'Exporting...' : 'Download PDF'}
+            </button>
+            <button
+              onClick={handleExportDocx}
+              disabled={isExporting}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[44px] font-medium rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+              style={{ background: 'var(--da-surface, #F8FFFE)', color: '#0D9488', border: '1px solid #0D9488' }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              {isExporting ? 'Exporting...' : 'Download DOCX'}
             </button>
             <button
               onClick={handleCheckAts}

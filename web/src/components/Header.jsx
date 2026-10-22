@@ -5,8 +5,9 @@ const NAV_LINKS = [
   { to: '/', label: 'Builder' },
   { to: '/templates', label: 'Templates' },
   { to: '/ats-checker', label: 'ATS Checker' },
+  { to: '/resume-score', label: 'Resume Score' },
   { to: '/cover-letter-generator', label: 'Cover Letter' },
-  { to: '/tools/interview-prep', label: 'Interview Prep' },
+  { to: '/interview-questions', label: 'Interview Prep' },
   { to: '/advisor', label: 'Career Advisor' },
   { to: '/guides/resume-writing', label: 'Guides' },
 ];

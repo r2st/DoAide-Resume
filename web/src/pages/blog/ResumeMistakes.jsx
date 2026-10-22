@@ -236,6 +236,7 @@ export default function ResumeMistakes() {
 
         <div className="mt-8 flex flex-wrap gap-4 text-sm" style={{ color: 'var(--da-text-muted, #94A3B8)' }}>
           <span>Related:</span>
+          <Link to="/blog/resume-mistakes-2026" className="no-underline" style={{ color: '#0D9488' }}>Resume Mistakes to Avoid in 2026</Link>
           <Link to="/blog/resume-building-2026" className="no-underline" style={{ color: '#0D9488' }}>Resume Building Guide 2026</Link>
           <Link to="/blog/ats-friendly-resume" className="no-underline" style={{ color: '#0D9488' }}>ATS-Friendly Resume Guide</Link>
           <Link to="/ats-checker" className="no-underline" style={{ color: '#0D9488' }}>Free ATS Checker</Link>

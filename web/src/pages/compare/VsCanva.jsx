@@ -26,7 +26,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Is DoAide Resume really 100% free?',
-    a: 'Yes. DoAide Resume is completely free with no paywall, no watermark, and no premium tier. You can create unlimited resumes and download PDFs without signing up. Canva requires a paid Pro plan (Rs 3,999/year) for many resume features.',
+    a: 'Yes. DoAide Resume is completely free with no paywall, no watermark, and no premium tier. You can create unlimited resumes and download PDFs and DOCX files without signing up. Canva has a free tier, but many resume templates and features require a paid Canva Pro subscription.',
   },
   {
     q: 'Can I download my resume as PDF without paying?',
@@ -42,7 +42,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Is my data safe on DoAide Resume?',
-    a: 'Yes. DoAide Resume processes everything in your browser. No data is uploaded to any server, no account is needed, and your resume content stays on your device. Canva stores your data on their cloud servers.',
+    a: 'Yes. The resume builder runs in your browser — your resume stays on your device and no account is needed. Optional AI tools (like the AI resume score) send your text to our server only to generate the result and do not store it. Canva requires an account and stores your designs on its cloud servers.',
   },
 ];
 
@@ -161,8 +161,8 @@ export default function VsCanva() {
               </div>
               <div className="border-t border-blue-200 pt-4">
                 <div className="font-semibold text-gray-600">Canva</div>
-                <div className="text-2xl font-bold text-gray-800">Rs 3,999/year</div>
-                <p className="text-sm text-gray-600 mt-1">Free tier available with limited templates. Premium templates, brand kit, and advanced features require Canva Pro.</p>
+                <div className="text-2xl font-bold text-gray-800">Free + paid Pro tier</div>
+                <p className="text-sm text-gray-600 mt-1">Free tier available with limited templates. Premium templates, brand kit, and advanced features require a Canva Pro subscription (see canva.com for current pricing).</p>
               </div>
             </div>
           </div>

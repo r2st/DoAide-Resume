@@ -15,6 +15,10 @@ PAGES = [
     {"loc": "/linkedin-resume-import", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/interview-preparation", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/advisor", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/resume-score", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": "/keyword-optimizer", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": "/interview-questions", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": "/portfolio-builder", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/tools/interview-prep", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/guides/resume-writing", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/guides/ats-resume", "priority": "0.8", "changefreq": "monthly"},
@@ -43,6 +47,8 @@ PAGES = [
     {"loc": "/blog/best-free-resume-builder-2026", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/ats-friendly-resume-tips-india", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/linkedin-profile-to-resume", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/resume-mistakes-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/how-to-write-cover-letter-india", "priority": "0.8", "changefreq": "monthly"},
 ]
 
 
