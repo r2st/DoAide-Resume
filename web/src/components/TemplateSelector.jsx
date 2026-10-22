@@ -59,6 +59,12 @@ const templateOptions = [
     description: 'Dark sidebar with skills & contact',
     preview: 'twocolumn',
   },
+  {
+    id: 'academic',
+    name: 'Academic',
+    description: 'Serif CV for research & teaching roles',
+    preview: 'academic',
+  },
 ];
 
 const presetColors = [
@@ -203,6 +209,20 @@ function MiniPreview({ type, color }) {
           <div className="h-1.5 w-full bg-gray-200 rounded" />
           <div className="h-1.5 w-5/6 bg-gray-200 rounded" />
         </div>
+      </div>
+    );
+  }
+  if (type === 'academic') {
+    return (
+      <div className="w-full h-24 bg-white rounded overflow-hidden border border-gray-200 p-2 space-y-1">
+        <div className="h-2.5 w-2/5 mx-auto bg-gray-800 rounded" />
+        <div className="h-1 w-1/2 mx-auto bg-gray-300 rounded" />
+        <div className="h-0.5 w-full rounded" style={{ backgroundColor: color }} />
+        <div className="h-1.5 w-1/3 rounded" style={{ backgroundColor: color, opacity: 0.6 }} />
+        <div className="h-1.5 w-full bg-gray-200 rounded" />
+        <div className="h-1.5 w-5/6 bg-gray-200 rounded" />
+        <div className="h-1.5 w-1/3 rounded" style={{ backgroundColor: color, opacity: 0.6 }} />
+        <div className="h-1.5 w-full bg-gray-200 rounded" />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate, FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate } from '../templates';
+import { ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate, FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate, AcademicTemplate } from '../templates';
 
 const templates = {
   modern: ModernTemplate,
@@ -11,6 +11,7 @@ const templates = {
   design: DesignTemplate,
   executive: ExecutiveTemplate,
   twocolumn: TwoColumnTemplate,
+  academic: AcademicTemplate,
 };
 
 export default function ResumePreview({ data, template = 'modern', templateColor = '#2563eb' }) {

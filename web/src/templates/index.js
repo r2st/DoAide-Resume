@@ -8,3 +8,4 @@ export { default as TechnicalTemplate } from './TechnicalTemplate';
 export { default as DesignTemplate } from './DesignTemplate';
 export { default as ExecutiveTemplate } from './ExecutiveTemplate';
 export { default as TwoColumnTemplate } from './TwoColumnTemplate';
+export { default as AcademicTemplate } from './AcademicTemplate';

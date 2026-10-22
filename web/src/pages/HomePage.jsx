@@ -10,6 +10,7 @@ import AtsScoreCard from '../components/AtsScoreCard';
 import { exportToPdf } from '../lib/pdfExport';
 import { checkAtsScore } from '../lib/atsChecker';
 import { jobRoleSuggestions } from '../lib/jobSuggestions';
+import { IMPORT_STORAGE_KEY } from '../lib/linkedinParser';
 
 const defaultResumeData = {
   personal: { name: '', email: '', phone: '', location: '', linkedin: '', website: '' },
@@ -43,8 +44,8 @@ const features = [
     ),
   },
   {
-    title: '10 Professional Templates',
-    description: 'Modern, Classic, Minimalist, Creative, ATS-Friendly, Executive, and more — designed for every career stage.',
+    title: '11 Professional Templates',
+    description: 'Modern, Classic, Minimalist, Creative, ATS-Friendly, Executive, Academic, and more — designed for every career stage.',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="#0D9488" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -93,9 +94,31 @@ export default function HomePage() {
 
   useEffect(() => {
     const tmpl = searchParams.get('template');
-    if (tmpl && ['modern', 'classic', 'minimalist', 'creative', 'ats'].includes(tmpl)) {
+    if (tmpl && ['modern', 'classic', 'minimalist', 'creative', 'ats', 'fresher', 'technical', 'design', 'executive', 'twocolumn', 'academic'].includes(tmpl)) {
       setSelectedTemplate(tmpl);
       builderRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [searchParams]);
+
+  // Data handed over by the LinkedIn import page (/linkedin-resume-import).
+  useEffect(() => {
+    if (searchParams.get('import') !== 'linkedin') return;
+    try {
+      const raw = localStorage.getItem(IMPORT_STORAGE_KEY);
+      if (!raw) return;
+      const imported = JSON.parse(raw);
+      setResumeData({
+        ...defaultResumeData,
+        ...imported,
+        personal: { ...defaultResumeData.personal, ...(imported.personal || {}) },
+        experience: imported.experience?.length ? imported.experience : defaultResumeData.experience,
+        education: imported.education?.length ? imported.education : defaultResumeData.education,
+        skills: imported.skills?.length ? imported.skills : defaultResumeData.skills,
+      });
+      localStorage.removeItem(IMPORT_STORAGE_KEY);
+      builderRef.current?.scrollIntoView({ behavior: 'smooth' });
+    } catch {
+      // Corrupt or inaccessible storage — start with a blank builder.
     }
   }, [searchParams]);
 

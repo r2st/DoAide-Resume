@@ -12,7 +12,7 @@ def test_sitemap_valid_xml(client):
     root = ET.fromstring(r.text)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = root.findall("s:url", ns)
-    assert len(urls) == 29
+    assert len(urls) == 36
 
 
 def test_sitemap_contains_homepage(client):
@@ -24,6 +24,8 @@ def test_sitemap_contains_new_tools(client):
     r = client.get("/sitemap.xml")
     assert "https://resume.doaide.com/cover-letter-generator" in r.text
     assert "https://resume.doaide.com/linkedin-summary-generator" in r.text
+    assert "https://resume.doaide.com/linkedin-resume-import" in r.text
+    assert "https://resume.doaide.com/blog/linkedin-profile-to-resume" in r.text
 
 
 def test_sitemap_contains_all_pages(client):

@@ -12,6 +12,7 @@ PAGES = [
     {"loc": "/ats-checker", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/cover-letter-generator", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/linkedin-summary-generator", "priority": "0.9", "changefreq": "monthly"},
+    {"loc": "/linkedin-resume-import", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/interview-preparation", "priority": "0.9", "changefreq": "monthly"},
     {"loc": "/advisor", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/tools/interview-prep", "priority": "0.9", "changefreq": "monthly"},
@@ -36,6 +37,12 @@ PAGES = [
     {"loc": "/blog", "priority": "0.8", "changefreq": "weekly"},
     {"loc": "/blog/ai-resume-builder-freshers-2026", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/resume-with-no-experience", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/naukri-resume-format-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/check-resume-ats-score-free", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/resume-for-it-services-freshers", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/best-free-resume-builder-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/ats-friendly-resume-tips-india", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/linkedin-profile-to-resume", "priority": "0.8", "changefreq": "monthly"},
 ]
 
 

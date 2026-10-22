@@ -14,6 +14,7 @@ const FresherResumeGuide = lazy(() => import('./pages/guides/FresherResumeGuide'
 const CoverLetterGuide = lazy(() => import('./pages/guides/CoverLetterGuide'));
 const CoverLetterGenerator = lazy(() => import('./pages/CoverLetterGenerator'));
 const LinkedinSummaryGenerator = lazy(() => import('./pages/LinkedinSummaryGenerator'));
+const LinkedinImportPage = lazy(() => import('./pages/LinkedinImportPage'));
 const VsNovoresume = lazy(() => import('./pages/compare/VsNovoresume'));
 const BestFreeResumeBuilder = lazy(() => import('./pages/compare/BestFreeResumeBuilder'));
 const VsCanva = lazy(() => import('./pages/compare/VsCanva'));
@@ -60,6 +61,7 @@ export default function App() {
           <Route path="/ats-checker" element={<AtsCheckerPage />} />
           <Route path="/cover-letter-generator" element={<CoverLetterGenerator />} />
           <Route path="/linkedin-summary-generator" element={<LinkedinSummaryGenerator />} />
+          <Route path="/linkedin-resume-import" element={<LinkedinImportPage />} />
           <Route path="/guides/resume-writing" element={<ResumeWritingGuide />} />
           <Route path="/guides/ats-resume" element={<AtsResumeGuide />} />
           <Route path="/guides/fresher-resume" element={<FresherResumeGuide />} />

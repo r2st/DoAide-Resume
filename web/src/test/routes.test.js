@@ -6,6 +6,7 @@ const EXPECTED_ROUTES = [
   '/ats-checker',
   '/cover-letter-generator',
   '/linkedin-summary-generator',
+  '/linkedin-resume-import',
   '/interview-preparation',
   '/guides/resume-writing',
   '/guides/ats-resume',
@@ -38,6 +39,7 @@ const SITEMAP_PAGES = [
   '/ats-checker',
   '/cover-letter-generator',
   '/linkedin-summary-generator',
+  '/linkedin-resume-import',
   '/interview-preparation',
   '/guides/resume-writing',
   '/guides/ats-resume',
@@ -66,7 +68,7 @@ const SITEMAP_PAGES = [
 
 describe('Route and sitemap coverage', () => {
   it('has 29 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(29);
+    expect(EXPECTED_ROUTES.length).toBe(30);
   });
 
   it('every sitemap page has a matching route', () => {
@@ -82,6 +84,7 @@ describe('Route and sitemap coverage', () => {
   it('new tools are in routes', () => {
     expect(EXPECTED_ROUTES).toContain('/cover-letter-generator');
     expect(EXPECTED_ROUTES).toContain('/linkedin-summary-generator');
+    expect(EXPECTED_ROUTES).toContain('/linkedin-resume-import');
     expect(EXPECTED_ROUTES).toContain('/interview-preparation');
     expect(EXPECTED_ROUTES).toContain('/guides/best-resume-format-india');
     expect(EXPECTED_ROUTES).toContain('/guides/fresher-resume-template');

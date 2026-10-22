@@ -10,10 +10,11 @@ import {
   DesignTemplate,
   ExecutiveTemplate,
   TwoColumnTemplate,
+  AcademicTemplate,
 } from '../templates/index';
 
 describe('Resume Templates', () => {
-  it('exports 10 templates', () => {
+  it('exports 11 templates', () => {
     expect(ModernTemplate).toBeDefined();
     expect(ClassicTemplate).toBeDefined();
     expect(MinimalistTemplate).toBeDefined();
@@ -24,10 +25,11 @@ describe('Resume Templates', () => {
     expect(DesignTemplate).toBeDefined();
     expect(ExecutiveTemplate).toBeDefined();
     expect(TwoColumnTemplate).toBeDefined();
+    expect(AcademicTemplate).toBeDefined();
   });
 
   it('all templates are React components (functions)', () => {
-    [ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate, FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate].forEach(
+    [ModernTemplate, ClassicTemplate, MinimalistTemplate, CreativeTemplate, AtsTemplate, FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate, AcademicTemplate].forEach(
       (Template) => {
         expect(typeof Template).toBe('function');
       }
@@ -35,7 +37,7 @@ describe('Resume Templates', () => {
   });
 
   it('new templates accept data and templateColor props', () => {
-    [FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate].forEach((Template) => {
+    [FresherTemplate, TechnicalTemplate, DesignTemplate, ExecutiveTemplate, TwoColumnTemplate, AcademicTemplate].forEach((Template) => {
       expect(() => Template({ data: {}, templateColor: '#2563eb' })).not.toThrow();
     });
   });
@@ -63,6 +65,23 @@ describe('Resume Templates', () => {
         languages: [{ language: 'English', proficiency: 'Fluent' }],
       },
       templateColor: '#7c3aed',
+    });
+    expect(result).toBeTruthy();
+  });
+});
+
+describe('Academic template', () => {
+  it('renders with sample data', () => {
+    const result = AcademicTemplate({
+      data: {
+        personal: { name: 'Dr. Asha Rao', email: 'asha@univ.ac.in' },
+        summary: 'Researcher in computational linguistics',
+        education: [{ institution: 'IIT Bombay', degree: 'PhD', field: 'Computer Science', startDate: '2018', endDate: '2023' }],
+        experience: [{ title: 'Assistant Professor', company: 'IIT Delhi', bullets: ['Taught NLP'] }],
+        projects: [{ name: 'Hindi NER corpus', description: 'Published at ACL 2025' }],
+        certifications: [{ name: 'UGC NET', issuer: 'NTA', date: '2019' }],
+      },
+      templateColor: '#059669',
     });
     expect(result).toBeTruthy();
   });
