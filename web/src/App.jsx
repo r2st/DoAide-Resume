@@ -29,6 +29,9 @@ import AtsOptimization2026 from './pages/blog/AtsOptimization2026';
 import ResumeFormatFreshers2026 from './pages/blog/ResumeFormatFreshers2026';
 import AtsFriendlyResume from './pages/blog/AtsFriendlyResume';
 import ResumeMistakes from './pages/blog/ResumeMistakes';
+import AiResumeBuilderFreshers2026 from './pages/blog/AiResumeBuilderFreshers2026';
+import ResumeWithNoExperience from './pages/blog/ResumeWithNoExperience';
+import BlogIndex from './pages/blog/BlogIndex';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
 import FeedbackWidget from './components/FeedbackWidget';
 
@@ -65,6 +68,9 @@ export default function App() {
           <Route path="/blog/resume-format-freshers-2026" element={<ResumeFormatFreshers2026 />} />
           <Route path="/blog/ats-friendly-resume" element={<AtsFriendlyResume />} />
           <Route path="/blog/resume-mistakes" element={<ResumeMistakes />} />
+          <Route path="/blog/ai-resume-builder-freshers-2026" element={<AiResumeBuilderFreshers2026 />} />
+          <Route path="/blog/resume-with-no-experience" element={<ResumeWithNoExperience />} />
+          <Route path="/blog" element={<BlogIndex />} />
         </Routes>
       </main>
       <Footer />

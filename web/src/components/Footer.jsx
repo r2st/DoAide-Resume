@@ -45,6 +45,7 @@ export default function Footer() {
               <li><Link to="/guides/ats-resume" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>ATS Resume</Link></li>
               <li><Link to="/blog/resume-building-2026" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Resume Building 2026</Link></li>
               <li><Link to="/blog/ats-optimization-2026" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>ATS Optimization 2026</Link></li>
+              <li><Link to="/blog" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>All Blog Posts</Link></li>
             </ul>
           </div>
 

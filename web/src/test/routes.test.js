@@ -27,6 +27,9 @@ const EXPECTED_ROUTES = [
   '/blog/resume-format-freshers-2026',
   '/blog/ats-friendly-resume',
   '/blog/resume-mistakes',
+  '/blog',
+  '/blog/ai-resume-builder-freshers-2026',
+  '/blog/resume-with-no-experience',
 ];
 
 const SITEMAP_PAGES = [
@@ -56,11 +59,14 @@ const SITEMAP_PAGES = [
   '/blog/resume-format-freshers-2026',
   '/blog/ats-friendly-resume',
   '/blog/resume-mistakes',
+  '/blog',
+  '/blog/ai-resume-builder-freshers-2026',
+  '/blog/resume-with-no-experience',
 ];
 
 describe('Route and sitemap coverage', () => {
-  it('has 26 routes', () => {
-    expect(EXPECTED_ROUTES.length).toBe(26);
+  it('has 29 routes', () => {
+    expect(EXPECTED_ROUTES.length).toBe(29);
   });
 
   it('every sitemap page has a matching route', () => {
@@ -91,5 +97,8 @@ describe('Route and sitemap coverage', () => {
     expect(EXPECTED_ROUTES).toContain('/blog/resume-format-freshers-2026');
     expect(EXPECTED_ROUTES).toContain('/blog/ats-friendly-resume');
     expect(EXPECTED_ROUTES).toContain('/blog/resume-mistakes');
+    expect(EXPECTED_ROUTES).toContain('/blog');
+    expect(EXPECTED_ROUTES).toContain('/blog/ai-resume-builder-freshers-2026');
+    expect(EXPECTED_ROUTES).toContain('/blog/resume-with-no-experience');
   });
 });

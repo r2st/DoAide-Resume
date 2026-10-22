@@ -122,6 +122,27 @@ PAGE_METADATA = [
         "keywords": ["resume mistakes", "common resume errors", "resume tips India", "resume dos and donts"],
         "og_image": "https://resume.doaide.com/og-blog-mistakes.png",
     },
+    {
+        "path": "/blog",
+        "title": "Resume & Career Blog — Tips for Indian Job Seekers | DoAide Resume",
+        "description": "Resume writing tips, ATS guides, fresher advice and AI resume builder guides for Indian job seekers in 2026.",
+        "keywords": ["resume blog", "resume tips India", "career advice India", "job search tips"],
+        "og_image": "https://resume.doaide.com/og-image.png",
+    },
+    {
+        "path": "/blog/ai-resume-builder-freshers-2026",
+        "title": "Best Free AI Resume Builder for Freshers 2026: How to Use AI Without Sounding Generic | DoAide Resume",
+        "description": "What to look for in a free AI resume builder as a fresher in 2026, and a step-by-step workflow to use AI for your first resume without sounding generic or fake.",
+        "keywords": ["free AI resume builder for freshers", "AI resume builder 2026", "fresher resume AI", "best free resume builder India"],
+        "og_image": "https://resume.doaide.com/og-image.png",
+    },
+    {
+        "path": "/blog/resume-with-no-experience",
+        "title": "How to Write a Resume With No Experience (With Examples) | DoAide Resume",
+        "description": "How to write a resume with no work experience in 2026. What to include instead of jobs, a section-by-section template, and before-and-after bullet examples for students, freshers and career restarters.",
+        "keywords": ["resume with no experience", "how to write a resume with no experience", "fresher resume no experience", "student resume India"],
+        "og_image": "https://resume.doaide.com/og-image.png",
+    },
 ]
 
 

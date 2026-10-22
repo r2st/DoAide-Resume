@@ -33,6 +33,9 @@ PAGES = [
     {"loc": "/blog/resume-format-freshers-2026", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/ats-friendly-resume", "priority": "0.8", "changefreq": "monthly"},
     {"loc": "/blog/resume-mistakes", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog", "priority": "0.8", "changefreq": "weekly"},
+    {"loc": "/blog/ai-resume-builder-freshers-2026", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/blog/resume-with-no-experience", "priority": "0.8", "changefreq": "monthly"},
 ]
 
 

@@ -12,7 +12,7 @@ def test_sitemap_valid_xml(client):
     root = ET.fromstring(r.text)
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     urls = root.findall("s:url", ns)
-    assert len(urls) == 26
+    assert len(urls) == 29
 
 
 def test_sitemap_contains_homepage(client):
@@ -47,6 +47,9 @@ def test_sitemap_contains_all_pages(client):
         "/best-free-resume-builder",
         "/blog/resume-building-2026",
         "/blog/ats-optimization-2026",
+        "/blog",
+        "/blog/ai-resume-builder-freshers-2026",
+        "/blog/resume-with-no-experience",
     ]:
         assert f"https://resume.doaide.com{path}" in r.text
 
