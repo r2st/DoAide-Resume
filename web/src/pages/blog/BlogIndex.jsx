@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { MARKDOWN_POSTS } from './markdownPosts';
 
-export const POSTS = [
+const JSX_POSTS = [
   {
     slug: 'resume-with-no-experience',
     title: 'How to Write a Resume With No Experience (With Examples)',
@@ -44,6 +45,11 @@ export const POSTS = [
     description: 'Essential sections, action verbs, formatting best practices and how to use AI tools to improve your resume.',
     date: '2026-10-10',
   },
+];
+
+export const POSTS = [
+  ...MARKDOWN_POSTS.map(({ slug, title, description, date }) => ({ slug, title, description, date })),
+  ...JSX_POSTS,
 ];
 
 export default function BlogIndex() {

@@ -32,6 +32,7 @@ import ResumeMistakes from './pages/blog/ResumeMistakes';
 import AiResumeBuilderFreshers2026 from './pages/blog/AiResumeBuilderFreshers2026';
 import ResumeWithNoExperience from './pages/blog/ResumeWithNoExperience';
 import BlogIndex from './pages/blog/BlogIndex';
+import MarkdownPost from './pages/blog/MarkdownPost';
 import AtsFloatingWidget from './components/AtsFloatingWidget';
 import FeedbackWidget from './components/FeedbackWidget';
 
@@ -71,6 +72,7 @@ export default function App() {
           <Route path="/blog/ai-resume-builder-freshers-2026" element={<AiResumeBuilderFreshers2026 />} />
           <Route path="/blog/resume-with-no-experience" element={<ResumeWithNoExperience />} />
           <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<MarkdownPost />} />
         </Routes>
       </main>
       <Footer />
