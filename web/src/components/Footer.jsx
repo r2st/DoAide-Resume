@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const DOAIDE_PRODUCTS = [
   { name: 'Desk', url: 'https://desk.doaide.com' },
   { name: 'Jobs', url: 'https://job.doaide.com' },
-  { name: '409A', url: 'https://409a.doaide.com' },
+  { name: '409A', url: 'https://409.doaide.com' },
   { name: 'GST', url: 'https://gst.doaide.com' },
   { name: 'Pulse', url: 'https://pulse.doaide.com' },
   { name: 'Med', url: 'https://med.doaide.com' },
@@ -57,7 +57,7 @@ export default function Footer() {
             <ul className="space-y-0">
               <li><a href="https://docs.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Docs</a></li>
               <li><a href="https://gst.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>GST Bot</a></li>
-              <li><a href="https://409a.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>409A Valuations</a></li>
+              <li><a href="https://409.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>409A Valuations</a></li>
               <li><a href="https://job.doaide.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-teal-600 transition-colors no-underline min-h-[44px] flex items-center" style={{ color: 'var(--da-text-muted)' }}>Jobs</a></li>
             </ul>
           </div>
